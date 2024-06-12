@@ -9,21 +9,63 @@
 /* Begin PBXBuildFile section */
 		FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DBE2C18C072003CB232 /* AppDelegate.swift */; };
 		FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC02C18C072003CB232 /* SceneDelegate.swift */; };
-		FFD53DC32C18C072003CB232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC22C18C072003CB232 /* ViewController.swift */; };
+		FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC22C18C072003CB232 /* InitialVC.swift */; };
 		FFD53DC62C18C072003CB232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD53DC42C18C072003CB232 /* Main.storyboard */; };
 		FFD53DC82C18C074003CB232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD53DC72C18C074003CB232 /* Assets.xcassets */; };
 		FFD53DCB2C18C074003CB232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD53DC92C18C074003CB232 /* LaunchScreen.storyboard */; };
+		FFF0A4D62C1A0E6200057925 /* Urbanist-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4C42C1A0E6000057925 /* Urbanist-ThinItalic.ttf */; };
+		FFF0A4D72C1A0E6200057925 /* Urbanist-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4C52C1A0E6100057925 /* Urbanist-Medium.ttf */; };
+		FFF0A4D82C1A0E6200057925 /* Urbanist-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4C62C1A0E6100057925 /* Urbanist-ExtraBold.ttf */; };
+		FFF0A4D92C1A0E6200057925 /* Urbanist-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4C72C1A0E6100057925 /* Urbanist-Thin.ttf */; };
+		FFF0A4DA2C1A0E6200057925 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4C82C1A0E6100057925 /* Urbanist-Bold.ttf */; };
+		FFF0A4DB2C1A0E6200057925 /* Urbanist-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4C92C1A0E6100057925 /* Urbanist-BoldItalic.ttf */; };
+		FFF0A4DC2C1A0E6200057925 /* Urbanist-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4CA2C1A0E6100057925 /* Urbanist-SemiBoldItalic.ttf */; };
+		FFF0A4DD2C1A0E6200057925 /* Urbanist-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4CB2C1A0E6100057925 /* Urbanist-Italic.ttf */; };
+		FFF0A4DE2C1A0E6200057925 /* Urbanist-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4CC2C1A0E6100057925 /* Urbanist-SemiBold.ttf */; };
+		FFF0A4DF2C1A0E6200057925 /* Urbanist-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4CD2C1A0E6100057925 /* Urbanist-Regular.ttf */; };
+		FFF0A4E02C1A0E6200057925 /* Urbanist-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4CE2C1A0E6100057925 /* Urbanist-BlackItalic.ttf */; };
+		FFF0A4E12C1A0E6200057925 /* Urbanist-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4CF2C1A0E6100057925 /* Urbanist-Light.ttf */; };
+		FFF0A4E22C1A0E6200057925 /* Urbanist-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4D02C1A0E6100057925 /* Urbanist-Black.ttf */; };
+		FFF0A4E32C1A0E6200057925 /* Urbanist-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4D12C1A0E6100057925 /* Urbanist-ExtraBoldItalic.ttf */; };
+		FFF0A4E42C1A0E6200057925 /* Urbanist-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4D22C1A0E6100057925 /* Urbanist-LightItalic.ttf */; };
+		FFF0A4E52C1A0E6200057925 /* Urbanist-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4D32C1A0E6200057925 /* Urbanist-MediumItalic.ttf */; };
+		FFF0A4E62C1A0E6200057925 /* Urbanist-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4D42C1A0E6200057925 /* Urbanist-ExtraLight.ttf */; };
+		FFF0A4E72C1A0E6200057925 /* Urbanist-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFF0A4D52C1A0E6200057925 /* Urbanist-ExtraLightItalic.ttf */; };
+		FFF0A4EA2C1A10AF00057925 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4E92C1A10AF00057925 /* UIView+Extension.swift */; };
+		FFF0A4F12C1A120300057925 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4F02C1A120300057925 /* Utilities.swift */; };
+		FFF0A4F32C1A170F00057925 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4F22C1A170F00057925 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFD53DBB2C18C072003CB232 /* MonsoTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsoTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD53DBE2C18C072003CB232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD53DC02C18C072003CB232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FFD53DC22C18C072003CB232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFD53DC22C18C072003CB232 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
 		FFD53DC52C18C072003CB232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFD53DC72C18C074003CB232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFD53DCA2C18C074003CB232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD53DCC2C18C074003CB232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF0A4C42C1A0E6000057925 /* Urbanist-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-ThinItalic.ttf"; sourceTree = "<group>"; };
+		FFF0A4C52C1A0E6100057925 /* Urbanist-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Medium.ttf"; sourceTree = "<group>"; };
+		FFF0A4C62C1A0E6100057925 /* Urbanist-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FFF0A4C72C1A0E6100057925 /* Urbanist-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Thin.ttf"; sourceTree = "<group>"; };
+		FFF0A4C82C1A0E6100057925 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Bold.ttf"; sourceTree = "<group>"; };
+		FFF0A4C92C1A0E6100057925 /* Urbanist-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FFF0A4CA2C1A0E6100057925 /* Urbanist-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FFF0A4CB2C1A0E6100057925 /* Urbanist-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Italic.ttf"; sourceTree = "<group>"; };
+		FFF0A4CC2C1A0E6100057925 /* Urbanist-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-SemiBold.ttf"; sourceTree = "<group>"; };
+		FFF0A4CD2C1A0E6100057925 /* Urbanist-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Regular.ttf"; sourceTree = "<group>"; };
+		FFF0A4CE2C1A0E6100057925 /* Urbanist-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FFF0A4CF2C1A0E6100057925 /* Urbanist-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Light.ttf"; sourceTree = "<group>"; };
+		FFF0A4D02C1A0E6100057925 /* Urbanist-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Black.ttf"; sourceTree = "<group>"; };
+		FFF0A4D12C1A0E6100057925 /* Urbanist-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		FFF0A4D22C1A0E6100057925 /* Urbanist-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-LightItalic.ttf"; sourceTree = "<group>"; };
+		FFF0A4D32C1A0E6200057925 /* Urbanist-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FFF0A4D42C1A0E6200057925 /* Urbanist-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FFF0A4D52C1A0E6200057925 /* Urbanist-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FFF0A4E92C1A10AF00057925 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FFF0A4F02C1A120300057925 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		FFF0A4F22C1A170F00057925 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +98,92 @@
 		FFD53DBD2C18C072003CB232 /* MonsoTech */ = {
 			isa = PBXGroup;
 			children = (
-				FFD53DBE2C18C072003CB232 /* AppDelegate.swift */,
-				FFD53DC02C18C072003CB232 /* SceneDelegate.swift */,
-				FFD53DC22C18C072003CB232 /* ViewController.swift */,
-				FFD53DC42C18C072003CB232 /* Main.storyboard */,
+				FFF0A4EF2C1A11F500057925 /* Extra Files */,
+				FFF0A4E82C1A109800057925 /* Extensions */,
+				FFF0A4C22C1A0E3C00057925 /* Resources */,
+				FFF0A4EE2C1A11D900057925 /* Supporting Files */,
+				FFF0A4EC2C1A11BE00057925 /* Views */,
+				FFF0A4ED2C1A11D000057925 /* Storyboards */,
 				FFD53DC72C18C074003CB232 /* Assets.xcassets */,
-				FFD53DC92C18C074003CB232 /* LaunchScreen.storyboard */,
 				FFD53DCC2C18C074003CB232 /* Info.plist */,
 			);
 			path = MonsoTech;
+			sourceTree = "<group>";
+		};
+		FFF0A4C22C1A0E3C00057925 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FFF0A4C32C1A0E4200057925 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FFF0A4C32C1A0E4200057925 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FFF0A4D02C1A0E6100057925 /* Urbanist-Black.ttf */,
+				FFF0A4CE2C1A0E6100057925 /* Urbanist-BlackItalic.ttf */,
+				FFF0A4C82C1A0E6100057925 /* Urbanist-Bold.ttf */,
+				FFF0A4C92C1A0E6100057925 /* Urbanist-BoldItalic.ttf */,
+				FFF0A4C62C1A0E6100057925 /* Urbanist-ExtraBold.ttf */,
+				FFF0A4D12C1A0E6100057925 /* Urbanist-ExtraBoldItalic.ttf */,
+				FFF0A4D42C1A0E6200057925 /* Urbanist-ExtraLight.ttf */,
+				FFF0A4D52C1A0E6200057925 /* Urbanist-ExtraLightItalic.ttf */,
+				FFF0A4CB2C1A0E6100057925 /* Urbanist-Italic.ttf */,
+				FFF0A4CF2C1A0E6100057925 /* Urbanist-Light.ttf */,
+				FFF0A4D22C1A0E6100057925 /* Urbanist-LightItalic.ttf */,
+				FFF0A4C52C1A0E6100057925 /* Urbanist-Medium.ttf */,
+				FFF0A4D32C1A0E6200057925 /* Urbanist-MediumItalic.ttf */,
+				FFF0A4CD2C1A0E6100057925 /* Urbanist-Regular.ttf */,
+				FFF0A4CC2C1A0E6100057925 /* Urbanist-SemiBold.ttf */,
+				FFF0A4CA2C1A0E6100057925 /* Urbanist-SemiBoldItalic.ttf */,
+				FFF0A4C72C1A0E6100057925 /* Urbanist-Thin.ttf */,
+				FFF0A4C42C1A0E6000057925 /* Urbanist-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FFF0A4E82C1A109800057925 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFF0A4E92C1A10AF00057925 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FFF0A4EC2C1A11BE00057925 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFD53DC22C18C072003CB232 /* InitialVC.swift */,
+				FFF0A4F22C1A170F00057925 /* LoginVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFF0A4ED2C1A11D000057925 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FFD53DC42C18C072003CB232 /* Main.storyboard */,
+				FFD53DC92C18C074003CB232 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FFF0A4EE2C1A11D900057925 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFD53DBE2C18C072003CB232 /* AppDelegate.swift */,
+				FFD53DC02C18C072003CB232 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFF0A4EF2C1A11F500057925 /* Extra Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFF0A4F02C1A120300057925 /* Utilities.swift */,
+			);
+			path = "Extra Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +244,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF0A4E72C1A0E6200057925 /* Urbanist-ExtraLightItalic.ttf in Resources */,
+				FFF0A4E22C1A0E6200057925 /* Urbanist-Black.ttf in Resources */,
+				FFF0A4D92C1A0E6200057925 /* Urbanist-Thin.ttf in Resources */,
 				FFD53DCB2C18C074003CB232 /* LaunchScreen.storyboard in Resources */,
+				FFF0A4D62C1A0E6200057925 /* Urbanist-ThinItalic.ttf in Resources */,
+				FFF0A4DC2C1A0E6200057925 /* Urbanist-SemiBoldItalic.ttf in Resources */,
+				FFF0A4DB2C1A0E6200057925 /* Urbanist-BoldItalic.ttf in Resources */,
+				FFF0A4DA2C1A0E6200057925 /* Urbanist-Bold.ttf in Resources */,
+				FFF0A4DF2C1A0E6200057925 /* Urbanist-Regular.ttf in Resources */,
+				FFF0A4D82C1A0E6200057925 /* Urbanist-ExtraBold.ttf in Resources */,
+				FFF0A4DD2C1A0E6200057925 /* Urbanist-Italic.ttf in Resources */,
 				FFD53DC82C18C074003CB232 /* Assets.xcassets in Resources */,
+				FFF0A4DE2C1A0E6200057925 /* Urbanist-SemiBold.ttf in Resources */,
+				FFF0A4D72C1A0E6200057925 /* Urbanist-Medium.ttf in Resources */,
+				FFF0A4E02C1A0E6200057925 /* Urbanist-BlackItalic.ttf in Resources */,
+				FFF0A4E12C1A0E6200057925 /* Urbanist-Light.ttf in Resources */,
+				FFF0A4E42C1A0E6200057925 /* Urbanist-LightItalic.ttf in Resources */,
+				FFF0A4E62C1A0E6200057925 /* Urbanist-ExtraLight.ttf in Resources */,
 				FFD53DC62C18C072003CB232 /* Main.storyboard in Resources */,
+				FFF0A4E52C1A0E6200057925 /* Urbanist-MediumItalic.ttf in Resources */,
+				FFF0A4E32C1A0E6200057925 /* Urbanist-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD53DC32C18C072003CB232 /* ViewController.swift in Sources */,
+				FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */,
 				FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */,
+				FFF0A4F32C1A170F00057925 /* LoginVC.swift in Sources */,
+				FFF0A4EA2C1A10AF00057925 /* UIView+Extension.swift in Sources */,
+				FFF0A4F12C1A120300057925 /* Utilities.swift in Sources */,
 				FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
