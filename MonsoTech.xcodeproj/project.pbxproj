@@ -34,6 +34,14 @@
 		FFF0A4EA2C1A10AF00057925 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4E92C1A10AF00057925 /* UIView+Extension.swift */; };
 		FFF0A4F12C1A120300057925 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4F02C1A120300057925 /* Utilities.swift */; };
 		FFF0A4F32C1A170F00057925 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4F22C1A170F00057925 /* LoginVC.swift */; };
+		FFF0A4F52C1A1B1C00057925 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4F42C1A1B1C00057925 /* SignupVC.swift */; };
+		FFF0A4F72C1A1CFF00057925 /* ConnectDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4F62C1A1CFF00057925 /* ConnectDeviceVC.swift */; };
+		FFF0A4F92C1B646000057925 /* Step1ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4F82C1B646000057925 /* Step1ConnectVC.swift */; };
+		FFF0A4FB2C1B647100057925 /* Step2ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4FA2C1B647100057925 /* Step2ConnectVC.swift */; };
+		FFF0A4FD2C1B648300057925 /* Step3ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4FC2C1B648300057925 /* Step3ConnectVC.swift */; };
+		FFF0A4FF2C1B648D00057925 /* Step4ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4FE2C1B648D00057925 /* Step4ConnectVC.swift */; };
+		FFF0A5012C1B649800057925 /* Step5ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A5002C1B649800057925 /* Step5ConnectVC.swift */; };
+		FFF0A5032C1B64A000057925 /* Step6ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A5022C1B64A000057925 /* Step6ConnectVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +74,14 @@
 		FFF0A4E92C1A10AF00057925 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FFF0A4F02C1A120300057925 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		FFF0A4F22C1A170F00057925 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FFF0A4F42C1A1B1C00057925 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		FFF0A4F62C1A1CFF00057925 /* ConnectDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectDeviceVC.swift; sourceTree = "<group>"; };
+		FFF0A4F82C1B646000057925 /* Step1ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1ConnectVC.swift; sourceTree = "<group>"; };
+		FFF0A4FA2C1B647100057925 /* Step2ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ConnectVC.swift; sourceTree = "<group>"; };
+		FFF0A4FC2C1B648300057925 /* Step3ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3ConnectVC.swift; sourceTree = "<group>"; };
+		FFF0A4FE2C1B648D00057925 /* Step4ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step4ConnectVC.swift; sourceTree = "<group>"; };
+		FFF0A5002C1B649800057925 /* Step5ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step5ConnectVC.swift; sourceTree = "<group>"; };
+		FFF0A5022C1B64A000057925 /* Step6ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step6ConnectVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +172,14 @@
 			children = (
 				FFD53DC22C18C072003CB232 /* InitialVC.swift */,
 				FFF0A4F22C1A170F00057925 /* LoginVC.swift */,
+				FFF0A4F42C1A1B1C00057925 /* SignupVC.swift */,
+				FFF0A4F62C1A1CFF00057925 /* ConnectDeviceVC.swift */,
+				FFF0A4F82C1B646000057925 /* Step1ConnectVC.swift */,
+				FFF0A4FA2C1B647100057925 /* Step2ConnectVC.swift */,
+				FFF0A4FC2C1B648300057925 /* Step3ConnectVC.swift */,
+				FFF0A4FE2C1B648D00057925 /* Step4ConnectVC.swift */,
+				FFF0A5002C1B649800057925 /* Step5ConnectVC.swift */,
+				FFF0A5022C1B64A000057925 /* Step6ConnectVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,12 +299,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF0A5012C1B649800057925 /* Step5ConnectVC.swift in Sources */,
 				FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */,
+				FFF0A4F52C1A1B1C00057925 /* SignupVC.swift in Sources */,
 				FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */,
+				FFF0A4F72C1A1CFF00057925 /* ConnectDeviceVC.swift in Sources */,
+				FFF0A4FB2C1B647100057925 /* Step2ConnectVC.swift in Sources */,
+				FFF0A5032C1B64A000057925 /* Step6ConnectVC.swift in Sources */,
 				FFF0A4F32C1A170F00057925 /* LoginVC.swift in Sources */,
+				FFF0A4FD2C1B648300057925 /* Step3ConnectVC.swift in Sources */,
 				FFF0A4EA2C1A10AF00057925 /* UIView+Extension.swift in Sources */,
 				FFF0A4F12C1A120300057925 /* Utilities.swift in Sources */,
 				FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */,
+				FFF0A4FF2C1B648D00057925 /* Step4ConnectVC.swift in Sources */,
+				FFF0A4F92C1B646000057925 /* Step1ConnectVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
