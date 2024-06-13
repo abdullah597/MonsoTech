@@ -32,6 +32,9 @@ class LoginVC: UIViewController {
         }
     }
     @IBAction func forgotPassword(_ sender: Any) {
-    
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ForgotPasswordVC.self)) as? ForgotPasswordVC {
+            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        }
     }
 }

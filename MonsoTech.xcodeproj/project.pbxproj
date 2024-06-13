@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7792CCE4BDEAFB7381F72B /* Pods_MonsoTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546C38863C60DAF8A6080434 /* Pods_MonsoTech.framework */; };
+		FF2A2E9F2C1B814900433096 /* ConnectSlaveDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A2E9E2C1B814900433096 /* ConnectSlaveDeviceVC.swift */; };
+		FF7937DD2C1B7E4C00182B7F /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */; };
+		FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */; };
 		FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DBE2C18C072003CB232 /* AppDelegate.swift */; };
 		FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC02C18C072003CB232 /* SceneDelegate.swift */; };
 		FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC22C18C072003CB232 /* InitialVC.swift */; };
@@ -42,9 +46,16 @@
 		FFF0A4FF2C1B648D00057925 /* Step4ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A4FE2C1B648D00057925 /* Step4ConnectVC.swift */; };
 		FFF0A5012C1B649800057925 /* Step5ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A5002C1B649800057925 /* Step5ConnectVC.swift */; };
 		FFF0A5032C1B64A000057925 /* Step6ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A5022C1B64A000057925 /* Step6ConnectVC.swift */; };
+		FFF3F60B2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		546C38863C60DAF8A6080434 /* Pods_MonsoTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonsoTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2BDAA58EDD946843584D36A /* Pods-MonsoTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsoTech.debug.xcconfig"; path = "Target Support Files/Pods-MonsoTech/Pods-MonsoTech.debug.xcconfig"; sourceTree = "<group>"; };
+		F8C0BE565BD51AD4BBC510BD /* Pods-MonsoTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsoTech.release.xcconfig"; path = "Target Support Files/Pods-MonsoTech/Pods-MonsoTech.release.xcconfig"; sourceTree = "<group>"; };
+		FF2A2E9E2C1B814900433096 /* ConnectSlaveDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectSlaveDeviceVC.swift; sourceTree = "<group>"; };
+		FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFailedVC.swift; sourceTree = "<group>"; };
 		FFD53DBB2C18C072003CB232 /* MonsoTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsoTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD53DBE2C18C072003CB232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD53DC02C18C072003CB232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +93,7 @@
 		FFF0A4FE2C1B648D00057925 /* Step4ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step4ConnectVC.swift; sourceTree = "<group>"; };
 		FFF0A5002C1B649800057925 /* Step5ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step5ConnectVC.swift; sourceTree = "<group>"; };
 		FFF0A5022C1B64A000057925 /* Step6ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step6ConnectVC.swift; sourceTree = "<group>"; };
+		FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectYourDeviceVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,17 +101,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7792CCE4BDEAFB7381F72B /* Pods_MonsoTech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20D886EC04E05611034ED9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				546C38863C60DAF8A6080434 /* Pods_MonsoTech.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E95FDCA05AC748BBFA332888 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2BDAA58EDD946843584D36A /* Pods-MonsoTech.debug.xcconfig */,
+				F8C0BE565BD51AD4BBC510BD /* Pods-MonsoTech.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FFD53DB22C18C072003CB232 = {
 			isa = PBXGroup;
 			children = (
 				FFD53DBD2C18C072003CB232 /* MonsoTech */,
 				FFD53DBC2C18C072003CB232 /* Products */,
+				E95FDCA05AC748BBFA332888 /* Pods */,
+				D20D886EC04E05611034ED9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +212,10 @@
 				FFF0A4FE2C1B648D00057925 /* Step4ConnectVC.swift */,
 				FFF0A5002C1B649800057925 /* Step5ConnectVC.swift */,
 				FFF0A5022C1B64A000057925 /* Step6ConnectVC.swift */,
+				FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */,
+				FF2A2E9E2C1B814900433096 /* ConnectSlaveDeviceVC.swift */,
+				FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */,
+				FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFD53DCF2C18C074003CB232 /* Build configuration list for PBXNativeTarget "MonsoTech" */;
 			buildPhases = (
+				A14DD928D555284960396DF6 /* [CP] Check Pods Manifest.lock */,
 				FFD53DB72C18C072003CB232 /* Sources */,
 				FFD53DB82C18C072003CB232 /* Frameworks */,
 				FFD53DB92C18C072003CB232 /* Resources */,
+				E2BCCB2B222C3D8457612202 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +332,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A14DD928D555284960396DF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MonsoTech-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2BCCB2B222C3D8457612202 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MonsoTech/Pods-MonsoTech-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MonsoTech/Pods-MonsoTech-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MonsoTech/Pods-MonsoTech-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FFD53DB72C18C072003CB232 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -302,6 +382,8 @@
 				FFF0A5012C1B649800057925 /* Step5ConnectVC.swift in Sources */,
 				FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */,
 				FFF0A4F52C1A1B1C00057925 /* SignupVC.swift in Sources */,
+				FF2A2E9F2C1B814900433096 /* ConnectSlaveDeviceVC.swift in Sources */,
+				FFF3F60B2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift in Sources */,
 				FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */,
 				FFF0A4F72C1A1CFF00057925 /* ConnectDeviceVC.swift in Sources */,
 				FFF0A4FB2C1B647100057925 /* Step2ConnectVC.swift in Sources */,
@@ -311,8 +393,10 @@
 				FFF0A4EA2C1A10AF00057925 /* UIView+Extension.swift in Sources */,
 				FFF0A4F12C1A120300057925 /* Utilities.swift in Sources */,
 				FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */,
+				FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */,
 				FFF0A4FF2C1B648D00057925 /* Step4ConnectVC.swift in Sources */,
 				FFF0A4F92C1B646000057925 /* Step1ConnectVC.swift in Sources */,
+				FF7937DD2C1B7E4C00182B7F /* ForgotPasswordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +538,7 @@
 		};
 		FFD53DD02C18C074003CB232 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2BDAA58EDD946843584D36A /* Pods-MonsoTech.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -482,6 +567,7 @@
 		};
 		FFD53DD12C18C074003CB232 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8C0BE565BD51AD4BBC510BD /* Pods-MonsoTech.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

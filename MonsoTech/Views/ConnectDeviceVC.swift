@@ -16,7 +16,10 @@ class ConnectDeviceVC: UIViewController {
         Utilities.shared.setTopCorners(view: mainView, radius: 30)
     }
     @IBAction func connectSlaveDevice(_ sender: Any) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ConnectSlaveDeviceVC.self)) as? ConnectSlaveDeviceVC {
+            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        }
     }
     @IBAction func connectNewDevice(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
