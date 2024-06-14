@@ -28,6 +28,12 @@ class HomeVC: UIViewController {
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true)
     }
+    @IBAction func connectDevice(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: Step1ConnectVC.self)) as? Step1ConnectVC {
+            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        }
+    }
     @IBAction func notifications(_ sender: Any) {
         
     }

@@ -7,6 +7,6 @@ target 'MonsoTech' do
 
   # Pods for MonsoTech
   pod 'DPOTPView'
-
+  pod 'IQKeyboardManager'
 
 end
