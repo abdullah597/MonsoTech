@@ -154,6 +154,52 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		FF91E9F42C1CBC4A00BA9A87 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FFF0A4F22C1A170F00057925 /* LoginVC.swift */,
+				FFF0A4F42C1A1B1C00057925 /* SignupVC.swift */,
+				FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FF91E9F52C1CBC5C00BA9A87 /* ConnectNewDevice */ = {
+			isa = PBXGroup;
+			children = (
+				FFF0A4F82C1B646000057925 /* Step1ConnectVC.swift */,
+				FFF0A4FA2C1B647100057925 /* Step2ConnectVC.swift */,
+				FFF0A4FC2C1B648300057925 /* Step3ConnectVC.swift */,
+				FFF0A4FE2C1B648D00057925 /* Step4ConnectVC.swift */,
+				FFF0A5002C1B649800057925 /* Step5ConnectVC.swift */,
+				FFF0A5022C1B64A000057925 /* Step6ConnectVC.swift */,
+			);
+			path = ConnectNewDevice;
+			sourceTree = "<group>";
+		};
+		FF91E9F62C1CBC7400BA9A87 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FFD53DC22C18C072003CB232 /* InitialVC.swift */,
+				FFF3F60E2C1B92E6000FC7B4 /* HomeVC.swift */,
+				FF409A2E2C1CA21A0019CBD7 /* DeviceDetailVC.swift */,
+				FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */,
+				FF91E9F22C1CB4B500BA9A87 /* SideMenuVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FF91E9F72C1CBC8800BA9A87 /* Connect Slave Device */ = {
+			isa = PBXGroup;
+			children = (
+				FFF0A4F62C1A1CFF00057925 /* ConnectDeviceVC.swift */,
+				FF2A2E9E2C1B814900433096 /* ConnectSlaveDeviceVC.swift */,
+				FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */,
+				FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */,
+			);
+			path = "Connect Slave Device";
+			sourceTree = "<group>";
+		};
 		FFD53DB22C18C072003CB232 = {
 			isa = PBXGroup;
 			children = (
@@ -231,25 +277,11 @@
 		FFF0A4EC2C1A11BE00057925 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FF91E9F72C1CBC8800BA9A87 /* Connect Slave Device */,
+				FF91E9F62C1CBC7400BA9A87 /* Home */,
+				FF91E9F52C1CBC5C00BA9A87 /* ConnectNewDevice */,
+				FF91E9F42C1CBC4A00BA9A87 /* Auth */,
 				FF409A292C1C9DA10019CBD7 /* Cells */,
-				FFD53DC22C18C072003CB232 /* InitialVC.swift */,
-				FFF0A4F22C1A170F00057925 /* LoginVC.swift */,
-				FFF0A4F42C1A1B1C00057925 /* SignupVC.swift */,
-				FFF0A4F62C1A1CFF00057925 /* ConnectDeviceVC.swift */,
-				FFF0A4F82C1B646000057925 /* Step1ConnectVC.swift */,
-				FFF0A4FA2C1B647100057925 /* Step2ConnectVC.swift */,
-				FFF0A4FC2C1B648300057925 /* Step3ConnectVC.swift */,
-				FFF0A4FE2C1B648D00057925 /* Step4ConnectVC.swift */,
-				FFF0A5002C1B649800057925 /* Step5ConnectVC.swift */,
-				FFF0A5022C1B64A000057925 /* Step6ConnectVC.swift */,
-				FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */,
-				FF2A2E9E2C1B814900433096 /* ConnectSlaveDeviceVC.swift */,
-				FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */,
-				FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */,
-				FFF3F60E2C1B92E6000FC7B4 /* HomeVC.swift */,
-				FF409A2E2C1CA21A0019CBD7 /* DeviceDetailVC.swift */,
-				FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */,
-				FF91E9F22C1CB4B500BA9A87 /* SideMenuVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
