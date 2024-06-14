@@ -143,20 +143,6 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="lrm-CH-hDh"/>
                                     <constraint firstItem="xKO-0U-IAA" firstAttribute="leading" secondItem="dZr-4x-UkY" secondAttribute="leading" constant="24" id="seF-Bf-sft"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="topLeftCornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="topRightCornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomLeftCornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomRightCornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -1545,7 +1531,6 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="connect:" destination="Bis-cR-dy3" eventType="touchUpInside" id="mNb-AQ-4mW"/>
-                                    <action selector="next:" destination="Bis-cR-dy3" eventType="touchUpInside" id="9Gy-iG-efA"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSg-Nf-0R6" customClass="DPOTPView" customModule="DPOTPView">
@@ -1707,10 +1692,10 @@ You have the possibility to do this with the QR code or manually with the 5-char
             </objects>
             <point key="canvasLocation" x="3234" y="694"/>
         </scene>
-        <!--View Controller-->
+        <!--Connect Your DeviceVC-->
         <scene sceneID="YG4-bu-BAz">
             <objects>
-                <viewController id="0aO-hi-BaE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConnectYourDeviceVC" id="0aO-hi-BaE" customClass="ConnectYourDeviceVC" customModule="MonsoTech" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O4d-2p-aAy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1732,21 +1717,18 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting new device failed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAH-Nn-iM8">
-                                <rect key="frame" x="32" y="346" width="329" height="19.333333333333314"/>
-                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="step4" translatesAutoresizingMaskIntoConstraints="NO" id="FHs-BR-cqr">
+                                <rect key="frame" x="24" y="153" width="345" height="32"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZU-n9-Iuk">
-                                <rect key="frame" x="24" y="463" width="345" height="56"/>
+                                <rect key="frame" x="24" y="445" width="345" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="fTf-8l-qBZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Send">
+                                <state key="normal" title="Next Step">
                                     <color key="titleColor" name="AppColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1754,41 +1736,124 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextStep:" destination="0aO-hi-BaE" eventType="touchUpInside" id="mRW-Up-ckn"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Nmk-by-yMC">
-                                <rect key="frame" x="134.66666666666666" y="178" width="123.99999999999997" height="124"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting failed. Press the send button to send us an error report. We will inform you at the known email address." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQ5-MS-NCs">
-                                <rect key="frame" x="32" y="372.33333333333331" width="329" height="57.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 5  character string" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfG-aR-5BP">
+                                <rect key="frame" x="24" y="215" width="345" height="20"/>
+                                <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnj-Uq-c00" customClass="DPOTPView" customModule="DPOTPView">
+                                <rect key="frame" x="24" y="245" width="345" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ghL-aF-QxS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorTextField">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusTextField">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColorTextField">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColorFilledTextField">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColorTextField">
+                                        <color key="value" red="0.066666666669999999" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedBorderWidthTextField">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthTextField">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 3 digit number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtX-E1-jzY">
+                                <rect key="frame" x="24" y="317" width="345" height="20"/>
+                                <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="570-wf-IFO" customClass="DPOTPView" customModule="DPOTPView">
+                                <rect key="frame" x="93" y="347" width="207" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Xgf-ne-dgd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorTextField">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusTextField">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColorTextField">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColorFilledTextField">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColorTextField">
+                                        <color key="value" red="0.066666666669999999" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedBorderWidthTextField">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthTextField">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tle-WV-RrD"/>
                         <color key="backgroundColor" name="AppColor"/>
                         <constraints>
-                            <constraint firstItem="NQ5-MS-NCs" firstAttribute="top" secondItem="Fzp-wN-MkA" secondAttribute="bottom" constant="6" id="0AO-K9-1hK"/>
-                            <constraint firstItem="Nmk-by-yMC" firstAttribute="centerX" secondItem="O4d-2p-aAy" secondAttribute="centerX" id="3Dx-tj-QV3"/>
+                            <constraint firstItem="FHs-BR-cqr" firstAttribute="top" secondItem="tII-3G-Bvp" secondAttribute="bottom" constant="36" id="0LH-dO-RPS"/>
+                            <constraint firstItem="570-wf-IFO" firstAttribute="top" secondItem="NtX-E1-jzY" secondAttribute="bottom" constant="10" id="4fB-fE-ZXy"/>
                             <constraint firstItem="Uja-Om-dwL" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" id="6bc-xL-7Uu"/>
-                            <constraint firstItem="DAH-Nn-iM8" firstAttribute="top" secondItem="Nmk-by-yMC" secondAttribute="bottom" constant="44" id="FDK-uf-lKM"/>
-                            <constraint firstItem="NQ5-MS-NCs" firstAttribute="leading" secondItem="DAH-Nn-iM8" secondAttribute="leading" id="GAt-ZE-lXx"/>
-                            <constraint firstItem="Nmk-by-yMC" firstAttribute="top" secondItem="tII-3G-Bvp" secondAttribute="bottom" constant="61" id="LJA-YN-mDK"/>
+                            <constraint firstItem="tle-WV-RrD" firstAttribute="trailing" secondItem="KfG-aR-5BP" secondAttribute="trailing" constant="24" id="87x-bh-LNE"/>
+                            <constraint firstItem="NtX-E1-jzY" firstAttribute="top" secondItem="gnj-Uq-c00" secondAttribute="bottom" constant="20" id="8im-TN-s0s"/>
+                            <constraint firstItem="KfG-aR-5BP" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" constant="24" id="9br-Xy-4yN"/>
+                            <constraint firstAttribute="trailing" secondItem="FHs-BR-cqr" secondAttribute="trailing" constant="24" id="EHL-5r-n6N"/>
+                            <constraint firstItem="KfG-aR-5BP" firstAttribute="top" secondItem="FHs-BR-cqr" secondAttribute="bottom" constant="30" id="FSa-oz-X6M"/>
+                            <constraint firstItem="FHs-BR-cqr" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" constant="24" id="IOe-Hf-Wko"/>
                             <constraint firstItem="Rcf-Ql-3k6" firstAttribute="top" secondItem="tle-WV-RrD" secondAttribute="top" constant="34" id="NTn-dn-bKB"/>
+                            <constraint firstItem="NtX-E1-jzY" firstAttribute="leading" secondItem="KfG-aR-5BP" secondAttribute="leading" id="Qeb-5k-M5y"/>
                             <constraint firstAttribute="trailing" secondItem="Fzp-wN-MkA" secondAttribute="trailing" id="U1T-hf-2he"/>
-                            <constraint firstItem="DAH-Nn-iM8" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" constant="32" id="YWb-ot-iwz"/>
+                            <constraint firstItem="gnj-Uq-c00" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" constant="24" id="WkU-FW-48w"/>
                             <constraint firstItem="Rcf-Ql-3k6" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" constant="24" id="Znd-Lk-6oZ"/>
                             <constraint firstAttribute="bottom" secondItem="Uja-Om-dwL" secondAttribute="bottom" id="bTh-co-dli"/>
-                            <constraint firstItem="NQ5-MS-NCs" firstAttribute="trailing" secondItem="DAH-Nn-iM8" secondAttribute="trailing" id="hTS-O8-3Tl"/>
+                            <constraint firstItem="570-wf-IFO" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" constant="93" id="coL-UJ-7q4"/>
+                            <constraint firstItem="uZU-n9-Iuk" firstAttribute="top" secondItem="570-wf-IFO" secondAttribute="bottom" constant="46" id="dH7-gN-8Gx"/>
                             <constraint firstItem="uZU-n9-Iuk" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" constant="24" id="j13-Gh-beT"/>
-                            <constraint firstItem="uZU-n9-Iuk" firstAttribute="top" secondItem="NQ5-MS-NCs" secondAttribute="bottom" constant="33" id="jqw-gb-eE4"/>
-                            <constraint firstItem="tle-WV-RrD" firstAttribute="trailing" secondItem="DAH-Nn-iM8" secondAttribute="trailing" constant="32" id="kG0-pR-hCV"/>
+                            <constraint firstItem="tle-WV-RrD" firstAttribute="trailing" secondItem="gnj-Uq-c00" secondAttribute="trailing" constant="24" id="l7L-ew-9cS"/>
+                            <constraint firstItem="tle-WV-RrD" firstAttribute="trailing" secondItem="570-wf-IFO" secondAttribute="trailing" constant="93" id="p7R-OO-g5u"/>
+                            <constraint firstItem="NtX-E1-jzY" firstAttribute="trailing" secondItem="KfG-aR-5BP" secondAttribute="trailing" id="pqf-jh-NNC"/>
                             <constraint firstAttribute="trailing" secondItem="uZU-n9-Iuk" secondAttribute="trailing" constant="24" id="qbR-bG-tR5"/>
-                            <constraint firstItem="DAH-Nn-iM8" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" constant="32" id="vQd-ZL-YcK"/>
                             <constraint firstItem="tII-3G-Bvp" firstAttribute="centerX" secondItem="O4d-2p-aAy" secondAttribute="centerX" id="vhV-Hx-OCO"/>
                             <constraint firstItem="Fzp-wN-MkA" firstAttribute="top" secondItem="O4d-2p-aAy" secondAttribute="top" id="xog-ya-cnx"/>
                             <constraint firstItem="tII-3G-Bvp" firstAttribute="centerY" secondItem="Rcf-Ql-3k6" secondAttribute="centerY" id="xqN-1p-yWi"/>
-                            <constraint firstItem="tle-WV-RrD" firstAttribute="trailing" secondItem="DAH-Nn-iM8" secondAttribute="trailing" constant="32" id="yAe-HT-WT8"/>
+                            <constraint firstItem="gnj-Uq-c00" firstAttribute="top" secondItem="KfG-aR-5BP" secondAttribute="bottom" constant="10" id="znQ-b4-1VF"/>
                         </constraints>
                     </view>
                 </viewController>

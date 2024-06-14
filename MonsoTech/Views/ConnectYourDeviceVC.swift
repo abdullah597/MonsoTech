@@ -13,4 +13,10 @@ class ConnectYourDeviceVC: UIViewController {
         super.viewDidLoad()
         
     }
+    @IBAction func nextStep(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: HomeVC.self)) as? HomeVC {
+            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        }
+    }
 }

@@ -9,8 +9,15 @@
 /* Begin PBXBuildFile section */
 		0D7792CCE4BDEAFB7381F72B /* Pods_MonsoTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546C38863C60DAF8A6080434 /* Pods_MonsoTech.framework */; };
 		FF2A2E9F2C1B814900433096 /* ConnectSlaveDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A2E9E2C1B814900433096 /* ConnectSlaveDeviceVC.swift */; };
+		FF409A2C2C1C9DBB0019CBD7 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF409A2A2C1C9DBB0019CBD7 /* HomeListCell.swift */; };
+		FF409A2D2C1C9DBB0019CBD7 /* HomeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF409A2B2C1C9DBB0019CBD7 /* HomeListCell.xib */; };
+		FF409A2F2C1CA21A0019CBD7 /* DeviceDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF409A2E2C1CA21A0019CBD7 /* DeviceDetailVC.swift */; };
+		FF409A322C1CA3000019CBD7 /* DeviceDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF409A302C1CA3000019CBD7 /* DeviceDetailCell.swift */; };
+		FF409A332C1CA3000019CBD7 /* DeviceDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF409A312C1CA3000019CBD7 /* DeviceDetailCell.xib */; };
 		FF7937DD2C1B7E4C00182B7F /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */; };
 		FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */; };
+		FF91E9F12C1CB08700BA9A87 /* GenerateCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */; };
+		FF91E9F32C1CB4B500BA9A87 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9F22C1CB4B500BA9A87 /* SideMenuVC.swift */; };
 		FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DBE2C18C072003CB232 /* AppDelegate.swift */; };
 		FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC02C18C072003CB232 /* SceneDelegate.swift */; };
 		FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC22C18C072003CB232 /* InitialVC.swift */; };
@@ -47,6 +54,8 @@
 		FFF0A5012C1B649800057925 /* Step5ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A5002C1B649800057925 /* Step5ConnectVC.swift */; };
 		FFF0A5032C1B64A000057925 /* Step6ConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF0A5022C1B64A000057925 /* Step6ConnectVC.swift */; };
 		FFF3F60B2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */; };
+		FFF3F60D2C1B92A5000FC7B4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF3F60C2C1B92A5000FC7B4 /* Home.storyboard */; };
+		FFF3F60F2C1B92E6000FC7B4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF3F60E2C1B92E6000FC7B4 /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,8 +63,15 @@
 		A2BDAA58EDD946843584D36A /* Pods-MonsoTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsoTech.debug.xcconfig"; path = "Target Support Files/Pods-MonsoTech/Pods-MonsoTech.debug.xcconfig"; sourceTree = "<group>"; };
 		F8C0BE565BD51AD4BBC510BD /* Pods-MonsoTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsoTech.release.xcconfig"; path = "Target Support Files/Pods-MonsoTech/Pods-MonsoTech.release.xcconfig"; sourceTree = "<group>"; };
 		FF2A2E9E2C1B814900433096 /* ConnectSlaveDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectSlaveDeviceVC.swift; sourceTree = "<group>"; };
+		FF409A2A2C1C9DBB0019CBD7 /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
+		FF409A2B2C1C9DBB0019CBD7 /* HomeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListCell.xib; sourceTree = "<group>"; };
+		FF409A2E2C1CA21A0019CBD7 /* DeviceDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailVC.swift; sourceTree = "<group>"; };
+		FF409A302C1CA3000019CBD7 /* DeviceDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailCell.swift; sourceTree = "<group>"; };
+		FF409A312C1CA3000019CBD7 /* DeviceDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceDetailCell.xib; sourceTree = "<group>"; };
 		FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFailedVC.swift; sourceTree = "<group>"; };
+		FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCodeVC.swift; sourceTree = "<group>"; };
+		FF91E9F22C1CB4B500BA9A87 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		FFD53DBB2C18C072003CB232 /* MonsoTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsoTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD53DBE2C18C072003CB232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD53DC02C18C072003CB232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +110,8 @@
 		FFF0A5002C1B649800057925 /* Step5ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step5ConnectVC.swift; sourceTree = "<group>"; };
 		FFF0A5022C1B64A000057925 /* Step6ConnectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step6ConnectVC.swift; sourceTree = "<group>"; };
 		FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectYourDeviceVC.swift; sourceTree = "<group>"; };
+		FFF3F60C2C1B92A5000FC7B4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		FFF3F60E2C1B92E6000FC7B4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +141,17 @@
 				F8C0BE565BD51AD4BBC510BD /* Pods-MonsoTech.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF409A292C1C9DA10019CBD7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF409A2A2C1C9DBB0019CBD7 /* HomeListCell.swift */,
+				FF409A2B2C1C9DBB0019CBD7 /* HomeListCell.xib */,
+				FF409A302C1CA3000019CBD7 /* DeviceDetailCell.swift */,
+				FF409A312C1CA3000019CBD7 /* DeviceDetailCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FFD53DB22C18C072003CB232 = {
@@ -202,6 +231,7 @@
 		FFF0A4EC2C1A11BE00057925 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FF409A292C1C9DA10019CBD7 /* Cells */,
 				FFD53DC22C18C072003CB232 /* InitialVC.swift */,
 				FFF0A4F22C1A170F00057925 /* LoginVC.swift */,
 				FFF0A4F42C1A1B1C00057925 /* SignupVC.swift */,
@@ -216,6 +246,10 @@
 				FF2A2E9E2C1B814900433096 /* ConnectSlaveDeviceVC.swift */,
 				FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */,
 				FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */,
+				FFF3F60E2C1B92E6000FC7B4 /* HomeVC.swift */,
+				FF409A2E2C1CA21A0019CBD7 /* DeviceDetailVC.swift */,
+				FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */,
+				FF91E9F22C1CB4B500BA9A87 /* SideMenuVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +259,7 @@
 			children = (
 				FFD53DC42C18C072003CB232 /* Main.storyboard */,
 				FFD53DC92C18C074003CB232 /* LaunchScreen.storyboard */,
+				FFF3F60C2C1B92A5000FC7B4 /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -307,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF0A4E72C1A0E6200057925 /* Urbanist-ExtraLightItalic.ttf in Resources */,
+				FFF3F60D2C1B92A5000FC7B4 /* Home.storyboard in Resources */,
 				FFF0A4E22C1A0E6200057925 /* Urbanist-Black.ttf in Resources */,
 				FFF0A4D92C1A0E6200057925 /* Urbanist-Thin.ttf in Resources */,
 				FFD53DCB2C18C074003CB232 /* LaunchScreen.storyboard in Resources */,
@@ -321,6 +357,8 @@
 				FFF0A4DE2C1A0E6200057925 /* Urbanist-SemiBold.ttf in Resources */,
 				FFF0A4D72C1A0E6200057925 /* Urbanist-Medium.ttf in Resources */,
 				FFF0A4E02C1A0E6200057925 /* Urbanist-BlackItalic.ttf in Resources */,
+				FF409A332C1CA3000019CBD7 /* DeviceDetailCell.xib in Resources */,
+				FF409A2D2C1C9DBB0019CBD7 /* HomeListCell.xib in Resources */,
 				FFF0A4E12C1A0E6200057925 /* Urbanist-Light.ttf in Resources */,
 				FFF0A4E42C1A0E6200057925 /* Urbanist-LightItalic.ttf in Resources */,
 				FFF0A4E62C1A0E6200057925 /* Urbanist-ExtraLight.ttf in Resources */,
@@ -383,19 +421,25 @@
 				FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */,
 				FFF0A4F52C1A1B1C00057925 /* SignupVC.swift in Sources */,
 				FF2A2E9F2C1B814900433096 /* ConnectSlaveDeviceVC.swift in Sources */,
+				FF409A322C1CA3000019CBD7 /* DeviceDetailCell.swift in Sources */,
 				FFF3F60B2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift in Sources */,
 				FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */,
+				FF409A2C2C1C9DBB0019CBD7 /* HomeListCell.swift in Sources */,
 				FFF0A4F72C1A1CFF00057925 /* ConnectDeviceVC.swift in Sources */,
 				FFF0A4FB2C1B647100057925 /* Step2ConnectVC.swift in Sources */,
 				FFF0A5032C1B64A000057925 /* Step6ConnectVC.swift in Sources */,
 				FFF0A4F32C1A170F00057925 /* LoginVC.swift in Sources */,
 				FFF0A4FD2C1B648300057925 /* Step3ConnectVC.swift in Sources */,
+				FF91E9F12C1CB08700BA9A87 /* GenerateCodeVC.swift in Sources */,
+				FF91E9F32C1CB4B500BA9A87 /* SideMenuVC.swift in Sources */,
 				FFF0A4EA2C1A10AF00057925 /* UIView+Extension.swift in Sources */,
 				FFF0A4F12C1A120300057925 /* Utilities.swift in Sources */,
 				FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */,
+				FF409A2F2C1CA21A0019CBD7 /* DeviceDetailVC.swift in Sources */,
 				FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */,
 				FFF0A4FF2C1B648D00057925 /* Step4ConnectVC.swift in Sources */,
 				FFF0A4F92C1B646000057925 /* Step1ConnectVC.swift in Sources */,
+				FFF3F60F2C1B92E6000FC7B4 /* HomeVC.swift in Sources */,
 				FF7937DD2C1B7E4C00182B7F /* ForgotPasswordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
