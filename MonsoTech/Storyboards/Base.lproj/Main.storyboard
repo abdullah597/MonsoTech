@@ -772,6 +772,9 @@
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="backWhite"/>
+                                <connections>
+                                    <action selector="back:" destination="MdL-rw-Qwe" eventType="touchUpInside" id="AHI-KB-k6k"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Your Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teb-Kt-OyD">
                                 <rect key="frame" x="103.66666666666667" y="93" width="185.66666666666663" height="24"/>
@@ -871,6 +874,9 @@ Open the box to see what's inside.
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="backWhite"/>
+                                <connections>
+                                    <action selector="back:" destination="T16-c3-q9q" eventType="touchUpInside" id="haY-Qf-aVx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Your Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTJ-il-MKq">
                                 <rect key="frame" x="103.66666666666667" y="93" width="185.66666666666663" height="24"/>
@@ -977,6 +983,9 @@ One side of the product will contain a 5-character string, a 3-digit number, and
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="backWhite"/>
+                                <connections>
+                                    <action selector="back:" destination="Czb-f3-s4d" eventType="touchUpInside" id="b62-Qh-1JU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Your Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJZ-nv-ijH">
                                 <rect key="frame" x="103.66666666666667" y="93" width="185.66666666666663" height="24"/>
@@ -1073,6 +1082,9 @@ The 5-year subscription will start when the device is connected to the network f
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="backWhite"/>
+                                <connections>
+                                    <action selector="back:" destination="iUy-Kg-XCD" eventType="touchUpInside" id="eIU-pX-TgL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Your Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNY-kO-OSO">
                                 <rect key="frame" x="103.66666666666667" y="93" width="185.66666666666663" height="24"/>
@@ -1161,6 +1173,9 @@ The 5-year subscription will start when the device is connected to the network f
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="backWhite"/>
+                                <connections>
+                                    <action selector="back:" destination="ORM-Se-o03" eventType="touchUpInside" id="1O6-LI-drN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Your Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcC-hC-KWS">
                                 <rect key="frame" x="103.66666666666667" y="93" width="185.66666666666663" height="24"/>
@@ -1262,6 +1277,9 @@ The 5-year subscription will start when the device is connected to the network f
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="backWhite"/>
+                                <connections>
+                                    <action selector="back:" destination="JdS-7v-AaJ" eventType="touchUpInside" id="0cy-qz-kdT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Your Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moH-Pd-OcT">
                                 <rect key="frame" x="103.66666666666667" y="93" width="185.66666666666663" height="24"/>
@@ -1503,6 +1521,9 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="backWhite"/>
+                                <connections>
+                                    <action selector="back:" destination="Bis-cR-dy3" eventType="touchUpInside" id="rYr-dl-23q"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Slave Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDl-o3-Nt8">
                                 <rect key="frame" x="98.666666666666686" y="93" width="196" height="24"/>
@@ -1621,6 +1642,9 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="backWhite"/>
+                                <connections>
+                                    <action selector="back:" destination="bWD-Ow-NYr" eventType="touchUpInside" id="SS9-rI-oMu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect New Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rp-Gd-Zkv">
                                 <rect key="frame" x="103.66666666666669" y="93" width="186" height="24"/>
@@ -1713,6 +1737,9 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="backWhite"/>
+                                <connections>
+                                    <action selector="back:" destination="0aO-hi-BaE" eventType="touchUpInside" id="qKs-Ac-Xff"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Your Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tII-3G-Bvp">
                                 <rect key="frame" x="103.66666666666669" y="93" width="186" height="24"/>

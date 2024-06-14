@@ -13,6 +13,9 @@ class Step1ConnectVC: UIViewController {
         super.viewDidLoad()
         
     }
+    @IBAction func back(_ sender: Any) {
+        Utilities.shared.popViewController(currentViewController: self, animated: true)
+    }
     @IBAction func next(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: Step2ConnectVC.self)) as? Step2ConnectVC {

@@ -13,6 +13,9 @@ class Step6ConnectVC: UIViewController {
         super.viewDidLoad()
         
     }
+    @IBAction func back(_ sender: Any) {
+        Utilities.shared.popViewController(currentViewController: self, animated: true)
+    }
     @IBAction func nextStep(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: HomeVC.self)) as? HomeVC {
