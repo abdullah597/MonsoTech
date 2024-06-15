@@ -488,21 +488,6 @@
             </objects>
             <point key="canvasLocation" x="858.77862595419845" y="-2.1126760563380285"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="gWz-U3-Zho">
-            <objects>
-                <viewController storyboardIdentifier="MainViewController" id="Zbb-x7-Uj1" customClass="MainViewController" customModule="MonsoTech" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="W6T-2O-oIT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="XCf-P4-tkI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tv4-nR-rQA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1717" y="-2"/>
-        </scene>
         <!--Side MenuVC-->
         <scene sceneID="pd8-fc-SOD">
             <objects>

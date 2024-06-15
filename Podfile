@@ -8,6 +8,5 @@ target 'MonsoTech' do
   # Pods for MonsoTech
   pod 'DPOTPView'
   pod 'IQKeyboardManager'
-  pod 'SideMenu'
 
 end

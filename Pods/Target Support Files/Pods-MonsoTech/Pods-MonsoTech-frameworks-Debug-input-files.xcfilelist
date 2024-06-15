@@ -1,4 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-MonsoTech/Pods-MonsoTech-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/DPOTPView/DPOTPView.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework
-${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework
