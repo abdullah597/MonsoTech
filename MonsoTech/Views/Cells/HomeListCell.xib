@@ -30,16 +30,16 @@
                                 <rect key="frame" x="10" y="10" width="44" height="44"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vergader mondriaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6C-j9-PV3">
-                                <rect key="frame" x="61.999999999999986" y="12" width="132.66666666666663" height="17"/>
+                                <rect key="frame" x="62" y="11.999999999999998" width="131" height="16.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="14"/>
                                 <color key="textColor" name="TextBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKK-5s-4Ei">
-                                <rect key="frame" x="61.999999999999986" y="37" width="132.66666666666663" height="22"/>
+                                <rect key="frame" x="62" y="36.333333333333336" width="131" height="21.666666666666664"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="new power outage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQw-mK-mTi">
-                                        <rect key="frame" x="15" y="5" width="84.666666666666671" height="12"/>
+                                        <rect key="frame" x="15" y="4.9999999999999991" width="83" height="11.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -62,10 +62,40 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="CuM-Bb-ey7">
                                 <rect key="frame" x="224" y="10" width="94" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZR-mr-qcN">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWT-Tw-cFL">
+                                        <rect key="frame" x="-44" y="0.0" width="44" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OA2-wc-tx7">
+                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="eye"/>
+                                                <connections>
+                                                    <action selector="viewButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3eL-6Q-gGZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.059999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="488-dm-d7c"/>
+                                            <constraint firstAttribute="bottom" secondItem="OA2-wc-tx7" secondAttribute="bottom" id="61B-fG-O8R"/>
+                                            <constraint firstItem="OA2-wc-tx7" firstAttribute="leading" secondItem="GWT-Tw-cFL" secondAttribute="leading" id="NsE-zP-AQz"/>
+                                            <constraint firstAttribute="trailing" secondItem="OA2-wc-tx7" secondAttribute="trailing" id="cWl-df-agd"/>
+                                            <constraint firstItem="OA2-wc-tx7" firstAttribute="top" secondItem="GWT-Tw-cFL" secondAttribute="top" id="d4k-kh-gzl"/>
+                                            <constraint firstAttribute="width" constant="44" id="f0Z-dU-vKU"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jh3-e6-ipw">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="profileIcon"/>
+                                        <connections>
+                                            <action selector="profilePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="twz-Wt-xvx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6o-Nz-1xK">
                                         <rect key="frame" x="50" y="0.0" width="44" height="44"/>
@@ -118,15 +148,20 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="profileButton" destination="jh3-e6-ipw" id="OWe-3l-OKi"/>
+                <outlet property="viewButton" destination="GWT-Tw-cFL" id="HPN-YE-u42"/>
+            </connections>
             <point key="canvasLocation" x="91.603053435114504" y="67.605633802816911"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="eye" width="24" height="24"/>
         <image name="fireIcon" width="44" height="44"/>
         <image name="profileIcon" width="44" height="44"/>
         <image name="settingIcon" width="44" height="44"/>
         <namedColor name="TextBlueColor">
-            <color red="0.0039215686274509803" green="0.3529411764705882" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0040000001899898052" green="0.3529999852180481" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

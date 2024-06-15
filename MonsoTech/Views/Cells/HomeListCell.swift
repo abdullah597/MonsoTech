@@ -7,17 +7,31 @@
 
 import UIKit
 
-class HomeListCell: UITableViewCell {
+protocol HomeListCellDelegate: AnyObject {
+    func openProfilePage()
+    func openViewPage()
+}
 
+class HomeListCell: UITableViewCell {
+    
+    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var viewButton: UIView!
+    
+    weak var delegate: HomeListCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+    }
+    
+    @IBAction func profilePressed(_ sender: Any) {
+        self.delegate?.openProfilePage()
+    }
+    @IBAction func viewButtonPressed(_ sender: Any) {
+        self.delegate?.openViewPage()
+    }
 }

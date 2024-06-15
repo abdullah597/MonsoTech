@@ -18,6 +18,11 @@
 		FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */; };
 		FF91E9F12C1CB08700BA9A87 /* GenerateCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */; };
 		FF91E9F32C1CB4B500BA9A87 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9F22C1CB4B500BA9A87 /* SideMenuVC.swift */; };
+		FF91E9F92C1D72BB00BA9A87 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9F82C1D72BB00BA9A87 /* MainViewController.swift */; };
+		FF91E9FB2C1D783D00BA9A87 /* DeviceProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9FA2C1D783D00BA9A87 /* DeviceProfileVC.swift */; };
+		FF91E9FD2C1D784F00BA9A87 /* DeviceViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9FC2C1D784F00BA9A87 /* DeviceViewVC.swift */; };
+		FF91EA012C1D794300BA9A87 /* DeviceProfileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9FF2C1D794300BA9A87 /* DeviceProfileListCell.swift */; };
+		FF91EA022C1D794300BA9A87 /* DeviceProfileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF91EA002C1D794300BA9A87 /* DeviceProfileListCell.xib */; };
 		FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DBE2C18C072003CB232 /* AppDelegate.swift */; };
 		FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC02C18C072003CB232 /* SceneDelegate.swift */; };
 		FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC22C18C072003CB232 /* InitialVC.swift */; };
@@ -72,6 +77,11 @@
 		FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFailedVC.swift; sourceTree = "<group>"; };
 		FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCodeVC.swift; sourceTree = "<group>"; };
 		FF91E9F22C1CB4B500BA9A87 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		FF91E9F82C1D72BB00BA9A87 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FF91E9FA2C1D783D00BA9A87 /* DeviceProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProfileVC.swift; sourceTree = "<group>"; };
+		FF91E9FC2C1D784F00BA9A87 /* DeviceViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewVC.swift; sourceTree = "<group>"; };
+		FF91E9FF2C1D794300BA9A87 /* DeviceProfileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProfileListCell.swift; sourceTree = "<group>"; };
+		FF91EA002C1D794300BA9A87 /* DeviceProfileListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceProfileListCell.xib; sourceTree = "<group>"; };
 		FFD53DBB2C18C072003CB232 /* MonsoTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsoTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD53DBE2C18C072003CB232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD53DC02C18C072003CB232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,11 +190,15 @@
 		FF91E9F62C1CBC7400BA9A87 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FF91E9FE2C1D792200BA9A87 /* Cells */,
 				FFD53DC22C18C072003CB232 /* InitialVC.swift */,
 				FFF3F60E2C1B92E6000FC7B4 /* HomeVC.swift */,
 				FF409A2E2C1CA21A0019CBD7 /* DeviceDetailVC.swift */,
 				FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */,
 				FF91E9F22C1CB4B500BA9A87 /* SideMenuVC.swift */,
+				FF91E9F82C1D72BB00BA9A87 /* MainViewController.swift */,
+				FF91E9FA2C1D783D00BA9A87 /* DeviceProfileVC.swift */,
+				FF91E9FC2C1D784F00BA9A87 /* DeviceViewVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -198,6 +212,15 @@
 				FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */,
 			);
 			path = "Connect Slave Device";
+			sourceTree = "<group>";
+		};
+		FF91E9FE2C1D792200BA9A87 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF91E9FF2C1D794300BA9A87 /* DeviceProfileListCell.swift */,
+				FF91EA002C1D794300BA9A87 /* DeviceProfileListCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FFD53DB22C18C072003CB232 = {
@@ -384,6 +407,7 @@
 				FFF0A4DA2C1A0E6200057925 /* Urbanist-Bold.ttf in Resources */,
 				FFF0A4DF2C1A0E6200057925 /* Urbanist-Regular.ttf in Resources */,
 				FFF0A4D82C1A0E6200057925 /* Urbanist-ExtraBold.ttf in Resources */,
+				FF91EA022C1D794300BA9A87 /* DeviceProfileListCell.xib in Resources */,
 				FFF0A4DD2C1A0E6200057925 /* Urbanist-Italic.ttf in Resources */,
 				FFD53DC82C18C074003CB232 /* Assets.xcassets in Resources */,
 				FFF0A4DE2C1A0E6200057925 /* Urbanist-SemiBold.ttf in Resources */,
@@ -457,18 +481,22 @@
 				FFF3F60B2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift in Sources */,
 				FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */,
 				FF409A2C2C1C9DBB0019CBD7 /* HomeListCell.swift in Sources */,
+				FF91E9FB2C1D783D00BA9A87 /* DeviceProfileVC.swift in Sources */,
 				FFF0A4F72C1A1CFF00057925 /* ConnectDeviceVC.swift in Sources */,
 				FFF0A4FB2C1B647100057925 /* Step2ConnectVC.swift in Sources */,
 				FFF0A5032C1B64A000057925 /* Step6ConnectVC.swift in Sources */,
 				FFF0A4F32C1A170F00057925 /* LoginVC.swift in Sources */,
 				FFF0A4FD2C1B648300057925 /* Step3ConnectVC.swift in Sources */,
+				FF91E9FD2C1D784F00BA9A87 /* DeviceViewVC.swift in Sources */,
 				FF91E9F12C1CB08700BA9A87 /* GenerateCodeVC.swift in Sources */,
+				FF91E9F92C1D72BB00BA9A87 /* MainViewController.swift in Sources */,
 				FF91E9F32C1CB4B500BA9A87 /* SideMenuVC.swift in Sources */,
 				FFF0A4EA2C1A10AF00057925 /* UIView+Extension.swift in Sources */,
 				FFF0A4F12C1A120300057925 /* Utilities.swift in Sources */,
 				FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */,
 				FF409A2F2C1CA21A0019CBD7 /* DeviceDetailVC.swift in Sources */,
 				FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */,
+				FF91EA012C1D794300BA9A87 /* DeviceProfileListCell.swift in Sources */,
 				FFF0A4FF2C1B648D00057925 /* Step4ConnectVC.swift in Sources */,
 				FFF0A4F92C1B646000057925 /* Step1ConnectVC.swift in Sources */,
 				FFF3F60F2C1B92E6000FC7B4 /* HomeVC.swift in Sources */,
