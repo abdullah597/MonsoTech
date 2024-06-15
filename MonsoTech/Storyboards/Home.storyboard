@@ -1066,6 +1066,9 @@
                             <constraint firstItem="T6A-Do-ylh" firstAttribute="leading" secondItem="oEx-ua-6L2" secondAttribute="leading" constant="24" id="xvT-xC-r5p"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainView" destination="EIK-cD-NaP" id="Mht-nE-3GP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6M-p2-TQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

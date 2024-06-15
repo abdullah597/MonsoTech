@@ -30,16 +30,16 @@
                                 <rect key="frame" x="10" y="10" width="44" height="44"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vergader mondriaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6C-j9-PV3">
-                                <rect key="frame" x="62" y="11.999999999999998" width="131" height="16.333333333333329"/>
+                                <rect key="frame" x="61.999999999999986" y="12" width="132.66666666666663" height="17"/>
                                 <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="14"/>
                                 <color key="textColor" name="TextBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKK-5s-4Ei">
-                                <rect key="frame" x="62" y="36.333333333333336" width="131" height="21.666666666666664"/>
+                                <rect key="frame" x="61.999999999999986" y="37" width="132.66666666666663" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="new power outage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQw-mK-mTi">
-                                        <rect key="frame" x="15" y="4.9999999999999991" width="83" height="11.666666666666664"/>
+                                        <rect key="frame" x="15" y="5" width="84.666666666666671" height="12"/>
                                         <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -59,6 +59,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhJ-IU-Uy3">
+                                <rect key="frame" x="0.0" y="0.0" width="328" height="162"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="openDetail:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ud4-3i-vVp"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="CuM-Bb-ey7">
                                 <rect key="frame" x="224" y="10" width="94" height="44"/>
                                 <subviews>
@@ -101,6 +108,9 @@
                                         <rect key="frame" x="50" y="0.0" width="44" height="44"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="settingIcon"/>
+                                        <connections>
+                                            <action selector="openSettings:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JQL-9Q-sz5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -109,11 +119,15 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="CuM-Bb-ey7" secondAttribute="trailing" constant="10" id="3QP-qK-ovf"/>
                             <constraint firstItem="Iaq-vO-Xvj" firstAttribute="top" secondItem="1P8-nn-wfp" secondAttribute="top" constant="10" id="7VH-6b-azq"/>
+                            <constraint firstItem="YhJ-IU-Uy3" firstAttribute="leading" secondItem="1P8-nn-wfp" secondAttribute="leading" id="8I0-WY-2Bs"/>
                             <constraint firstItem="p6C-j9-PV3" firstAttribute="top" secondItem="1P8-nn-wfp" secondAttribute="top" constant="12" id="MUb-yV-MrO"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Iaq-vO-Xvj" secondAttribute="bottom" constant="10" id="NjQ-yw-rgn"/>
                             <constraint firstItem="lKK-5s-4Ei" firstAttribute="top" secondItem="p6C-j9-PV3" secondAttribute="bottom" constant="8" id="Yjz-rO-YmS"/>
+                            <constraint firstAttribute="trailing" secondItem="YhJ-IU-Uy3" secondAttribute="trailing" id="bpU-QX-5UJ"/>
                             <constraint firstItem="CuM-Bb-ey7" firstAttribute="top" secondItem="1P8-nn-wfp" secondAttribute="top" constant="10" id="cKU-aN-3cU"/>
+                            <constraint firstItem="YhJ-IU-Uy3" firstAttribute="top" secondItem="1P8-nn-wfp" secondAttribute="top" id="eLz-7B-6i7"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CuM-Bb-ey7" secondAttribute="bottom" constant="10" id="iRA-O7-e5z"/>
+                            <constraint firstAttribute="bottom" secondItem="YhJ-IU-Uy3" secondAttribute="bottom" id="l6i-QK-H9j"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lKK-5s-4Ei" secondAttribute="bottom" constant="14" id="peb-6W-QM9"/>
                             <constraint firstItem="Iaq-vO-Xvj" firstAttribute="leading" secondItem="1P8-nn-wfp" secondAttribute="leading" constant="10" id="ulw-Xy-9q9"/>
                             <constraint firstItem="lKK-5s-4Ei" firstAttribute="trailing" secondItem="p6C-j9-PV3" secondAttribute="trailing" id="vf0-Q7-l0J"/>

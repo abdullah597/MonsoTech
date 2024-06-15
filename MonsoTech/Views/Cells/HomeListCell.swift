@@ -10,6 +10,8 @@ import UIKit
 protocol HomeListCellDelegate: AnyObject {
     func openProfilePage()
     func openViewPage()
+    func openSettings()
+    func openDetailPage()
 }
 
 class HomeListCell: UITableViewCell {
@@ -28,10 +30,16 @@ class HomeListCell: UITableViewCell {
         
     }
     
+    @IBAction func openDetail(_ sender: Any) {
+        self.delegate?.openDetailPage()
+    }
     @IBAction func profilePressed(_ sender: Any) {
         self.delegate?.openProfilePage()
     }
     @IBAction func viewButtonPressed(_ sender: Any) {
         self.delegate?.openViewPage()
+    }
+    @IBAction func openSettings(_ sender: Any) {
+        self.delegate?.openSettings()
     }
 }
