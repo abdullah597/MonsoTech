@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZfM-ik-nUJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZfM-ik-nUJ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -207,7 +207,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="beA-7j-6gb">
                                         <rect key="frame" x="15" y="16.666666666666657" width="18" height="15"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VSU-sc-OsJ">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ehtisham.badar@gmail.com" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VSU-sc-OsJ">
                                         <rect key="frame" x="52" y="12" width="277" height="24"/>
                                         <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -247,7 +247,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passIcon" translatesAutoresizingMaskIntoConstraints="NO" id="EJV-XD-lNm">
                                         <rect key="frame" x="15" y="14.666666666666686" width="14" height="19"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YqI-eH-oUR">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hashtag55@" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YqI-eH-oUR">
                                         <rect key="frame" x="48" y="12" width="250" height="24"/>
                                         <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -368,6 +368,10 @@
                             <constraint firstItem="bEh-bt-hLX" firstAttribute="leading" secondItem="cZb-pE-r1s" secondAttribute="leading" id="z0c-ZX-ZwR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="VSU-sc-OsJ" id="mud-Gk-OQo"/>
+                        <outlet property="passwordTF" destination="YqI-eH-oUR" id="mom-FH-i0F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJJ-p0-Icw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -804,7 +808,7 @@ Open the box to see what's inside.
 </string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="16" name="Urbanist-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -904,7 +908,7 @@ Open the box to see what's inside.
 One side of the product will contain a 5-character string, a 3-digit number, and a QR code.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="16" name="Urbanist-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -1015,7 +1019,7 @@ After a successful connection, the light will go out. The green light will then 
 The 5-year subscription will start when the device is connected to the network for the first time.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="16" name="Urbanist-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -1309,7 +1313,7 @@ How do you want to register the device?
 You have the possibility to do this with the QR code or manually with the 5-character string code and 3-digit number code on the enclosure.</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="16" name="Urbanist-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="16"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>

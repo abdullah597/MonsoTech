@@ -9,6 +9,8 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,9 +22,26 @@ class LoginVC: UIViewController {
         
     }
     @IBAction func login(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ConnectDeviceVC.self)) as? ConnectDeviceVC {
-            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ConnectDeviceVC.self)) as? ConnectDeviceVC {
+//            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+//        }
+        guard let email = emailTF.text, !email.isEmpty,
+              let password = passwordTF.text, !password.isEmpty else {
+            print("Please enter email and password")
+            return
+        }
+
+        LoginTokenManager.shared.getAccessToken(username: email, password: password) { token, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Login failed")
+                } else if let token = token {
+                    // Handle successful login, use the token
+                    print("Login successful, token: \(token)")
+                    // Proceed to the next screen or perform other actions
+                }
+            }
         }
     }
     @IBAction func signup(_ sender: Any) {
@@ -36,5 +55,26 @@ class LoginVC: UIViewController {
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ForgotPasswordVC.self)) as? ForgotPasswordVC {
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
+    }
+}
+import UIKit
+
+class LoginViewController: UIViewController {
+
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+       
+    }
+
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
 }
