@@ -1,0 +1,5 @@
+{
+  "client_id": "f3d17410-c9c7-4c78-b1ad-4c5d7e52df4a",
+  "redirect_uri": "msauth.com.monso.tech://auth",
+  "authority": "https://login.microsoftonline.com/84842931-5c83-48d8-a112-c19574b78849"
+}

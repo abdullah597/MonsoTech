@@ -1,20 +1,26 @@
 PODS:
   - DPOTPView (1.5.12)
   - IQKeyboardManager (6.5.19)
+  - MSAL (1.4.0):
+    - MSAL/app-lib (= 1.4.0)
+  - MSAL/app-lib (1.4.0)
 
 DEPENDENCIES:
   - DPOTPView
   - IQKeyboardManager
+  - MSAL
 
 SPEC REPOS:
   trunk:
     - DPOTPView
     - IQKeyboardManager
+    - MSAL
 
 SPEC CHECKSUMS:
   DPOTPView: 28d8a0a84a2ff4b1e4a7712065aba1cbb14e2704
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  MSAL: 63e26e0039aa4ff851efbf61266a21851375f506
 
-PODFILE CHECKSUM: 54048d0285f37caed43683938ec9b2945c6e5687
+PODFILE CHECKSUM: 61f3277924374bda297c2053c5f0dcaa0b65e321
 
 COCOAPODS: 1.14.3

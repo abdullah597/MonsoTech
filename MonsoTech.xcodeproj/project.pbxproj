@@ -14,6 +14,8 @@
 		FF409A2F2C1CA21A0019CBD7 /* DeviceDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF409A2E2C1CA21A0019CBD7 /* DeviceDetailVC.swift */; };
 		FF409A322C1CA3000019CBD7 /* DeviceDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF409A302C1CA3000019CBD7 /* DeviceDetailCell.swift */; };
 		FF409A332C1CA3000019CBD7 /* DeviceDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF409A312C1CA3000019CBD7 /* DeviceDetailCell.xib */; };
+		FF42442A2C22DC22001CD413 /* msalconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = FF4244292C22DC22001CD413 /* msalconfig.json */; };
+		FF42442E2C22DDB4001CD413 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42442D2C22DDB4001CD413 /* Constants.swift */; };
 		FF7937DD2C1B7E4C00182B7F /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */; };
 		FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */; };
 		FF91E9F12C1CB08700BA9A87 /* GenerateCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */; };
@@ -72,6 +74,9 @@
 		FF409A2E2C1CA21A0019CBD7 /* DeviceDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailVC.swift; sourceTree = "<group>"; };
 		FF409A302C1CA3000019CBD7 /* DeviceDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailCell.swift; sourceTree = "<group>"; };
 		FF409A312C1CA3000019CBD7 /* DeviceDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceDetailCell.xib; sourceTree = "<group>"; };
+		FF4244282C22DB56001CD413 /* MonsoTech.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MonsoTech.entitlements; sourceTree = "<group>"; };
+		FF4244292C22DC22001CD413 /* msalconfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = msalconfig.json; sourceTree = "<group>"; };
+		FF42442D2C22DDB4001CD413 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFailedVC.swift; sourceTree = "<group>"; };
 		FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCodeVC.swift; sourceTree = "<group>"; };
@@ -241,6 +246,7 @@
 		FFD53DBD2C18C072003CB232 /* MonsoTech */ = {
 			isa = PBXGroup;
 			children = (
+				FF4244282C22DB56001CD413 /* MonsoTech.entitlements */,
 				FFF0A4EF2C1A11F500057925 /* Extra Files */,
 				FFF0A4E82C1A109800057925 /* Extensions */,
 				FFF0A4C22C1A0E3C00057925 /* Resources */,
@@ -257,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				FFF0A4C32C1A0E4200057925 /* Fonts */,
+				FF42442D2C22DDB4001CD413 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -329,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				FFF0A4F02C1A120300057925 /* Utilities.swift */,
+				FF4244292C22DC22001CD413 /* msalconfig.json */,
 			);
 			path = "Extra Files";
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 			files = (
 				FFF0A4E72C1A0E6200057925 /* Urbanist-ExtraLightItalic.ttf in Resources */,
 				FFF3F60D2C1B92A5000FC7B4 /* Home.storyboard in Resources */,
+				FF42442A2C22DC22001CD413 /* msalconfig.json in Resources */,
 				FFF0A4E22C1A0E6200057925 /* Urbanist-Black.ttf in Resources */,
 				FFF0A4D92C1A0E6200057925 /* Urbanist-Thin.ttf in Resources */,
 				FFD53DCB2C18C074003CB232 /* LaunchScreen.storyboard in Resources */,
@@ -481,6 +490,7 @@
 				FF91E9FB2C1D783D00BA9A87 /* DeviceProfileVC.swift in Sources */,
 				FFF0A4F72C1A1CFF00057925 /* ConnectDeviceVC.swift in Sources */,
 				FFF0A4FB2C1B647100057925 /* Step2ConnectVC.swift in Sources */,
+				FF42442E2C22DDB4001CD413 /* Constants.swift in Sources */,
 				FFF0A5032C1B64A000057925 /* Step6ConnectVC.swift in Sources */,
 				FFF0A4F32C1A170F00057925 /* LoginVC.swift in Sources */,
 				FFF0A4FD2C1B648300057925 /* Step3ConnectVC.swift in Sources */,
@@ -572,7 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -626,7 +636,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -642,6 +652,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MonsoTech/MonsoTech.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -652,6 +663,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -659,9 +671,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.monso.tech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -671,6 +686,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MonsoTech/MonsoTech.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -681,6 +697,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -688,9 +705,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.monso.tech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

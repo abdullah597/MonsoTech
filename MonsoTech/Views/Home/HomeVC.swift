@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SideMenu
 
 class HomeVC: UIViewController {
     
