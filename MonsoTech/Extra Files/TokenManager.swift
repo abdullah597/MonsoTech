@@ -54,25 +54,25 @@ class TokenManager {
     }
 }
 
-
-import Foundation
-
 class LoginTokenManager {
     static let shared = LoginTokenManager()
     private init() {}
 
     func getAccessToken(username: String, password: String, completion: @escaping (String?, Error?) -> Void) {
-        let tenantID = "a5d5834c-d7ee-47a0-86b7-9d2f773bd347"
-        let clientID = "668b03dc-0873-4043-97ea-7c20dd41fc9b"
-        let clientSecret = "RoG8Q~y6F6ku-Nc5gtXiXJtW1OPSQ5.7hO_Tvbw1"
+        let tenantID = "a5d5834c-d7ee-47a0-86b7-9d2f773bd347" // Your Azure AD B2C tenant ID
+        let clientID = "668b03dc-0873-4043-97ea-7c20dd41fc9b" // Your Azure AD B2C client ID
+        let clientSecret = "RoG8Q~y6F6ku-Nc5gtXiXJtW1OPSQ5.7hO_Tvbw1" // Your Azure AD B2C client secret
         let scope = "https://graph.microsoft.com/.default"
         let authority = "https://monsotech.b2clogin.com/monsotech.onmicrosoft.com"
-        let policy = "B2C_1_signup-and-in" // Replace with your ROPC policy name
-        let url = URL(string: "\(authority)/oauth2/v2.0/token?p=\(policy)")!
+        let policy = "B2C_1_signup-and-in" // Replace with your Azure AD B2C policy name
+
+        let url = URL(string: "https://login.microsoftonline.com/\(tenantID)/oauth2/v2.0/token")!
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        let params = "client_id=\(clientID)&scope=\(scope)&client_secret=\(clientSecret)&grant_type=password&username=\(username)&password=\(password)"
+        let verifiedDomain = "monsotech.onmicrosoft.com"
+        var email = "\(username.components(separatedBy: "@").first ?? username)@\(verifiedDomain)"
+        let params = "client_id=\(clientID)&scope=\(scope)&client_secret=\(clientSecret)&grant_type=password&username=\(email)&password=\(password)"
         request.httpBody = params.data(using: .utf8)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         
@@ -110,3 +110,5 @@ class LoginTokenManager {
         task.resume()
     }
 }
+
+

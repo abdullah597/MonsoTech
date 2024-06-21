@@ -12,6 +12,7 @@ class UserManager {
     private init() {}
 
     func createUser(email: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
+        let tenantID = "a5d5834c-d7ee-47a0-86b7-9d2f773bd347"
         TokenManager.shared.getAccessToken { token, error in
             guard let token = token, error == nil else {
                 completion(false, error)
@@ -29,9 +30,16 @@ class UserManager {
 
             let userPayload: [String: Any] = [
                 "accountEnabled": true,
-                "displayName": email,
+                "displayName": email.components(separatedBy: "@").first ?? email,
                 "mailNickname": email.components(separatedBy: "@").first ?? email,
                 "userPrincipalName": userPrincipalName,
+                "identities": [
+                    [
+                        "signInType": "emailAddress",
+                        "issuer": "monsotech.onmicrosoft.com",
+                        "issuerAssignedId": email
+                    ]
+                ],
                 "passwordProfile": [
                     "forceChangePasswordNextSignIn": false,
                     "password": password

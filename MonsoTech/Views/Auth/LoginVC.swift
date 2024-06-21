@@ -57,24 +57,3 @@ class LoginVC: UIViewController {
         }
     }
 }
-import UIKit
-
-class LoginViewController: UIViewController {
-
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-       
-    }
-
-    func showAlert(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        self.present(alert, animated: true, completion: nil)
-    }
-}
