@@ -15,13 +15,14 @@ class SignupVC: UIViewController {
     @IBOutlet weak var lblError: UILabel!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     
+    @IBOutlet weak var termsLabel: UILabel!
     @IBOutlet weak var errorView: UIView!
     var applicationContext: MSALPublicClientApplication?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loader.isHidden = true
     }
-    
     @IBAction func back(_ sender: Any) {
         Utilities.shared.popViewController(currentViewController: self, animated: true)
     }

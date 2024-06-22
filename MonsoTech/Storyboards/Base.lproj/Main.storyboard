@@ -797,6 +797,7 @@
                         <outlet property="lblError" destination="9sJ-9k-tUX" id="V8l-Jk-bP2"/>
                         <outlet property="loader" destination="DXz-65-vtJ" id="a9L-nx-r0A"/>
                         <outlet property="passwordTF" destination="tCo-uA-iLZ" id="bgc-bM-w2Z"/>
+                        <outlet property="termsLabel" destination="a8H-Dg-lTE" id="NCc-Xm-xl9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRS-4I-XYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
