@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -180,6 +181,7 @@
                             <constraint firstItem="88T-MT-1Bz" firstAttribute="centerX" secondItem="uTc-qU-WiS" secondAttribute="centerX" id="vRc-xc-z4c"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="spy-qL-fJp"/>
                     <connections>
                         <outlet property="mainView" destination="qrC-s6-hkW" id="lx1-Ze-YR3"/>
                         <outlet property="sideMenuBtn" destination="QBH-D6-UrC" id="Kvc-p7-bIJ"/>
@@ -188,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="645-wp-UGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-582.44274809160299" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="344.27480916030532" y="-2.1126760563380285"/>
         </scene>
         <!--Device DetailVC-->
         <scene sceneID="mJ0-ry-Dkd">
@@ -331,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MeW-Zl-rX3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="213" y="-2"/>
+            <point key="canvasLocation" x="1139.6946564885495" y="-2.1126760563380285"/>
         </scene>
         <!--Generate CodeVC-->
         <scene sceneID="U33-jZ-5Il">
@@ -452,7 +454,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="651385" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PR0-Lb-HKh">
-                                <rect key="frame" x="24" y="323" width="345" height="68"/>
+                                <rect key="frame" x="24" y="323" width="345" height="67.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="56"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -486,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oC9-WG-Xqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858.77862595419845" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1785.4961832061067" y="-2.1126760563380285"/>
         </scene>
         <!--Side MenuVC-->
         <scene sceneID="pd8-fc-SOD">
@@ -648,14 +650,25 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpv-QY-v91">
+                                                <rect key="frame" x="0.0" y="0.0" width="252" height="56"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="logout:" destination="thp-hp-PPB" eventType="touchUpInside" id="cDj-tD-F2O"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="tIg-3H-GGR" firstAttribute="leading" secondItem="wV4-88-YB7" secondAttribute="trailing" constant="10" id="0oz-ic-5XH"/>
                                             <constraint firstItem="tIg-3H-GGR" firstAttribute="centerY" secondItem="wV4-88-YB7" secondAttribute="centerY" id="FbQ-OW-yeX"/>
+                                            <constraint firstItem="Gpv-QY-v91" firstAttribute="leading" secondItem="B3d-jd-wHA" secondAttribute="leading" id="H13-Om-zRn"/>
                                             <constraint firstItem="wV4-88-YB7" firstAttribute="top" secondItem="B3d-jd-wHA" secondAttribute="top" id="NrA-QY-ojw"/>
                                             <constraint firstAttribute="height" constant="56" id="Tvw-uA-tkb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gpv-QY-v91" secondAttribute="trailing" id="X2k-1Y-Ln5"/>
                                             <constraint firstItem="wV4-88-YB7" firstAttribute="leading" secondItem="B3d-jd-wHA" secondAttribute="leading" id="f8K-qP-b4a"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gpv-QY-v91" secondAttribute="bottom" id="gq4-ZU-bzq"/>
+                                            <constraint firstItem="Gpv-QY-v91" firstAttribute="top" secondItem="B3d-jd-wHA" secondAttribute="top" id="w0K-AV-lJd"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -686,7 +699,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ApH-yo-Jb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2475.5725190839694" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="3401.5267175572517" y="-6.3380281690140849"/>
         </scene>
         <!--Device ProfileVC-->
         <scene sceneID="qWD-ch-JXI">
@@ -828,7 +841,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e93-M3-JIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3173" y="-2"/>
+            <point key="canvasLocation" x="4098.4732824427483" y="-2.1126760563380285"/>
         </scene>
         <!--Device ViewVC-->
         <scene sceneID="nBt-sE-Uz9">
@@ -1057,7 +1070,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6M-p2-TQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3900" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="4826.7175572519081" y="-6.3380281690140849"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n8m-eq-Kxb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Jwn-Iy-W4r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Ov-S4-6Xf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Im5-ws-9jG" kind="relationship" relationship="rootViewController" id="DCM-Gq-XLf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7MZ-Zn-oTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-582.44274809160299" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>

@@ -18,6 +18,10 @@
 		FF409A332C1CA3000019CBD7 /* DeviceDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF409A312C1CA3000019CBD7 /* DeviceDetailCell.xib */; };
 		FF42442A2C22DC22001CD413 /* msalconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = FF4244292C22DC22001CD413 /* msalconfig.json */; };
 		FF42442E2C22DDB4001CD413 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42442D2C22DDB4001CD413 /* Constants.swift */; };
+		FF67B6FC2C269BA5008B7C77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B6FB2C269BA5008B7C77 /* User.swift */; };
+		FF67B6FE2C269BBC008B7C77 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B6FD2C269BBC008B7C77 /* UserDefaultManager.swift */; };
+		FF67B7002C26A0AD008B7C77 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B6FF2C26A0AD008B7C77 /* LaunchScreenViewController.swift */; };
+		FF67B7022C26A81C008B7C77 /* LoginNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B7012C26A81C008B7C77 /* LoginNavViewController.swift */; };
 		FF7937DD2C1B7E4C00182B7F /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */; };
 		FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */; };
 		FF91E9F12C1CB08700BA9A87 /* GenerateCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */; };
@@ -81,6 +85,10 @@
 		FF4244282C22DB56001CD413 /* MonsoTech.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MonsoTech.entitlements; sourceTree = "<group>"; };
 		FF4244292C22DC22001CD413 /* msalconfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = msalconfig.json; sourceTree = "<group>"; };
 		FF42442D2C22DDB4001CD413 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FF67B6FB2C269BA5008B7C77 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FF67B6FD2C269BBC008B7C77 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		FF67B6FF2C26A0AD008B7C77 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		FF67B7012C26A81C008B7C77 /* LoginNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavViewController.swift; sourceTree = "<group>"; };
 		FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFailedVC.swift; sourceTree = "<group>"; };
 		FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCodeVC.swift; sourceTree = "<group>"; };
@@ -171,6 +179,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		FF67B6FA2C269B9C008B7C77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF67B6FB2C269BA5008B7C77 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FF91E9F42C1CBC4A00BA9A87 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +221,8 @@
 				FF91E9F22C1CB4B500BA9A87 /* SideMenuVC.swift */,
 				FF91E9FA2C1D783D00BA9A87 /* DeviceProfileVC.swift */,
 				FF91E9FC2C1D784F00BA9A87 /* DeviceViewVC.swift */,
+				FF67B6FF2C26A0AD008B7C77 /* LaunchScreenViewController.swift */,
+				FF67B7012C26A81C008B7C77 /* LoginNavViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -250,6 +268,7 @@
 		FFD53DBD2C18C072003CB232 /* MonsoTech */ = {
 			isa = PBXGroup;
 			children = (
+				FF67B6FA2C269B9C008B7C77 /* Model */,
 				FF4244282C22DB56001CD413 /* MonsoTech.entitlements */,
 				FFF0A4EF2C1A11F500057925 /* Extra Files */,
 				FFF0A4E82C1A109800057925 /* Extensions */,
@@ -343,6 +362,7 @@
 				FF4244292C22DC22001CD413 /* msalconfig.json */,
 				7F2484852C25ADC300B84575 /* TokenManager.swift */,
 				7F2484872C25ADDE00B84575 /* UserManager.swift */,
+				FF67B6FD2C269BBC008B7C77 /* UserDefaultManager.swift */,
 			);
 			path = "Extra Files";
 			sourceTree = "<group>";
@@ -489,6 +509,7 @@
 				FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */,
 				FFF0A4F52C1A1B1C00057925 /* SignupVC.swift in Sources */,
 				FF2A2E9F2C1B814900433096 /* ConnectSlaveDeviceVC.swift in Sources */,
+				FF67B6FC2C269BA5008B7C77 /* User.swift in Sources */,
 				FF409A322C1CA3000019CBD7 /* DeviceDetailCell.swift in Sources */,
 				FFF3F60B2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift in Sources */,
 				FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */,
@@ -502,6 +523,7 @@
 				FFF0A4F32C1A170F00057925 /* LoginVC.swift in Sources */,
 				FFF0A4FD2C1B648300057925 /* Step3ConnectVC.swift in Sources */,
 				FF91E9FD2C1D784F00BA9A87 /* DeviceViewVC.swift in Sources */,
+				FF67B6FE2C269BBC008B7C77 /* UserDefaultManager.swift in Sources */,
 				FF91E9F12C1CB08700BA9A87 /* GenerateCodeVC.swift in Sources */,
 				7F2484882C25ADDE00B84575 /* UserManager.swift in Sources */,
 				FF91E9F32C1CB4B500BA9A87 /* SideMenuVC.swift in Sources */,
@@ -514,6 +536,8 @@
 				FFF0A4FF2C1B648D00057925 /* Step4ConnectVC.swift in Sources */,
 				FFF0A4F92C1B646000057925 /* Step1ConnectVC.swift in Sources */,
 				FFF3F60F2C1B92E6000FC7B4 /* HomeVC.swift in Sources */,
+				FF67B7002C26A0AD008B7C77 /* LaunchScreenViewController.swift in Sources */,
+				FF67B7022C26A81C008B7C77 /* LoginNavViewController.swift in Sources */,
 				FF7937DD2C1B7E4C00182B7F /* ForgotPasswordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

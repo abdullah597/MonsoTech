@@ -33,43 +33,44 @@ class HomeVC: UIViewController {
         registerNibs()
         setSideMenu()
         tableView.allowsSelection = true
+        sideMenuViewController.delegate = self
     }
     func setSideMenu() {
-            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
-            panGestureRecognizer.delegate = self
-            view.addGestureRecognizer(panGestureRecognizer)
-            
-            self.sideMenuShadowView = UIView(frame: self.view.bounds)
-            self.sideMenuShadowView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            self.sideMenuShadowView.backgroundColor = .black
-            self.sideMenuShadowView.alpha = 0.0
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TapGestureRecognizer))
-            tapGestureRecognizer.numberOfTapsRequired = 1
-            tapGestureRecognizer.delegate = self
-            view.addGestureRecognizer(tapGestureRecognizer)
-            
-            if self.revealSideMenuOnTop {
-                view.insertSubview(self.sideMenuShadowView, at: 1)
-            }
-            
-            let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
-            self.sideMenuViewController = storyboard.instantiateViewController(withIdentifier: "SideMenuVC") as? SideMenuVC
-            view.insertSubview(self.sideMenuViewController!.view, at: self.revealSideMenuOnTop ? 4 : 0)
-            addChild(self.sideMenuViewController!)
-            self.sideMenuViewController!.didMove(toParent: self)
-            
-            self.sideMenuViewController.view.translatesAutoresizingMaskIntoConstraints = false
-            
-            if self.revealSideMenuOnTop {
-                self.sideMenuTrailingConstraint = self.sideMenuViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -self.sideMenuRevealWidth - self.paddingForRotation)
-                self.sideMenuTrailingConstraint.isActive = true
-            }
-            NSLayoutConstraint.activate([
-                self.sideMenuViewController.view.widthAnchor.constraint(equalToConstant: self.sideMenuRevealWidth),
-                self.sideMenuViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-                self.sideMenuViewController.view.topAnchor.constraint(equalTo: view.topAnchor)
-            ])
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
+        panGestureRecognizer.delegate = self
+        view.addGestureRecognizer(panGestureRecognizer)
+        
+        self.sideMenuShadowView = UIView(frame: self.view.bounds)
+        self.sideMenuShadowView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.sideMenuShadowView.backgroundColor = .black
+        self.sideMenuShadowView.alpha = 0.0
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TapGestureRecognizer))
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        tapGestureRecognizer.delegate = self
+        view.addGestureRecognizer(tapGestureRecognizer)
+        
+        if self.revealSideMenuOnTop {
+            view.insertSubview(self.sideMenuShadowView, at: 1)
         }
+        
+        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
+        self.sideMenuViewController = storyboard.instantiateViewController(withIdentifier: "SideMenuVC") as? SideMenuVC
+        view.insertSubview(self.sideMenuViewController!.view, at: self.revealSideMenuOnTop ? 4 : 0)
+        addChild(self.sideMenuViewController!)
+        self.sideMenuViewController!.didMove(toParent: self)
+        
+        self.sideMenuViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        if self.revealSideMenuOnTop {
+            self.sideMenuTrailingConstraint = self.sideMenuViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -self.sideMenuRevealWidth - self.paddingForRotation)
+            self.sideMenuTrailingConstraint.isActive = true
+        }
+        NSLayoutConstraint.activate([
+            self.sideMenuViewController.view.widthAnchor.constraint(equalToConstant: self.sideMenuRevealWidth),
+            self.sideMenuViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            self.sideMenuViewController.view.topAnchor.constraint(equalTo: view.topAnchor)
+        ])
+    }
     
     func registerNibs() {
         self.tableView.register(UINib(nibName: String(describing: HomeListCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HomeListCell.self))
@@ -84,7 +85,7 @@ class HomeVC: UIViewController {
         }
     }
     @IBAction func notifications(_ sender: Any) {
-        
+        logout()
     }
 }
 
@@ -264,5 +265,25 @@ extension HomeVC: HomeListCellDelegate {
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: DeviceDetailVC.self)) as? DeviceDetailVC {
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
+    }
+}
+
+extension HomeVC: SideMenuDelegate {
+    func logout() {
+        let alert = UIAlertController(title: "Confirm Logout", message: "Are you sure you want to log out?", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        
+        let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { _ in
+            // Clear user data from UserDefaults
+            UserDefaults.standard.clearUser()
+            
+            let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: LoginNavViewController.self))
+            UIApplication.shared.keyWindow?.rootViewController = loginViewController
+        }
+        alert.addAction(logoutAction)
+        
+        present(alert, animated: true, completion: nil)
     }
 }

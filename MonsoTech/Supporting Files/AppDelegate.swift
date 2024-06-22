@@ -12,13 +12,12 @@ import MSAL
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
+    var window: UIWindow?
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return MSALPublicClientApplication.handleMSALResponse(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String)
     }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared().isEnabled = true
-        // Override point for customization after application launch.
         return true
     }
     

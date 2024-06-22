@@ -27,4 +27,28 @@ class Utilities {
     func popViewController(currentViewController: UIViewController, animated: Bool) {
         currentViewController.navigationController?.popViewController(animated: true)
     }
+    func showLoader(loader: UIActivityIndicatorView) {
+        loader.isHidden = false
+        loader.startAnimating()
+    }
+    func hideLoader(loader: UIActivityIndicatorView) {
+        loader.isHidden = true
+        loader.stopAnimating()
+    }
+}
+class AlertManager {
+    static let shared = AlertManager()
+    private init() {}
+    
+    func showAlert(on viewController: UIViewController, message: String, actionText: String, completion: @escaping () -> Void) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: actionText, style: .default) { _ in
+            completion()
+        }
+        
+        alertController.addAction(action)
+        
+        viewController.present(alertController, animated: true, completion: nil)
+    }
 }

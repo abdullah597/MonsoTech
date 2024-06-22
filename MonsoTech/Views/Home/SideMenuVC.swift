@@ -7,15 +7,17 @@
 
 import UIKit
 
-class SideMenuVC: UIViewController {
+protocol SideMenuDelegate: AnyObject {
+    func logout()
+}
 
-    @IBOutlet weak var blurView: UIView!
+class SideMenuVC: UIViewController {
+    weak var delegate: SideMenuDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissView))
-//        self.blurView.addGestureRecognizer(tap)
+        
     }
-    @objc func dismissView() {
-        self.dismiss(animated: true)
+    @IBAction func logout(_ sender: Any) {
+        self.delegate?.logout()
     }
 }
