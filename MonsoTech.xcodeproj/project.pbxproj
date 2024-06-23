@@ -22,6 +22,7 @@
 		FF67B6FE2C269BBC008B7C77 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B6FD2C269BBC008B7C77 /* UserDefaultManager.swift */; };
 		FF67B7002C26A0AD008B7C77 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B6FF2C26A0AD008B7C77 /* LaunchScreenViewController.swift */; };
 		FF67B7022C26A81C008B7C77 /* LoginNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B7012C26A81C008B7C77 /* LoginNavViewController.swift */; };
+		FF67B7042C28377D008B7C77 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B7032C28377D008B7C77 /* WebViewController.swift */; };
 		FF7937DD2C1B7E4C00182B7F /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */; };
 		FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */; };
 		FF91E9F12C1CB08700BA9A87 /* GenerateCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */; };
@@ -89,6 +90,7 @@
 		FF67B6FD2C269BBC008B7C77 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		FF67B6FF2C26A0AD008B7C77 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		FF67B7012C26A81C008B7C77 /* LoginNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavViewController.swift; sourceTree = "<group>"; };
+		FF67B7032C28377D008B7C77 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFailedVC.swift; sourceTree = "<group>"; };
 		FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCodeVC.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				FFF0A4F22C1A170F00057925 /* LoginVC.swift */,
 				FFF0A4F42C1A1B1C00057925 /* SignupVC.swift */,
 				FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */,
+				FF67B7032C28377D008B7C77 /* WebViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				FFF0A4F32C1A170F00057925 /* LoginVC.swift in Sources */,
 				FFF0A4FD2C1B648300057925 /* Step3ConnectVC.swift in Sources */,
 				FF91E9FD2C1D784F00BA9A87 /* DeviceViewVC.swift in Sources */,
+				FF67B7042C28377D008B7C77 /* WebViewController.swift in Sources */,
 				FF67B6FE2C269BBC008B7C77 /* UserDefaultManager.swift in Sources */,
 				FF91E9F12C1CB08700BA9A87 /* GenerateCodeVC.swift in Sources */,
 				7F2484882C25ADDE00B84575 /* UserManager.swift in Sources */,
