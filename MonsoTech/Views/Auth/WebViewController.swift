@@ -27,7 +27,7 @@ class WebViewController: UIViewController {
         }
         Utilities.shared.setTopCorners(view: mainView, radius: 30)
         Utilities.shared.setTopCorners(view: webView, radius: 30)
-
+        
         if let urlString = urlString, let url = URL(string: urlString) {
             webView.load(URLRequest(url: url))
         }

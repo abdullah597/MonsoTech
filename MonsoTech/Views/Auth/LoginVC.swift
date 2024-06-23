@@ -54,6 +54,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+        
     }
     func goToHome() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)

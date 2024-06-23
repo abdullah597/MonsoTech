@@ -63,6 +63,8 @@ class UserManager {
                 }
 
                 if httpResponse.statusCode == 201 {
+                    let user = User(email: email, token: token)
+                    UserDefaults.standard.saveUser(user)
                     completion(true, nil)
                 } else {
                     if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],

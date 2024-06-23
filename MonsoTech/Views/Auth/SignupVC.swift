@@ -63,14 +63,16 @@ class SignupVC: UIViewController {
     }
     func signUp(email: String, password: String) {
         UserManager.shared.createUser(email: email, password: password) { success, error in
-            Utilities.shared.hideLoader(loader: self.loader)
-            if success {
-                print("User created successfully")
-                self.goToHome()
-            } else {
-                print("Sign-up failed: \(error?.localizedDescription ?? "Unknown error")")
-                self.errorView.isHidden = false
-                self.lblError.text = "User doesn't exists, Please Signup to continue"
+            DispatchQueue.main.async {
+                Utilities.shared.hideLoader(loader: self.loader)
+                if success {
+                    print("User created successfully")
+                    self.goToHome()
+                } else {
+                    print("Sign-up failed: \(error?.localizedDescription ?? "Unknown error")")
+                    self.errorView.isHidden = false
+                    self.lblError.text = "User already exists, Please Login to continue"
+                }
             }
         }
     }
