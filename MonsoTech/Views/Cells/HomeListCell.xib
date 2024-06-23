@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -29,17 +30,24 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fireIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Iaq-vO-Xvj">
                                 <rect key="frame" x="10" y="10" width="44" height="44"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqZ-Q8-wxq">
+                                <rect key="frame" x="10" y="10" width="44" height="44"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="lighteningPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="frn-k8-27F"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vergader mondriaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6C-j9-PV3">
-                                <rect key="frame" x="61.999999999999986" y="12" width="132.66666666666663" height="17"/>
+                                <rect key="frame" x="62" y="11.999999999999998" width="131" height="16.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="14"/>
                                 <color key="textColor" name="TextBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKK-5s-4Ei">
-                                <rect key="frame" x="61.999999999999986" y="37" width="132.66666666666663" height="22"/>
+                                <rect key="frame" x="62" y="36.333333333333336" width="131" height="21.666666666666664"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="new power outage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQw-mK-mTi">
-                                        <rect key="frame" x="15" y="5" width="84.666666666666671" height="12"/>
+                                        <rect key="frame" x="15" y="4.9999999999999991" width="83" height="11.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -59,13 +67,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhJ-IU-Uy3">
-                                <rect key="frame" x="0.0" y="0.0" width="328" height="162"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <connections>
-                                    <action selector="openDetail:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ud4-3i-vVp"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="CuM-Bb-ey7">
                                 <rect key="frame" x="224" y="10" width="94" height="44"/>
                                 <subviews>
@@ -76,9 +77,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="eye"/>
-                                                <connections>
-                                                    <action selector="viewButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3eL-6Q-gGZ"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.059999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -100,9 +98,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="profileIcon"/>
-                                        <connections>
-                                            <action selector="profilePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="twz-Wt-xvx"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6o-Nz-1xK">
                                         <rect key="frame" x="50" y="0.0" width="44" height="44"/>
@@ -117,18 +112,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="YqZ-Q8-wxq" firstAttribute="bottom" secondItem="Iaq-vO-Xvj" secondAttribute="bottom" id="2Au-UT-vuT"/>
                             <constraint firstAttribute="trailing" secondItem="CuM-Bb-ey7" secondAttribute="trailing" constant="10" id="3QP-qK-ovf"/>
                             <constraint firstItem="Iaq-vO-Xvj" firstAttribute="top" secondItem="1P8-nn-wfp" secondAttribute="top" constant="10" id="7VH-6b-azq"/>
-                            <constraint firstItem="YhJ-IU-Uy3" firstAttribute="leading" secondItem="1P8-nn-wfp" secondAttribute="leading" id="8I0-WY-2Bs"/>
+                            <constraint firstItem="YqZ-Q8-wxq" firstAttribute="top" secondItem="Iaq-vO-Xvj" secondAttribute="top" id="9Fe-Nb-zwp"/>
                             <constraint firstItem="p6C-j9-PV3" firstAttribute="top" secondItem="1P8-nn-wfp" secondAttribute="top" constant="12" id="MUb-yV-MrO"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Iaq-vO-Xvj" secondAttribute="bottom" constant="10" id="NjQ-yw-rgn"/>
                             <constraint firstItem="lKK-5s-4Ei" firstAttribute="top" secondItem="p6C-j9-PV3" secondAttribute="bottom" constant="8" id="Yjz-rO-YmS"/>
-                            <constraint firstAttribute="trailing" secondItem="YhJ-IU-Uy3" secondAttribute="trailing" id="bpU-QX-5UJ"/>
                             <constraint firstItem="CuM-Bb-ey7" firstAttribute="top" secondItem="1P8-nn-wfp" secondAttribute="top" constant="10" id="cKU-aN-3cU"/>
-                            <constraint firstItem="YhJ-IU-Uy3" firstAttribute="top" secondItem="1P8-nn-wfp" secondAttribute="top" id="eLz-7B-6i7"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CuM-Bb-ey7" secondAttribute="bottom" constant="10" id="iRA-O7-e5z"/>
-                            <constraint firstAttribute="bottom" secondItem="YhJ-IU-Uy3" secondAttribute="bottom" id="l6i-QK-H9j"/>
+                            <constraint firstItem="YqZ-Q8-wxq" firstAttribute="leading" secondItem="Iaq-vO-Xvj" secondAttribute="leading" id="lIm-ly-NMZ"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lKK-5s-4Ei" secondAttribute="bottom" constant="14" id="peb-6W-QM9"/>
+                            <constraint firstItem="YqZ-Q8-wxq" firstAttribute="trailing" secondItem="Iaq-vO-Xvj" secondAttribute="trailing" id="tqM-kg-RID"/>
                             <constraint firstItem="Iaq-vO-Xvj" firstAttribute="leading" secondItem="1P8-nn-wfp" secondAttribute="leading" constant="10" id="ulw-Xy-9q9"/>
                             <constraint firstItem="lKK-5s-4Ei" firstAttribute="trailing" secondItem="p6C-j9-PV3" secondAttribute="trailing" id="vf0-Q7-l0J"/>
                             <constraint firstItem="lKK-5s-4Ei" firstAttribute="leading" secondItem="p6C-j9-PV3" secondAttribute="leading" id="wUM-wo-hJv"/>
@@ -163,6 +158,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bottomView" destination="lKK-5s-4Ei" id="ewf-mE-h9k"/>
+                <outlet property="lblDetail" destination="FQw-mK-mTi" id="gXF-OL-5LF"/>
                 <outlet property="profileButton" destination="jh3-e6-ipw" id="OWe-3l-OKi"/>
                 <outlet property="viewButton" destination="GWT-Tw-cFL" id="HPN-YE-u42"/>
             </connections>

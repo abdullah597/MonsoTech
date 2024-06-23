@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import DPOTPView
 
 class ConnectYourDeviceVC: UIViewController {
 
+    @IBOutlet weak var digitTF: DPOTPView!
+    @IBOutlet weak var characterStringTF: DPOTPView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        characterStringTF.keyboardType = .alphabet
     }
     @IBAction func back(_ sender: Any) {
         Utilities.shared.popViewController(currentViewController: self, animated: true)

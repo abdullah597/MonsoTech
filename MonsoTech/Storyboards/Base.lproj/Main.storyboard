@@ -701,7 +701,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZpT-Xe-nx4">
-                                <rect key="frame" x="24" y="341.33333333333331" width="345" height="188.66666666666669"/>
+                                <rect key="frame" x="24" y="341.33333333333331" width="345" height="178.99999999999994"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wla-RX-Oee">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="48"/>
@@ -748,7 +748,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QjG-iv-eC4">
-                                        <rect key="frame" x="0.0" y="64" width="345" height="124.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="64" width="345" height="115"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="86K-nU-lcI">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="17"/>
@@ -809,20 +809,46 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tEI-Uv-Bn6">
-                                                <rect key="frame" x="0.0" y="91" width="345" height="33.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="91" width="345" height="24"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Oso-dQ-AEd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMZ-Ph-M9Z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Oso-dQ-AEd">
+                                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="GlO-s0-NaN"/>
+                                                                    <constraint firstAttribute="width" constant="24" id="exU-X5-ED1"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to the company Term of Service and Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8H-Dg-lTE">
+                                                                <rect key="frame" x="32" y="-4.6666666666666288" width="313" height="33.666666666666664"/>
+                                                                <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="14"/>
+                                                                <color key="textColor" name="ButtonGreyColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u69-dw-U5q">
+                                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="agree:" destination="KHY-DY-QlZ" eventType="touchUpInside" id="qi5-2N-2hb"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="24" id="exU-X5-ED1"/>
+                                                            <constraint firstItem="a8H-Dg-lTE" firstAttribute="centerY" secondItem="Oso-dQ-AEd" secondAttribute="centerY" id="0Yc-vz-ZZc"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Oso-dQ-AEd" secondAttribute="bottom" id="EiQ-Kg-lXb"/>
+                                                            <constraint firstItem="u69-dw-U5q" firstAttribute="top" secondItem="Oso-dQ-AEd" secondAttribute="top" id="Mjp-tc-nBT"/>
+                                                            <constraint firstItem="u69-dw-U5q" firstAttribute="trailing" secondItem="Oso-dQ-AEd" secondAttribute="trailing" id="Npf-KZ-dDA"/>
+                                                            <constraint firstItem="u69-dw-U5q" firstAttribute="leading" secondItem="Oso-dQ-AEd" secondAttribute="leading" id="YTV-Qa-gai"/>
+                                                            <constraint firstItem="Oso-dQ-AEd" firstAttribute="top" secondItem="dMZ-Ph-M9Z" secondAttribute="top" id="e8e-JI-mLM"/>
+                                                            <constraint firstItem="a8H-Dg-lTE" firstAttribute="leading" secondItem="Oso-dQ-AEd" secondAttribute="trailing" constant="8" id="eOr-9g-tyr"/>
+                                                            <constraint firstItem="Oso-dQ-AEd" firstAttribute="leading" secondItem="dMZ-Ph-M9Z" secondAttribute="leading" id="jN9-rL-1Sb"/>
+                                                            <constraint firstItem="u69-dw-U5q" firstAttribute="bottom" secondItem="Oso-dQ-AEd" secondAttribute="bottom" id="n6q-YC-gTA"/>
+                                                            <constraint firstAttribute="trailing" secondItem="a8H-Dg-lTE" secondAttribute="trailing" id="t9q-DD-KxU"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to the company Term of Service and Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8H-Dg-lTE">
-                                                        <rect key="frame" x="32" y="0.0" width="313" height="33.666666666666664"/>
-                                                        <fontDescription key="fontDescription" name="Urbanist-Medium" family="Urbanist" pointSize="14"/>
-                                                        <color key="textColor" name="ButtonGreyColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -1247,7 +1273,7 @@ The 5-year subscription will start when the device is connected to the network f
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Next Step">
+                                <state key="normal" title="Go To Devices">
                                     <color key="titleColor" name="AppColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1389,6 +1415,9 @@ The 5-year subscription will start when the device is connected to the network f
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal1" translatesAutoresizingMaskIntoConstraints="NO" id="YS0-wh-PMU">
                                 <rect key="frame" x="18" y="0.0" width="375" height="366.33333333333331"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal2" translatesAutoresizingMaskIntoConstraints="NO" id="SgO-Jj-Iv7">
+                                <rect key="frame" x="0.0" y="471" width="353" height="381"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOC-EZ-rSg">
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1423,7 +1452,7 @@ The 5-year subscription will start when the device is connected to the network f
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Next Step">
+                                <state key="normal" title="Previous Step">
                                     <color key="titleColor" name="AppColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1432,21 +1461,36 @@ The 5-year subscription will start when the device is connected to the network f
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="next:" destination="ORM-Se-o03" eventType="touchUpInside" id="Uv9-f2-SF7"/>
+                                    <action selector="previousStep:" destination="ORM-Se-o03" eventType="touchUpInside" id="Puo-8d-jV7"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikp-Qv-h2I">
                                 <rect key="frame" x="24" y="276.33333333333326" width="345" height="443.66666666666674"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTE-Lr-RXW">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="443.66666666666669"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Click to complete QR scan ( it is just to complete UI)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="next:" destination="ORM-Se-o03" eventType="touchUpInside" id="YZs-fS-AOk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="TTE-Lr-RXW" secondAttribute="trailing" id="KcJ-lt-9bf"/>
+                                    <constraint firstAttribute="bottom" secondItem="TTE-Lr-RXW" secondAttribute="bottom" id="gNK-Ib-cFb"/>
+                                    <constraint firstItem="TTE-Lr-RXW" firstAttribute="top" secondItem="ikp-Qv-h2I" secondAttribute="top" id="tFN-02-kOP"/>
+                                    <constraint firstItem="TTE-Lr-RXW" firstAttribute="leading" secondItem="ikp-Qv-h2I" secondAttribute="leading" id="vmJ-QL-Mzj"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal2" translatesAutoresizingMaskIntoConstraints="NO" id="SgO-Jj-Iv7">
-                                <rect key="frame" x="0.0" y="471" width="353" height="381"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XjK-wf-UOx"/>
                         <color key="backgroundColor" name="AppColor"/>
@@ -1493,6 +1537,12 @@ The 5-year subscription will start when the device is connected to the network f
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal1" translatesAutoresizingMaskIntoConstraints="NO" id="tds-2Z-BB0">
                                 <rect key="frame" x="18" y="0.0" width="375" height="366.33333333333331"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrCode" translatesAutoresizingMaskIntoConstraints="NO" id="3FV-wf-TxP">
+                                <rect key="frame" x="134.66666666666666" y="403" width="123.99999999999997" height="124"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal2" translatesAutoresizingMaskIntoConstraints="NO" id="xrS-0f-5Ez">
+                                <rect key="frame" x="0.0" y="471" width="352.33333333333331" height="381"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMm-H7-Qlj">
                                 <rect key="frame" x="24" y="93" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1527,46 +1577,66 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-9v-tJJ">
-                                <rect key="frame" x="24" y="756" width="345" height="56"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="109-QK-Ndd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Next Step">
-                                    <color key="titleColor" name="AppColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="next:" destination="JdS-7v-AaJ" eventType="touchUpInside" id="yJ7-E3-EWj"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrCode" translatesAutoresizingMaskIntoConstraints="NO" id="3FV-wf-TxP">
-                                <rect key="frame" x="134.66666666666666" y="403" width="123.99999999999997" height="124"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal2" translatesAutoresizingMaskIntoConstraints="NO" id="xrS-0f-5Ez">
-                                <rect key="frame" x="0.0" y="471" width="353" height="381"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ue9-w3-Cek">
+                                <rect key="frame" x="24" y="685" width="345" height="127"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGC-9v-tJJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="109-QK-Ndd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="QR Code">
+                                            <color key="titleColor" name="AppColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="qrCode:" destination="JdS-7v-AaJ" eventType="touchUpInside" id="Tdr-i2-pa5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAT-f5-H4t">
+                                        <rect key="frame" x="0.0" y="71" width="345" height="56"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="vJg-i6-ui1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Manually">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="manually:" destination="JdS-7v-AaJ" eventType="touchUpInside" id="Dp9-uX-U3s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CWF-c4-eMV"/>
                         <color key="backgroundColor" name="AppColor"/>
                         <constraints>
-                            <constraint firstItem="eGC-9v-tJJ" firstAttribute="leading" secondItem="CWF-c4-eMV" secondAttribute="leading" constant="24" id="00a-Zd-19r"/>
                             <constraint firstItem="xrS-0f-5Ez" firstAttribute="leading" secondItem="CWF-c4-eMV" secondAttribute="leading" id="0sM-u7-T0i"/>
+                            <constraint firstAttribute="bottom" secondItem="ue9-w3-Cek" secondAttribute="bottom" constant="40" id="14h-zP-b7d"/>
                             <constraint firstItem="CWF-c4-eMV" firstAttribute="trailing" secondItem="hD9-ag-GOn" secondAttribute="trailing" constant="32" id="1Y1-ka-q3q"/>
                             <constraint firstItem="hD9-ag-GOn" firstAttribute="top" secondItem="G4A-IP-gSE" secondAttribute="bottom" constant="36" id="9ch-Au-jvv"/>
                             <constraint firstItem="G4A-IP-gSE" firstAttribute="top" secondItem="moH-Pd-OcT" secondAttribute="bottom" constant="36" id="BO5-Vo-vTb"/>
                             <constraint firstItem="hD9-ag-GOn" firstAttribute="leading" secondItem="CWF-c4-eMV" secondAttribute="leading" constant="32" id="EMs-er-zb1"/>
                             <constraint firstAttribute="bottom" secondItem="xrS-0f-5Ez" secondAttribute="bottom" id="EUE-cP-qdV"/>
+                            <constraint firstItem="ue9-w3-Cek" firstAttribute="leading" secondItem="CWF-c4-eMV" secondAttribute="leading" constant="24" id="Ec2-R1-EVd"/>
+                            <constraint firstItem="CWF-c4-eMV" firstAttribute="trailing" secondItem="ue9-w3-Cek" secondAttribute="trailing" constant="24" id="JmT-wW-QXT"/>
                             <constraint firstItem="DMm-H7-Qlj" firstAttribute="top" secondItem="CWF-c4-eMV" secondAttribute="top" constant="34" id="Nug-fo-Oh6"/>
                             <constraint firstItem="3FV-wf-TxP" firstAttribute="top" secondItem="hD9-ag-GOn" secondAttribute="bottom" constant="29" id="T7Z-tX-BTa"/>
-                            <constraint firstAttribute="trailing" secondItem="eGC-9v-tJJ" secondAttribute="trailing" constant="24" id="UV2-el-MsM"/>
                             <constraint firstItem="moH-Pd-OcT" firstAttribute="centerX" secondItem="LWX-ck-9Jb" secondAttribute="centerX" id="btJ-he-XBP"/>
                             <constraint firstItem="tds-2Z-BB0" firstAttribute="top" secondItem="LWX-ck-9Jb" secondAttribute="top" id="goo-if-Tvj"/>
                             <constraint firstAttribute="trailing" secondItem="tds-2Z-BB0" secondAttribute="trailing" id="iMO-eW-9A6"/>
@@ -1574,7 +1644,6 @@ You have the possibility to do this with the QR code or manually with the 5-char
                             <constraint firstItem="G4A-IP-gSE" firstAttribute="leading" secondItem="CWF-c4-eMV" secondAttribute="leading" constant="24" id="iqS-ZT-yUm"/>
                             <constraint firstItem="CWF-c4-eMV" firstAttribute="trailing" secondItem="G4A-IP-gSE" secondAttribute="trailing" constant="24" id="oDT-40-6uE"/>
                             <constraint firstItem="DMm-H7-Qlj" firstAttribute="leading" secondItem="CWF-c4-eMV" secondAttribute="leading" constant="24" id="uXd-k6-Av0"/>
-                            <constraint firstAttribute="bottom" secondItem="eGC-9v-tJJ" secondAttribute="bottom" constant="40" id="ujy-Kh-es6"/>
                             <constraint firstItem="moH-Pd-OcT" firstAttribute="centerY" secondItem="DMm-H7-Qlj" secondAttribute="centerY" id="zXP-PT-fXx"/>
                         </constraints>
                     </view>
@@ -1962,7 +2031,7 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Your Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tII-3G-Bvp">
-                                <rect key="frame" x="103.66666666666669" y="93" width="186" height="24"/>
+                                <rect key="frame" x="103.66666666666667" y="93" width="185.66666666666663" height="24"/>
                                 <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1971,7 +2040,7 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                 <rect key="frame" x="24" y="153" width="345" height="32"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZU-n9-Iuk">
-                                <rect key="frame" x="24" y="445" width="345" height="56"/>
+                                <rect key="frame" x="24" y="442.33333333333331" width="345" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="fTf-8l-qBZ"/>
@@ -1991,13 +2060,13 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 5  character string" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfG-aR-5BP">
-                                <rect key="frame" x="24" y="215" width="345" height="20"/>
+                                <rect key="frame" x="24" y="215" width="345" height="18.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnj-Uq-c00" customClass="DPOTPView" customModule="DPOTPView">
-                                <rect key="frame" x="24" y="245" width="345" height="52"/>
+                                <rect key="frame" x="24" y="243.66666666666663" width="345" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="ghL-aF-QxS"/>
@@ -2033,13 +2102,13 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 3 digit number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtX-E1-jzY">
-                                <rect key="frame" x="24" y="317" width="345" height="20"/>
+                                <rect key="frame" x="24" y="315.66666666666669" width="345" height="18.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="570-wf-IFO" customClass="DPOTPView" customModule="DPOTPView">
-                                <rect key="frame" x="93" y="347" width="207" height="52"/>
+                                <rect key="frame" x="93" y="344.33333333333331" width="207" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Xgf-ne-dgd"/>
@@ -2106,6 +2175,10 @@ You have the possibility to do this with the QR code or manually with the 5-char
                             <constraint firstItem="gnj-Uq-c00" firstAttribute="top" secondItem="KfG-aR-5BP" secondAttribute="bottom" constant="10" id="znQ-b4-1VF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="characterStringTF" destination="gnj-Uq-c00" id="bS8-oB-1ec"/>
+                        <outlet property="digitTF" destination="570-wf-IFO" id="jQ0-AX-sg2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igV-r0-c5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

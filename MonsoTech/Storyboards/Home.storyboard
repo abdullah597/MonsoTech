@@ -836,6 +836,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mainView" destination="D5Q-cE-ldg" id="U6b-vI-6Wk"/>
                         <outlet property="tableView" destination="A4X-VY-bfS" id="qp6-jf-9rM"/>
                     </connections>
                 </viewController>

@@ -11,9 +11,12 @@ class DeviceProfileVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var mainView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
+        Utilities.shared.setTopCorners(view: mainView, radius: 30)
+
     }
     func registerNibs() {
         self.tableView.register(UINib(nibName: String(describing: DeviceProfileListCell.self), bundle: nil), forCellReuseIdentifier: String(describing: DeviceProfileListCell.self))

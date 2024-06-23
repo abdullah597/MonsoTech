@@ -80,29 +80,33 @@ class HomeVC: UIViewController {
     }
     @IBAction func connectDevice(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: Step1ConnectVC.self)) as? Step1ConnectVC {
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ConnectDeviceVC.self)) as? ConnectDeviceVC {
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }
     @IBAction func notifications(_ sender: Any) {
-        logout()
+        
     }
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeListCell.self)) as? HomeListCell else { return UITableViewCell() }
         cell.delegate = self
-        if indexPath.row % 2 == 0 {
+        if indexPath.row % 2 != 0 {
             cell.viewButton.isHidden = false
             cell.profileButton.isHidden = true
+            cell.bottomView.backgroundColor = UIColor.hexStringToUIColor(hex: "D9F2D9")
+            cell.lblDetail.text = "4 events in the past"
         } else {
             cell.viewButton.isHidden = true
             cell.profileButton.isHidden = false
+            cell.bottomView.backgroundColor = UIColor.hexStringToUIColor(hex: "F2D9D9")
+            cell.lblDetail.text = "new power outage"
         }
         return cell
     }

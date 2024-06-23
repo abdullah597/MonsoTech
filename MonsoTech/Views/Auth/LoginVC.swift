@@ -31,34 +31,34 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         hideShowBtn.setImage(UIImage(named: imageName), for: .normal)
     }
     @IBAction func login(_ sender: Any) {
-        Utilities.shared.showLoader(loader: loader)
-        guard let email = emailTF.text, !email.isEmpty,
-              let password = passwordTF.text, !password.isEmpty else {
-            self.errorView.isHidden = false
-            self.lblError.text = "Please enter email and password"
-            Utilities.shared.hideLoader(loader: loader)
-            return
-        }
-        LoginTokenManager.shared.getAccessToken(username: email, password: password) { token, error in
-            DispatchQueue.main.async {
-                Utilities.shared.hideLoader(loader: self.loader)
-                if let error = error {
-                    print("Login failed \(error.localizedDescription)")
-                    self.errorView.isHidden = false
-                    self.lblError.text = "User doesn't exists, Please Signup to continue"
-                } else if let token = token {
-                    print("Login successful, token: \(token)")
-                    let user = User(email: email, token: token)
-                    UserDefaults.standard.saveUser(user)
-                    self.goToHome()
-                }
-            }
-        }
-        
+//        Utilities.shared.showLoader(loader: loader)
+//        guard let email = emailTF.text, !email.isEmpty,
+//              let password = passwordTF.text, !password.isEmpty else {
+//            self.errorView.isHidden = false
+//            self.lblError.text = "Please enter email and password"
+//            Utilities.shared.hideLoader(loader: loader)
+//            return
+//        }
+//        LoginTokenManager.shared.getAccessToken(username: email, password: password) { token, error in
+//            DispatchQueue.main.async {
+//                Utilities.shared.hideLoader(loader: self.loader)
+//                if let error = error {
+//                    print("Login failed \(error.localizedDescription)")
+//                    self.errorView.isHidden = false
+//                    self.lblError.text = "User doesn't exists, Please Signup to continue"
+//                } else if let token = token {
+//                    print("Login successful, token: \(token)")
+//                    let user = User(email: email, token: token)
+//                    UserDefaults.standard.saveUser(user)
+//                    self.goToHome()
+//                }
+//            }
+//        }
+        goToHome()
     }
     func goToHome() {
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: HomeVC.self)) as? HomeVC {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ConnectDeviceVC.self)) as? ConnectDeviceVC {
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }

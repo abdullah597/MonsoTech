@@ -18,7 +18,9 @@ class HomeListCell: UITableViewCell {
     
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var viewButton: UIView!
+    @IBOutlet weak var bottomView: UIView!
     
+    @IBOutlet weak var lblDetail: UILabel!
     weak var delegate: HomeListCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,16 +32,23 @@ class HomeListCell: UITableViewCell {
         
     }
     
-    @IBAction func openDetail(_ sender: Any) {
-        self.delegate?.openDetailPage()
-    }
-    @IBAction func profilePressed(_ sender: Any) {
+    @IBAction func lighteningPressed(_ sender: Any) {
         self.delegate?.openProfilePage()
     }
+    @IBAction func openDetail(_ sender: Any) {
+       // self.delegate?.openDetailPage()
+    }
+    @IBAction func profilePressed(_ sender: Any) {
+        //self.delegate?.openProfilePage()
+    }
     @IBAction func viewButtonPressed(_ sender: Any) {
-        self.delegate?.openViewPage()
+        //self.delegate?.openViewPage()
     }
     @IBAction func openSettings(_ sender: Any) {
-        self.delegate?.openSettings()
+        if viewButton.isHidden == true {
+            self.delegate?.openDetailPage()
+        } else {
+            self.delegate?.openViewPage()
+        }
     }
 }

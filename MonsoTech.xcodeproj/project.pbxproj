@@ -24,6 +24,7 @@
 		FF67B7022C26A81C008B7C77 /* LoginNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B7012C26A81C008B7C77 /* LoginNavViewController.swift */; };
 		FF67B7042C28377D008B7C77 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B7032C28377D008B7C77 /* WebViewController.swift */; };
 		FF67B7072C283FAB008B7C77 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B7062C283FAB008B7C77 /* APIManager.swift */; };
+		FF67B7092C288562008B7C77 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B7082C288562008B7C77 /* UIColor+Extensions.swift */; };
 		FF7937DD2C1B7E4C00182B7F /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */; };
 		FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */; };
 		FF91E9F12C1CB08700BA9A87 /* GenerateCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */; };
@@ -93,6 +94,7 @@
 		FF67B7012C26A81C008B7C77 /* LoginNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavViewController.swift; sourceTree = "<group>"; };
 		FF67B7032C28377D008B7C77 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		FF67B7062C283FAB008B7C77 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		FF67B7082C288562008B7C77 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		FF7937DC2C1B7E4C00182B7F /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		FF85F3B92C1B8CB800C78760 /* ConnectFailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFailedVC.swift; sourceTree = "<group>"; };
 		FF91E9F02C1CB08700BA9A87 /* GenerateCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCodeVC.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				FFF0A4E92C1A10AF00057925 /* UIView+Extension.swift */,
+				FF67B7082C288562008B7C77 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF0A5012C1B649800057925 /* Step5ConnectVC.swift in Sources */,
+				FF67B7092C288562008B7C77 /* UIColor+Extensions.swift in Sources */,
 				FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */,
 				FFF0A4F52C1A1B1C00057925 /* SignupVC.swift in Sources */,
 				FF2A2E9F2C1B814900433096 /* ConnectSlaveDeviceVC.swift in Sources */,

@@ -39,15 +39,16 @@ class SignupVC: UIViewController {
     }
     
     @IBAction func signup(_ sender: Any) {
-        Utilities.shared.showLoader(loader: loader)
-        guard let email = emailTF.text, !email.isEmpty,
-              let password = passwordTF.text, !password.isEmpty else {
-            self.errorView.isHidden = false
-            self.lblError.text = "Please enter email and password"
-            Utilities.shared.hideLoader(loader: loader)
-            return
-        }
-        signUp(email: email, password: password)
+//        Utilities.shared.showLoader(loader: loader)
+//        guard let email = emailTF.text, !email.isEmpty,
+//              let password = passwordTF.text, !password.isEmpty else {
+//            self.errorView.isHidden = false
+//            self.lblError.text = "Please enter email and password"
+//            Utilities.shared.hideLoader(loader: loader)
+//            return
+//        }
+//        signUp(email: email, password: password)
+        goToHome()
     }
     
     @IBAction func hideShowPassword(_ sender: Any) {
@@ -60,6 +61,9 @@ class SignupVC: UIViewController {
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: LoginVC.self)) as? LoginVC {
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
+    }
+    @IBAction func agree(_ sender: Any) {
+        
     }
     func signUp(email: String, password: String) {
         UserManager.shared.createUser(email: email, password: password) { success, error in
@@ -120,11 +124,11 @@ extension SignupVC {
         let privacyRange = (fullText as NSString).range(of: privacyText)
         
         // Set default color for the whole text
-        attributedString.addAttribute(.foregroundColor, value: UIColor.gray, range: fullRange)
+        attributedString.addAttribute(.foregroundColor, value: UIColor.textGreyColor, range: fullRange)
         
         // Set color for "Term of Service" and "Privacy Policy"
-        attributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: termsRange)
-        attributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: privacyRange)
+        attributedString.addAttribute(.foregroundColor, value: UIColor.appColor, range: termsRange)
+        attributedString.addAttribute(.foregroundColor, value: UIColor.appColor, range: privacyRange)
         
         // Set attributed text to the label
         termsLabel.attributedText = attributedString
