@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -38,9 +39,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-7o-0Iw">
                         <rect key="frame" x="24" y="27" width="398" height="48"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Power P100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPW-wn-K9t">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power P100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPW-wn-K9t">
                                 <rect key="frame" x="12" y="12" width="374" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,6 +48,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LPW-wn-K9t" firstAttribute="top" secondItem="Sgc-7o-0Iw" secondAttribute="top" constant="12" id="EvK-f6-Ec6"/>
+                            <constraint firstAttribute="bottom" secondItem="LPW-wn-K9t" secondAttribute="bottom" constant="12" id="ceQ-lV-flo"/>
+                            <constraint firstItem="LPW-wn-K9t" firstAttribute="leading" secondItem="Sgc-7o-0Iw" secondAttribute="leading" constant="12" id="vJw-FA-0cC"/>
+                            <constraint firstAttribute="trailing" secondItem="LPW-wn-K9t" secondAttribute="trailing" constant="12" id="wbY-C4-dHJ"/>
                             <constraint firstAttribute="height" constant="48" id="ybl-Cn-bzp"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -106,17 +110,19 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVF-Of-gNW">
                         <rect key="frame" x="24" y="116" width="398" height="48"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3L-XC-2Zq">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0VA-hx-tCN">
                                 <rect key="frame" x="12" y="12" width="374" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0VA-hx-tCN" firstAttribute="leading" secondItem="MVF-Of-gNW" secondAttribute="leading" constant="12" id="UTH-g0-6LC"/>
                             <constraint firstAttribute="height" constant="48" id="WjD-SA-4tJ"/>
+                            <constraint firstAttribute="bottom" secondItem="0VA-hx-tCN" secondAttribute="bottom" constant="12" id="X8a-c4-odG"/>
+                            <constraint firstItem="0VA-hx-tCN" firstAttribute="top" secondItem="MVF-Of-gNW" secondAttribute="top" constant="12" id="XxJ-gq-am3"/>
+                            <constraint firstAttribute="trailing" secondItem="0VA-hx-tCN" secondAttribute="trailing" constant="12" id="cIr-JM-Rh2"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">

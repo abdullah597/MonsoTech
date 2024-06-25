@@ -19,8 +19,8 @@ class ConnectSlaveDeviceVC: UIViewController, UITextFieldDelegate {
         Utilities.shared.popViewController(currentViewController: self, animated: true)
     }
     @IBAction func connect(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ConnectFailedVC.self)) as? ConnectFailedVC {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: HomeVC.self)) as? HomeVC {
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }
