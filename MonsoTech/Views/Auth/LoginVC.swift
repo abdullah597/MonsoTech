@@ -21,14 +21,18 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         emailTF.delegate = self
         passwordTF.delegate = self
         self.loader.isHidden = true
+        hideShowBtn.setImage(UIImage(named: "hidePassIcon"), for: .normal)
+        hideShowBtn.tintColor = UIColor.hexStringToUIColor(hex: "9CA3AF")
+        hideShowBtn.tintColor = UIColor.hexStringToUIColor(hex: "9CA3AF")
     }
     @IBAction func back(_ sender: Any) {
         Utilities.shared.popViewController(currentViewController: self, animated: true)
     }
     @IBAction func hideShowPasswird(_ sender: Any) {
         passwordTF.isSecureTextEntry.toggle()
-        let imageName = passwordTF.isSecureTextEntry ? "showPassIcon" : "hidePassIcon"
+        let imageName = passwordTF.isSecureTextEntry ? "hidePassIcon" : "showPassIcon"
         hideShowBtn.setImage(UIImage(named: imageName), for: .normal)
+        hideShowBtn.tintColor = UIColor.hexStringToUIColor(hex: "9CA3AF")
     }
     @IBAction func login(_ sender: Any) {
 //        Utilities.shared.showLoader(loader: loader)

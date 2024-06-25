@@ -33,6 +33,7 @@ class SignupVC: UIViewController {
         updateIcons(for: "")
         signupBtn.isEnabled = false
         setupTermsLabel()
+        hideShowBtn.setImage(UIImage(named: "hidePassIcon"), for: .normal)
     }
     @IBAction func back(_ sender: Any) {
         Utilities.shared.popViewController(currentViewController: self, animated: true)
@@ -53,8 +54,9 @@ class SignupVC: UIViewController {
     
     @IBAction func hideShowPassword(_ sender: Any) {
         passwordTF.isSecureTextEntry.toggle()
-        let imageName = passwordTF.isSecureTextEntry ? "showPassIcon" : "hidePassIcon"
+        let imageName = passwordTF.isSecureTextEntry ? "hidePassIcon" : "showPassIcon"
         hideShowBtn.setImage(UIImage(named: imageName), for: .normal)
+        hideShowBtn.tintColor = UIColor.hexStringToUIColor(hex: "9CA3AF")
     }
     @IBAction func login(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
