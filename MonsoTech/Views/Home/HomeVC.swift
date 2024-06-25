@@ -270,9 +270,49 @@ extension HomeVC: HomeListCellDelegate {
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }
+    func openWebView(urlString: String, isTerms: Bool? = nil, text: String? = nil) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: WebViewController.self)) as? WebViewController {
+            secondViewController.urlString = urlString
+            secondViewController.isTerms = isTerms
+            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        }
+    }
 }
 
 extension HomeVC: SideMenuDelegate {
+    func siteClick() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: WebViewController.self)) as? WebViewController {
+            secondViewController.urlString = "https://www.monso.tech"
+            secondViewController.text = "Monsotech Site"
+            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        }
+    }
+    
+    func orderClick() {
+        
+    }
+    
+    func licenseClick() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: WebViewController.self)) as? WebViewController {
+            secondViewController.urlString = "https://www.monso.tech/app-disclaimer_EN.pdf"
+            secondViewController.text = "Monsotech Site"
+            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        }
+    }
+    
+    func versionClick() {
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            let alert = UIAlertController(title: nil, message: "App Version \(version)", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+            alert.addAction(cancelAction)
+            
+            present(alert, animated: true, completion: nil)
+        }
+    }
     func logout() {
         let alert = UIAlertController(title: "Confirm Logout", message: "Are you sure you want to log out?", preferredStyle: .alert)
         

@@ -16,15 +16,22 @@ class WebViewController: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     
     @IBOutlet weak var mainView: UIView!
-    var isTerms: Bool = false
+    
+    var text = ""
+    var isTerms: Bool? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if isTerms {
-            lblTitle.text = "Term of Service"
+        if isTerms == nil {
+            lblTitle.text = text
         } else {
-            lblTitle.text = "Privacy Policy"
+            if isTerms ?? true {
+                lblTitle.text = "Term of Service"
+            } else {
+                lblTitle.text = "Privacy Policy"
+            }
         }
+        
         Utilities.shared.setTopCorners(view: mainView, radius: 30)
         Utilities.shared.setTopCorners(view: webView, radius: 30)
         
