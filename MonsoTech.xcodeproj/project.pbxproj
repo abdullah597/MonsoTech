@@ -10,6 +10,7 @@
 		0D7792CCE4BDEAFB7381F72B /* Pods_MonsoTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546C38863C60DAF8A6080434 /* Pods_MonsoTech.framework */; };
 		7F2484862C25ADC300B84575 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2484852C25ADC300B84575 /* TokenManager.swift */; };
 		7F2484882C25ADDE00B84575 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2484872C25ADDE00B84575 /* UserManager.swift */; };
+		7F97ED182C2ECCEC00672260 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97ED172C2ECCEC00672260 /* APIEndpoint.swift */; };
 		FF2A2E9F2C1B814900433096 /* ConnectSlaveDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A2E9E2C1B814900433096 /* ConnectSlaveDeviceVC.swift */; };
 		FF409A2C2C1C9DBB0019CBD7 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF409A2A2C1C9DBB0019CBD7 /* HomeListCell.swift */; };
 		FF409A2D2C1C9DBB0019CBD7 /* HomeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF409A2B2C1C9DBB0019CBD7 /* HomeListCell.xib */; };
@@ -77,6 +78,7 @@
 		546C38863C60DAF8A6080434 /* Pods_MonsoTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonsoTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2484852C25ADC300B84575 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		7F2484872C25ADDE00B84575 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		7F97ED172C2ECCEC00672260 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		A2BDAA58EDD946843584D36A /* Pods-MonsoTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsoTech.debug.xcconfig"; path = "Target Support Files/Pods-MonsoTech/Pods-MonsoTech.debug.xcconfig"; sourceTree = "<group>"; };
 		F8C0BE565BD51AD4BBC510BD /* Pods-MonsoTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsoTech.release.xcconfig"; path = "Target Support Files/Pods-MonsoTech/Pods-MonsoTech.release.xcconfig"; sourceTree = "<group>"; };
 		FF2A2E9E2C1B814900433096 /* ConnectSlaveDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectSlaveDeviceVC.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				FF67B7062C283FAB008B7C77 /* APIManager.swift */,
+				7F97ED172C2ECCEC00672260 /* APIEndpoint.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				FF91E9F32C1CB4B500BA9A87 /* SideMenuVC.swift in Sources */,
 				FFF0A4EA2C1A10AF00057925 /* UIView+Extension.swift in Sources */,
 				FFF0A4F12C1A120300057925 /* Utilities.swift in Sources */,
+				7F97ED182C2ECCEC00672260 /* APIEndpoint.swift in Sources */,
 				FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */,
 				FF409A2F2C1CA21A0019CBD7 /* DeviceDetailVC.swift in Sources */,
 				FF85F3BA2C1B8CB800C78760 /* ConnectFailedVC.swift in Sources */,
