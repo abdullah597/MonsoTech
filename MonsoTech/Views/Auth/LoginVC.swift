@@ -58,9 +58,16 @@ class LoginVC: UIViewController, UITextFieldDelegate {
 //                }
 //            }
 //        }
-        goToHome()
+        getUserDetail()
+//        goToHome()
     }
     func goToHome() {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: HomeVC.self)) as? HomeVC {
+            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        }
+    }
+    func goToConnectDevice() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ConnectDeviceVC.self)) as? ConnectDeviceVC {
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
@@ -79,6 +86,29 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ForgotPasswordVC.self)) as? ForgotPasswordVC {
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        }
+    }
+    func getUserDetail() {
+        Utilities.shared.showLoader(loader: loader)
+        APIManager.shared.fetchData(endpoint: .devices, viewController: self) { [weak self](code, result: APIResult<DeviceDetail>) in
+            guard let `self` = self else { return }
+            Utilities.shared.hideLoader(loader: self.loader)
+            switch result {
+            case .success(let deviceDetail):
+                DispatchQueue.main.async {
+                    if (deviceDetail.devices?.count ?? 0) > 0 {
+                        if deviceDetail.devices?.first?.role == "owner" || deviceDetail.devices?.first?.role == "watcher" {
+                            self.goToHome()
+                        } else {
+                            self.goToHome()
+                        }
+                    }
+                }
+            case .failure(let error):
+                AlertManager.shared.showAlert(on: self, message: error.localizedDescription, actionText: "Dismiss") {
+                    
+                }
+            }
         }
     }
 }

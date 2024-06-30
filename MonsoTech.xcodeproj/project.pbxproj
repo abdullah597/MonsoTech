@@ -34,6 +34,7 @@
 		FF91E9FD2C1D784F00BA9A87 /* DeviceViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9FC2C1D784F00BA9A87 /* DeviceViewVC.swift */; };
 		FF91EA012C1D794300BA9A87 /* DeviceProfileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91E9FF2C1D794300BA9A87 /* DeviceProfileListCell.swift */; };
 		FF91EA022C1D794300BA9A87 /* DeviceProfileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF91EA002C1D794300BA9A87 /* DeviceProfileListCell.xib */; };
+		FFC1A6E62C2FF59200CBC9DE /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC1A6E52C2FF59200CBC9DE /* Device.swift */; };
 		FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DBE2C18C072003CB232 /* AppDelegate.swift */; };
 		FFD53DC12C18C072003CB232 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC02C18C072003CB232 /* SceneDelegate.swift */; };
 		FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD53DC22C18C072003CB232 /* InitialVC.swift */; };
@@ -72,6 +73,10 @@
 		FFF3F60B2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */; };
 		FFF3F60D2C1B92A5000FC7B4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF3F60C2C1B92A5000FC7B4 /* Home.storyboard */; };
 		FFF3F60F2C1B92E6000FC7B4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF3F60E2C1B92E6000FC7B4 /* HomeVC.swift */; };
+		FFFFFDFD2C301B350014A065 /* WatchersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFFDFB2C301B350014A065 /* WatchersTableViewCell.swift */; };
+		FFFFFDFE2C301B350014A065 /* WatchersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFFFDFC2C301B350014A065 /* WatchersTableViewCell.xib */; };
+		FFFFFE012C301CD20014A065 /* BottomButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFFDFF2C301CD20014A065 /* BottomButtonsTableViewCell.swift */; };
+		FFFFFE022C301CD20014A065 /* BottomButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFFFFE002C301CD20014A065 /* BottomButtonsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +110,7 @@
 		FF91E9FC2C1D784F00BA9A87 /* DeviceViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewVC.swift; sourceTree = "<group>"; };
 		FF91E9FF2C1D794300BA9A87 /* DeviceProfileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProfileListCell.swift; sourceTree = "<group>"; };
 		FF91EA002C1D794300BA9A87 /* DeviceProfileListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceProfileListCell.xib; sourceTree = "<group>"; };
+		FFC1A6E52C2FF59200CBC9DE /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		FFD53DBB2C18C072003CB232 /* MonsoTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsoTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD53DBE2C18C072003CB232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD53DC02C18C072003CB232 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +151,10 @@
 		FFF3F60A2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectYourDeviceVC.swift; sourceTree = "<group>"; };
 		FFF3F60C2C1B92A5000FC7B4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		FFF3F60E2C1B92E6000FC7B4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		FFFFFDFB2C301B350014A065 /* WatchersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchersTableViewCell.swift; sourceTree = "<group>"; };
+		FFFFFDFC2C301B350014A065 /* WatchersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WatchersTableViewCell.xib; sourceTree = "<group>"; };
+		FFFFFDFF2C301CD20014A065 /* BottomButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtonsTableViewCell.swift; sourceTree = "<group>"; };
+		FFFFFE002C301CD20014A065 /* BottomButtonsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomButtonsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				FF67B6FB2C269BA5008B7C77 /* User.swift */,
+				FFC1A6E52C2FF59200CBC9DE /* Device.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +272,10 @@
 			children = (
 				FF91E9FF2C1D794300BA9A87 /* DeviceProfileListCell.swift */,
 				FF91EA002C1D794300BA9A87 /* DeviceProfileListCell.xib */,
+				FFFFFDFB2C301B350014A065 /* WatchersTableViewCell.swift */,
+				FFFFFDFC2C301B350014A065 /* WatchersTableViewCell.xib */,
+				FFFFFDFF2C301CD20014A065 /* BottomButtonsTableViewCell.swift */,
+				FFFFFE002C301CD20014A065 /* BottomButtonsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -453,12 +468,14 @@
 				FFF0A4E22C1A0E6200057925 /* Urbanist-Black.ttf in Resources */,
 				FFF0A4D92C1A0E6200057925 /* Urbanist-Thin.ttf in Resources */,
 				FFD53DCB2C18C074003CB232 /* LaunchScreen.storyboard in Resources */,
+				FFFFFE022C301CD20014A065 /* BottomButtonsTableViewCell.xib in Resources */,
 				FFF0A4D62C1A0E6200057925 /* Urbanist-ThinItalic.ttf in Resources */,
 				FFF0A4DC2C1A0E6200057925 /* Urbanist-SemiBoldItalic.ttf in Resources */,
 				FFF0A4DB2C1A0E6200057925 /* Urbanist-BoldItalic.ttf in Resources */,
 				FFF0A4DA2C1A0E6200057925 /* Urbanist-Bold.ttf in Resources */,
 				FFF0A4DF2C1A0E6200057925 /* Urbanist-Regular.ttf in Resources */,
 				FFF0A4D82C1A0E6200057925 /* Urbanist-ExtraBold.ttf in Resources */,
+				FFFFFDFE2C301B350014A065 /* WatchersTableViewCell.xib in Resources */,
 				FF91EA022C1D794300BA9A87 /* DeviceProfileListCell.xib in Resources */,
 				FFF0A4DD2C1A0E6200057925 /* Urbanist-Italic.ttf in Resources */,
 				FFD53DC82C18C074003CB232 /* Assets.xcassets in Resources */,
@@ -525,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC1A6E62C2FF59200CBC9DE /* Device.swift in Sources */,
 				FFF0A5012C1B649800057925 /* Step5ConnectVC.swift in Sources */,
 				FF67B7092C288562008B7C77 /* UIColor+Extensions.swift in Sources */,
 				FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */,
@@ -534,6 +552,7 @@
 				FF409A322C1CA3000019CBD7 /* DeviceDetailCell.swift in Sources */,
 				FFF3F60B2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift in Sources */,
 				FFD53DBF2C18C072003CB232 /* AppDelegate.swift in Sources */,
+				FFFFFDFD2C301B350014A065 /* WatchersTableViewCell.swift in Sources */,
 				FF409A2C2C1C9DBB0019CBD7 /* HomeListCell.swift in Sources */,
 				FF91E9FB2C1D783D00BA9A87 /* DeviceProfileVC.swift in Sources */,
 				7F2484862C25ADC300B84575 /* TokenManager.swift in Sources */,
@@ -563,6 +582,7 @@
 				FF67B7002C26A0AD008B7C77 /* LaunchScreenViewController.swift in Sources */,
 				FF67B7022C26A81C008B7C77 /* LoginNavViewController.swift in Sources */,
 				FF7937DD2C1B7E4C00182B7F /* ForgotPasswordVC.swift in Sources */,
+				FFFFFE012C301CD20014A065 /* BottomButtonsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

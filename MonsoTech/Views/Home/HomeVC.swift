@@ -12,6 +12,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var sideMenuBtn: UIButton!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     private var sideMenuViewController: SideMenuVC!
     private var sideMenuRevealWidth: CGFloat = 260
@@ -27,6 +28,8 @@ class HomeVC: UIViewController {
     private var draggingIsEnabled: Bool = false
     private var panBaseLocation: CGFloat = 0.0
     
+    var deviceDetail: DeviceDetail?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Utilities.shared.setTopCorners(view: mainView, radius: 30)
@@ -34,6 +37,11 @@ class HomeVC: UIViewController {
         setSideMenu()
         tableView.allowsSelection = true
         sideMenuViewController.delegate = self
+        loader.isHidden = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getDeviceDetails()
     }
     func setSideMenu() {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
@@ -87,27 +95,37 @@ class HomeVC: UIViewController {
     @IBAction func notifications(_ sender: Any) {
         
     }
+    func getDeviceDetails() {
+        Utilities.shared.showLoader(loader: loader)
+        APIManager.shared.fetchData(endpoint: .devices, viewController: self) { [weak self](code, result: APIResult<DeviceDetail>) in
+            guard let `self` = self else { return }
+            switch result {
+            case .success(let deviceDetail):
+                DispatchQueue.main.async {
+                    Utilities.shared.hideLoader(loader: self.loader)
+                    self.deviceDetail = deviceDetail
+                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                AlertManager.shared.showAlert(on: self, message: error.localizedDescription, actionText: "Dismiss") {
+                    
+                }
+            }
+        }
+    }
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return self.deviceDetail?.devices?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeListCell.self)) as? HomeListCell else { return UITableViewCell() }
         cell.delegate = self
-        if indexPath.row % 2 != 0 {
-            cell.viewButton.isHidden = false
-            cell.profileButton.isHidden = true
-            cell.bottomView.backgroundColor = UIColor.hexStringToUIColor(hex: "D9F2D9")
-            cell.lblDetail.text = "4 events in the past"
-        } else {
-            cell.viewButton.isHidden = true
-            cell.profileButton.isHidden = false
-            cell.bottomView.backgroundColor = UIColor.hexStringToUIColor(hex: "F2D9D9")
-            cell.lblDetail.text = "new power outage"
-        }
+        cell.index = indexPath.row
+        guard let data = self.deviceDetail?.devices?[indexPath.row] else { return UITableViewCell() }
+        cell.setCell(data: data)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -116,6 +134,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: DeviceDetailVC.self)) as? DeviceDetailVC {
+            secondViewController.deviceDetail = self.deviceDetail?.devices?[indexPath.row]
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }
@@ -255,18 +274,20 @@ extension HomeVC: HomeListCellDelegate {
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }
-    func openViewPage() {
+    func openViewPage(index: Int) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: DeviceViewVC.self)) as? DeviceViewVC {
+            secondViewController.deviceDetail = self.deviceDetail?.devices?[index]
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }
     func openSettings() {
         
     }
-    func openDetailPage() {
+    func openDetailPage(index: Int) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: DeviceDetailVC.self)) as? DeviceDetailVC {
+            secondViewController.deviceDetail = self.deviceDetail?.devices?[index]
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }

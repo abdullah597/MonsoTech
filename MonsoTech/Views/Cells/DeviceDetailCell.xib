@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -72,35 +72,6 @@
                         <color key="textColor" name="TextBlueColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ck0-ci-ScC">
-                        <rect key="frame" x="24" y="397.33333333333331" width="340" height="48"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e59-cu-1fO">
-                                <rect key="frame" x="12.000000000000004" y="12" width="40.333333333333343" height="24"/>
-                                <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="48" id="2dD-WJ-jZX"/>
-                            <constraint firstItem="e59-cu-1fO" firstAttribute="leading" secondItem="ck0-ci-ScC" secondAttribute="leading" constant="12" id="FmE-oU-c0B"/>
-                            <constraint firstItem="e59-cu-1fO" firstAttribute="top" secondItem="ck0-ci-ScC" secondAttribute="top" constant="12" id="Oxx-l1-l1W"/>
-                            <constraint firstAttribute="bottom" secondItem="e59-cu-1fO" secondAttribute="bottom" constant="12" id="ZQb-5p-MIJ"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" name="BorderColor"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="12"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z83-Ov-eYt">
                         <rect key="frame" x="24" y="91" width="398" height="17"/>
                         <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="14"/>
@@ -152,108 +123,10 @@
                                 <real key="value" value="12"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="saveSettings:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4Hg-2R-vRb"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi2-sG-asY">
-                        <rect key="frame" x="374" y="397.33333333333331" width="48" height="48"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="48" id="paK-DT-PJM"/>
-                            <constraint firstAttribute="height" constant="48" id="sZT-zE-pTq"/>
-                        </constraints>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="delete"/>
-                    </button>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ch6-1O-kPa">
-                        <rect key="frame" x="24" y="462.33333333333331" width="340" height="48"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="571-6F-l1B">
-                                <rect key="frame" x="12" y="12" width="316" height="24"/>
-                                <fontDescription key="fontDescription" name="Urbanist-Regular" family="Urbanist" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="571-6F-l1B" firstAttribute="top" secondItem="Ch6-1O-kPa" secondAttribute="top" constant="12" id="FnA-6v-93Q"/>
-                            <constraint firstItem="571-6F-l1B" firstAttribute="leading" secondItem="Ch6-1O-kPa" secondAttribute="leading" constant="12" id="RKS-6w-E6E"/>
-                            <constraint firstAttribute="bottom" secondItem="571-6F-l1B" secondAttribute="bottom" constant="12" id="mHL-4j-S1T"/>
-                            <constraint firstAttribute="trailing" secondItem="571-6F-l1B" secondAttribute="trailing" constant="12" id="q6J-4l-eWy"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="xLO-fc-3Iw"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" name="BorderColor"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="12"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnD-1x-daW">
-                        <rect key="frame" x="374" y="462.33333333333331" width="48" height="48"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="48" id="HLk-so-MCx"/>
-                            <constraint firstAttribute="width" constant="48" id="rdH-8X-gjI"/>
-                        </constraints>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="delete"/>
-                    </button>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Eie-tr-z3M">
-                        <rect key="frame" x="24" y="547.33333333333337" width="398" height="204"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWS-8j-DVM">
-                                <rect key="frame" x="0.0" y="0.0" width="398" height="56"/>
-                                <color key="backgroundColor" name="AppColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="0c8-Wx-ePR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Generate Connection Code">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="generateCode:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gos-TK-bzi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W91-cu-Smq">
-                                <rect key="frame" x="0.0" y="74" width="398" height="56"/>
-                                <color key="backgroundColor" red="0.92156862745098034" green="0.3411764705882353" blue="0.3411764705882353" alpha="0.26000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Report Fault to Monsotech  ">
-                                    <color key="titleColor" red="0.92156862745098034" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trb-nU-irl">
-                                <rect key="frame" x="0.0" y="148" width="398" height="56"/>
-                                <color key="backgroundColor" red="0.85098039215686272" green="0.90196078431372551" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Disconnect">
-                                    <color key="titleColor" name="AppColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
-                    </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QnP-ZA-If9">
                         <rect key="frame" x="24" y="201" width="398" height="77.333333333333314"/>
                         <subviews>
@@ -302,36 +175,23 @@ outage is detected.</string>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Ch6-1O-kPa" firstAttribute="top" secondItem="ck0-ci-ScC" secondAttribute="bottom" constant="17" id="0zr-Aa-Uyg"/>
-                    <constraint firstItem="fi2-sG-asY" firstAttribute="centerY" secondItem="ck0-ci-ScC" secondAttribute="centerY" id="1Bl-Lo-peE"/>
-                    <constraint firstItem="Eie-tr-z3M" firstAttribute="top" secondItem="Ch6-1O-kPa" secondAttribute="bottom" constant="37" id="1Fu-1a-gwn"/>
                     <constraint firstItem="QnP-ZA-If9" firstAttribute="leading" secondItem="MVF-Of-gNW" secondAttribute="leading" id="4jd-Ge-9eE"/>
                     <constraint firstAttribute="trailing" secondItem="EAP-zC-A6J" secondAttribute="trailing" constant="24" id="6AB-6l-6CM"/>
                     <constraint firstItem="EAP-zC-A6J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="6hy-ec-7U3"/>
                     <constraint firstItem="z83-Ov-eYt" firstAttribute="trailing" secondItem="Sgc-7o-0Iw" secondAttribute="trailing" id="9Hq-aQ-hkp"/>
-                    <constraint firstItem="fi2-sG-asY" firstAttribute="leading" secondItem="ck0-ci-ScC" secondAttribute="trailing" constant="10" id="9PG-WC-Bag"/>
                     <constraint firstItem="DfN-Gc-raa" firstAttribute="top" secondItem="QnP-ZA-If9" secondAttribute="bottom" constant="24" id="BJ7-6o-zgz"/>
                     <constraint firstItem="MVF-Of-gNW" firstAttribute="trailing" secondItem="z83-Ov-eYt" secondAttribute="trailing" id="CwL-P4-lXp"/>
                     <constraint firstItem="MVF-Of-gNW" firstAttribute="top" secondItem="z83-Ov-eYt" secondAttribute="bottom" constant="8" id="FeH-WI-oEr"/>
-                    <constraint firstItem="ck0-ci-ScC" firstAttribute="top" secondItem="u1T-dt-Exc" secondAttribute="bottom" constant="8" id="Fes-sV-sxM"/>
-                    <constraint firstItem="gnD-1x-daW" firstAttribute="centerY" secondItem="Ch6-1O-kPa" secondAttribute="centerY" id="FzN-b2-8pG"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Eie-tr-z3M" secondAttribute="bottom" constant="40" id="Jum-0G-BUa"/>
                     <constraint firstItem="z83-Ov-eYt" firstAttribute="leading" secondItem="Sgc-7o-0Iw" secondAttribute="leading" id="KuM-Pv-3zS"/>
-                    <constraint firstAttribute="trailing" secondItem="gnD-1x-daW" secondAttribute="trailing" constant="24" id="PtU-Oh-7Df"/>
                     <constraint firstItem="DfN-Gc-raa" firstAttribute="trailing" secondItem="MVF-Of-gNW" secondAttribute="trailing" id="SQa-WI-riG"/>
                     <constraint firstItem="z83-Ov-eYt" firstAttribute="top" secondItem="Sgc-7o-0Iw" secondAttribute="bottom" constant="16" id="Sp5-IO-FAI"/>
-                    <constraint firstItem="Ch6-1O-kPa" firstAttribute="leading" secondItem="ck0-ci-ScC" secondAttribute="leading" id="W44-ED-jjD"/>
-                    <constraint firstAttribute="trailing" secondItem="fi2-sG-asY" secondAttribute="trailing" constant="24" id="X78-bq-fyE"/>
                     <constraint firstItem="Sgc-7o-0Iw" firstAttribute="trailing" secondItem="EAP-zC-A6J" secondAttribute="trailing" id="Xi5-Jf-ISH"/>
                     <constraint firstItem="Sgc-7o-0Iw" firstAttribute="leading" secondItem="EAP-zC-A6J" secondAttribute="leading" id="bku-EX-QLx"/>
                     <constraint firstItem="EAP-zC-A6J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="dja-Nd-3xk"/>
                     <constraint firstItem="u1T-dt-Exc" firstAttribute="top" secondItem="DfN-Gc-raa" secondAttribute="bottom" constant="14" id="eul-dD-s9l"/>
                     <constraint firstItem="QnP-ZA-If9" firstAttribute="trailing" secondItem="MVF-Of-gNW" secondAttribute="trailing" id="hZi-1X-7sK"/>
-                    <constraint firstItem="gnD-1x-daW" firstAttribute="leading" secondItem="Ch6-1O-kPa" secondAttribute="trailing" constant="10" id="mhI-70-gFZ"/>
-                    <constraint firstAttribute="trailing" secondItem="Eie-tr-z3M" secondAttribute="trailing" constant="24" id="oHJ-N3-che"/>
-                    <constraint firstItem="ck0-ci-ScC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="p7U-Pa-x1a"/>
-                    <constraint firstItem="Eie-tr-z3M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="pkw-vG-3ul"/>
-                    <constraint firstItem="ck0-ci-ScC" firstAttribute="leading" secondItem="u1T-dt-Exc" secondAttribute="leading" id="rYY-F9-n4V"/>
+                    <constraint firstItem="u1T-dt-Exc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="jmI-Ci-1db"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="u1T-dt-Exc" secondAttribute="bottom" constant="8" id="qP8-l4-nkz"/>
                     <constraint firstItem="DfN-Gc-raa" firstAttribute="leading" secondItem="MVF-Of-gNW" secondAttribute="leading" id="rgM-OL-R9S"/>
                     <constraint firstItem="MVF-Of-gNW" firstAttribute="leading" secondItem="z83-Ov-eYt" secondAttribute="leading" id="rgg-kc-2RB"/>
                     <constraint firstItem="Sgc-7o-0Iw" firstAttribute="top" secondItem="EAP-zC-A6J" secondAttribute="bottom" constant="8" id="xWb-Xl-fYO"/>
@@ -340,11 +200,16 @@ outage is detected.</string>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="generateAlarmSwitch" destination="WHL-u4-Xdo" id="ybt-4f-cJT"/>
+                <outlet property="lblProductName" destination="LPW-wn-K9t" id="t5W-ge-Iae"/>
+                <outlet property="nameTF" destination="0VA-hx-tCN" id="wIi-gD-kFN"/>
+                <outlet property="sendNotiSwitch" destination="q30-oa-2rM" id="hQL-LT-Pk5"/>
+            </connections>
             <point key="canvasLocation" x="146.56488549618319" y="820.4225352112677"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="delete" width="48" height="48"/>
         <namedColor name="AppColor">
             <color red="0.0040000001899898052" green="0.3529999852180481" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

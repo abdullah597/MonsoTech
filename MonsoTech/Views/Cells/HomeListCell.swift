@@ -9,9 +9,9 @@ import UIKit
 
 protocol HomeListCellDelegate: AnyObject {
     func openProfilePage()
-    func openViewPage()
+    func openViewPage(index: Int)
     func openSettings()
-    func openDetailPage()
+    func openDetailPage(index: Int)
 }
 
 class HomeListCell: UITableViewCell {
@@ -19,9 +19,12 @@ class HomeListCell: UITableViewCell {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var viewButton: UIView!
     @IBOutlet weak var bottomView: UIView!
-    
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDetail: UILabel!
+    
     weak var delegate: HomeListCellDelegate?
+    var index = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -30,6 +33,23 @@ class HomeListCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
+    }
+    func setCell(data: Device) {
+        lblTitle.text = data.name ?? "N/a"
+        if data.role == "owner" {
+            profileButton.isHidden = false
+            viewButton.isHidden = true
+        } else {
+            profileButton.isHidden = true
+            viewButton.isHidden = false
+        }
+        if (data.trigercountunread ?? 0) == 0 {
+           bottomView.backgroundColor = UIColor.hexStringToUIColor(hex: "D9F2D9")
+            lblDetail.text = "\(data.trigercount ?? 02) events in the past"
+        } else {
+           bottomView.backgroundColor = UIColor.hexStringToUIColor(hex: "F2D9D9")
+           lblDetail.text = "new power outage"
+        }
     }
     
     @IBAction func lighteningPressed(_ sender: Any) {
@@ -46,9 +66,9 @@ class HomeListCell: UITableViewCell {
     }
     @IBAction func openSettings(_ sender: Any) {
         if viewButton.isHidden == true {
-            self.delegate?.openDetailPage()
+            self.delegate?.openDetailPage(index: self.index)
         } else {
-            self.delegate?.openViewPage()
+            self.delegate?.openViewPage(index: self.index)
         }
     }
 }

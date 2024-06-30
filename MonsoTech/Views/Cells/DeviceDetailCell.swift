@@ -8,23 +8,47 @@
 import UIKit
 
 protocol DeviceDetailCellDelegate: AnyObject {
-    func generatecCode()
+    func savesetting(alarm: Bool, notification: Bool)
 }
 
 class DeviceDetailCell: UITableViewCell {
+    @IBOutlet weak var lblProductName: UILabel!
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var generateAlarmSwitch: UISwitch!
+    @IBOutlet weak var sendNotiSwitch: UISwitch!
+    
     weak var delegate: DeviceDetailCellDelegate?
+    var data: Device?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
-    }
-    @IBAction func generateCode(_ sender: Any) {
-        self.delegate?.generatecCode()
     }
     
+    func setCell(data: Device) {
+        self.data = data
+        lblProductName.text = data.devicetype ?? "N/A"
+        nameTF.text = data.name
+        if (data.settings?.count ?? 0) > 0 {
+            if (data.settings?.count ?? 0) == 1 {
+                generateAlarmSwitch.isOn = data.settings?[0].value ?? true
+                sendNotiSwitch.isOn = false
+            } else {
+                generateAlarmSwitch.isOn = data.settings?[0].value ?? true
+                sendNotiSwitch.isOn = data.settings?[1].value ?? true
+            }
+        }
+    }
+    
+    @IBAction func saveSettings(_ sender: Any) {
+        self.delegate?.savesetting(alarm: generateAlarmSwitch.isOn, notification: sendNotiSwitch.isOn)
+    }
+}
+struct RequestBodySaveSettings: Codable {
+    let charcode, name, devicetype: String?
+    let alarm_when_removed, send_push_notifaction: Bool?
 }

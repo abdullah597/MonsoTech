@@ -12,6 +12,7 @@ import MSAL
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var applicationContext: MSALPublicClientApplication?
     var window: UIWindow?
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return MSALPublicClientApplication.handleMSALResponse(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String)

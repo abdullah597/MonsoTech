@@ -10,8 +10,10 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>msauth.com.monso.tech</string>
+                <string>msal668b03dc-0873-4043-97ea-7c20dd41fc9b</string>
 			</array>
 		</dict>
+        
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>

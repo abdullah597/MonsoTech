@@ -1882,6 +1882,10 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="b74-4e-RS3">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0V2-jB-o0W"/>
                         <color key="backgroundColor" name="AppColor"/>
@@ -1901,11 +1905,14 @@ You have the possibility to do this with the QR code or manually with the 5-char
                             <constraint firstItem="l4i-ls-MvO" firstAttribute="top" secondItem="qYn-wT-9i8" secondAttribute="top" id="dwg-UB-QFV"/>
                             <constraint firstItem="VAH-dC-VfQ" firstAttribute="leading" secondItem="0V2-jB-o0W" secondAttribute="leading" constant="24" id="hYi-If-g0t"/>
                             <constraint firstAttribute="trailing" secondItem="l4i-ls-MvO" secondAttribute="trailing" id="mS5-Q8-HrH"/>
+                            <constraint firstItem="b74-4e-RS3" firstAttribute="centerY" secondItem="qYn-wT-9i8" secondAttribute="centerY" id="nv0-lB-GMU"/>
                             <constraint firstAttribute="bottom" secondItem="8ZV-5P-zI3" secondAttribute="bottom" id="oED-GY-spv"/>
+                            <constraint firstItem="b74-4e-RS3" firstAttribute="centerX" secondItem="qYn-wT-9i8" secondAttribute="centerX" id="oY4-im-Ugn"/>
                             <constraint firstItem="GDl-o3-Nt8" firstAttribute="centerX" secondItem="qYn-wT-9i8" secondAttribute="centerX" id="p3c-ya-6L2"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loader" destination="b74-4e-RS3" id="Mfg-mu-Eas"/>
                         <outlet property="textField" destination="MSg-Nf-0R6" id="hdz-LQ-Cwd"/>
                     </connections>
                 </viewController>
@@ -2143,6 +2150,10 @@ You have the possibility to do this with the QR code or manually with the 5-char
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="f5V-TU-F5U">
+                                <rect key="frame" x="316" y="452" width="37" height="37"/>
+                                <color key="color" name="AppColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tle-WV-RrD"/>
                         <color key="backgroundColor" name="AppColor"/>
@@ -2164,7 +2175,9 @@ You have the possibility to do this with the QR code or manually with the 5-char
                             <constraint firstAttribute="bottom" secondItem="Uja-Om-dwL" secondAttribute="bottom" id="bTh-co-dli"/>
                             <constraint firstItem="570-wf-IFO" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" constant="93" id="coL-UJ-7q4"/>
                             <constraint firstItem="uZU-n9-Iuk" firstAttribute="top" secondItem="570-wf-IFO" secondAttribute="bottom" constant="46" id="dH7-gN-8Gx"/>
+                            <constraint firstItem="f5V-TU-F5U" firstAttribute="trailing" secondItem="uZU-n9-Iuk" secondAttribute="trailing" constant="-16" id="f8B-qV-GdI"/>
                             <constraint firstItem="uZU-n9-Iuk" firstAttribute="leading" secondItem="tle-WV-RrD" secondAttribute="leading" constant="24" id="j13-Gh-beT"/>
+                            <constraint firstItem="f5V-TU-F5U" firstAttribute="centerY" secondItem="uZU-n9-Iuk" secondAttribute="centerY" id="jr5-gz-dk6"/>
                             <constraint firstItem="tle-WV-RrD" firstAttribute="trailing" secondItem="gnj-Uq-c00" secondAttribute="trailing" constant="24" id="l7L-ew-9cS"/>
                             <constraint firstItem="tle-WV-RrD" firstAttribute="trailing" secondItem="570-wf-IFO" secondAttribute="trailing" constant="93" id="p7R-OO-g5u"/>
                             <constraint firstItem="NtX-E1-jzY" firstAttribute="trailing" secondItem="KfG-aR-5BP" secondAttribute="trailing" id="pqf-jh-NNC"/>
@@ -2178,6 +2191,7 @@ You have the possibility to do this with the QR code or manually with the 5-char
                     <connections>
                         <outlet property="characterStringTF" destination="gnj-Uq-c00" id="bS8-oB-1ec"/>
                         <outlet property="digitTF" destination="570-wf-IFO" id="jQ0-AX-sg2"/>
+                        <outlet property="loader" destination="f5V-TU-F5U" id="keA-Pt-vuN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igV-r0-c5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
