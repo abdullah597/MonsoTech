@@ -9,5 +9,7 @@ target 'MonsoTech' do
   pod 'DPOTPView'
   pod 'IQKeyboardManager'
   pod 'MSAL'
+  pod 'Firebase'
+  pod 'FirebaseMessaging'
 
 end

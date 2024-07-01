@@ -18,12 +18,14 @@ class ConnectFailedVC: UIViewController {
         Utilities.shared.popViewController(currentViewController: self, animated: true)
     }
     @IBAction func send(_ sender: Any) {
-        let body = SendFailedBody(userid: Constants.oid, charcode: self.charCode, message: "connection new device failed")
-        APIManager.shared.postData(endpoint: .monsoFault, requestBody: body, viewController: self) { (code, result: APIResult<String>) in
+        let body = SendFailedBody(oid: Constants.oid, charcode: self.charCode, message: "connection new device failed")
+        APIManager.shared.postData(endpoint: .fault, requestBody: body, viewController: self) { (code, result: APIResult<String>) in
             switch result {
             case .success(_):
                 DispatchQueue.main.async {
-                    self.goToHome()
+                    if code == 200 {
+                        self.goToHome()
+                    }
                 }
                 
             case .failure(_):
@@ -42,5 +44,5 @@ class ConnectFailedVC: UIViewController {
 }
 
 struct SendFailedBody: Codable {
-    let userid, charcode, message: String?
+    let oid, charcode, message: String?
 }

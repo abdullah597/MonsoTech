@@ -268,9 +268,10 @@ extension HomeVC: UIGestureRecognizerDelegate {
 }
 
 extension HomeVC: HomeListCellDelegate {
-    func openProfilePage() {
+    func openProfilePage(index: Int) {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: DeviceProfileVC.self)) as? DeviceProfileVC {
+            secondViewController.deviceDetail = self.deviceDetail?.devices?[index]
             Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }

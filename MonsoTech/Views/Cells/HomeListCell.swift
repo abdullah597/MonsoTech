@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeListCellDelegate: AnyObject {
-    func openProfilePage()
+    func openProfilePage(index: Int)
     func openViewPage(index: Int)
     func openSettings()
     func openDetailPage(index: Int)
@@ -53,7 +53,7 @@ class HomeListCell: UITableViewCell {
     }
     
     @IBAction func lighteningPressed(_ sender: Any) {
-        self.delegate?.openProfilePage()
+        self.delegate?.openProfilePage(index: self.index)
     }
     @IBAction func openDetail(_ sender: Any) {
        // self.delegate?.openDetailPage()

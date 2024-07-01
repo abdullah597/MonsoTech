@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -774,10 +774,10 @@
                                 <rect key="frame" x="18" y="0.0" width="375" height="366.33333333333331"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5Q-cE-ldg">
-                                <rect key="frame" x="0.0" y="153" width="393" height="699"/>
+                                <rect key="frame" x="0.0" y="199" width="393" height="653"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="A4X-VY-bfS">
-                                        <rect key="frame" x="0.0" y="77" width="393" height="622"/>
+                                        <rect key="frame" x="0.0" y="45" width="393" height="608"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -787,28 +787,35 @@
                                         </connections>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naam 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-Hq-hjD">
-                                        <rect key="frame" x="24" y="30" width="345" height="29"/>
+                                        <rect key="frame" x="24" y="8" width="345" height="29"/>
                                         <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="24"/>
                                         <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="Lie-8s-n9O">
+                                        <rect key="frame" x="0.0" y="327" width="393" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" name="AppColor"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="A4X-VY-bfS" firstAttribute="leading" secondItem="D5Q-cE-ldg" secondAttribute="leading" id="7sE-ni-qkB"/>
-                                    <constraint firstItem="I2y-Hq-hjD" firstAttribute="top" secondItem="D5Q-cE-ldg" secondAttribute="top" constant="30" id="BL1-qk-ZzV"/>
+                                    <constraint firstItem="I2y-Hq-hjD" firstAttribute="top" secondItem="D5Q-cE-ldg" secondAttribute="top" constant="8" id="BL1-qk-ZzV"/>
                                     <constraint firstAttribute="trailing" secondItem="A4X-VY-bfS" secondAttribute="trailing" id="JJf-rg-oda"/>
+                                    <constraint firstItem="Lie-8s-n9O" firstAttribute="centerX" secondItem="A4X-VY-bfS" secondAttribute="centerX" id="K8a-JL-UBF"/>
                                     <constraint firstItem="I2y-Hq-hjD" firstAttribute="leading" secondItem="D5Q-cE-ldg" secondAttribute="leading" constant="24" id="R18-cO-awf"/>
                                     <constraint firstAttribute="bottom" secondItem="A4X-VY-bfS" secondAttribute="bottom" id="UUc-iv-Bl0"/>
+                                    <constraint firstItem="Lie-8s-n9O" firstAttribute="centerY" secondItem="A4X-VY-bfS" secondAttribute="centerY" id="WBC-Y0-4eb"/>
                                     <constraint firstAttribute="trailing" secondItem="I2y-Hq-hjD" secondAttribute="trailing" constant="24" id="Y9C-9h-PKB"/>
-                                    <constraint firstItem="A4X-VY-bfS" firstAttribute="top" secondItem="I2y-Hq-hjD" secondAttribute="bottom" constant="18" id="zdM-3l-VGJ"/>
+                                    <constraint firstItem="A4X-VY-bfS" firstAttribute="top" secondItem="I2y-Hq-hjD" secondAttribute="bottom" constant="8" id="zdM-3l-VGJ"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Cm5-5A-BAR">
-                                <rect key="frame" x="153" y="65" width="87" height="72"/>
+                                <rect key="frame" x="153" y="65" width="87" height="118"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxH-NL-K0j">
-                                <rect key="frame" x="24" y="79" width="44" height="44"/>
+                                <rect key="frame" x="24" y="102" width="44" height="44"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backWhite" translatesAutoresizingMaskIntoConstraints="NO" id="ca1-om-4gF">
                                         <rect key="frame" x="10" y="10" width="24" height="24"/>
@@ -845,7 +852,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cvg-G2-7Ye">
-                                <rect key="frame" x="325" y="79" width="44" height="44"/>
+                                <rect key="frame" x="325" y="102" width="44" height="44"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notificationiCON" translatesAutoresizingMaskIntoConstraints="NO" id="a8A-CM-3WA">
                                         <rect key="frame" x="10" y="10" width="24" height="24"/>
@@ -897,6 +904,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loader" destination="Lie-8s-n9O" id="ef4-mo-oN9"/>
                         <outlet property="mainView" destination="D5Q-cE-ldg" id="U6b-vI-6Wk"/>
                         <outlet property="tableView" destination="A4X-VY-bfS" id="qp6-jf-9rM"/>
                     </connections>
@@ -1188,7 +1196,7 @@
             <color red="0.067000001668930054" green="0.093999996781349182" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

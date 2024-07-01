@@ -8,6 +8,8 @@
 import UIKit
 import IQKeyboardManager
 import MSAL
+import FirebaseCore
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,9 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared().isEnabled = true
+        setupNotificationHelperWithFirebase(application)
         return true
     }
-    
+    func setupNotificationHelperWithFirebase(_ application: UIApplication) {
+        FirebaseApp.configure()
+        NotificationHelper.shared.configure(application)
+    }
     // MARK: UISceneSession Lifecycle
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

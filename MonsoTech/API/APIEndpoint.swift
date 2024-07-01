@@ -12,7 +12,8 @@ enum APIEndpoint {
     case devices
     case generateCode(charcode: String)
     case fault
-    case monsoFault
+    case triggers(charcode: String)
+    case pushNotification
     
     func url(baseURL: String) -> URL? {
         switch self {
@@ -24,8 +25,10 @@ enum APIEndpoint {
             return URL(string: "\(baseURL)api/generatecode/\(Constants.oid)/\(code)")
         case .fault:
             return URL(string: "\(baseURL)api/fault")
-        case .monsoFault:
-            return URL(string: "\(baseURL)fault/")
+        case .triggers(let charcode):
+            return URL(string: "\(baseURL)api/triggers/\(charcode)")
+        case .pushNotification:
+            return URL(string: "\(baseURL)api/pushnotification")
         }
     }
 }
