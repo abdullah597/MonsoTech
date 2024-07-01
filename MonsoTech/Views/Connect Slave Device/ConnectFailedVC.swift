@@ -24,7 +24,7 @@ class ConnectFailedVC: UIViewController {
             case .success(_):
                 DispatchQueue.main.async {
                     if code == 200 {
-                        self.goToHome()
+                        Utilities.shared.goToHome(controller: self)
                     }
                 }
                 
@@ -33,12 +33,6 @@ class ConnectFailedVC: UIViewController {
                     AlertManager.shared.showAlert(on: self, message: "Failed", actionText: "Dismiss") {}
                 }
             }
-        }
-    }
-    func goToHome() {
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: HomeVC.self)) as? HomeVC {
-            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }
 }

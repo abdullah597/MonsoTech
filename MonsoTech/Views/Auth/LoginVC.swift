@@ -35,36 +35,28 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         hideShowBtn.tintColor = UIColor.hexStringToUIColor(hex: "9CA3AF")
     }
     @IBAction func login(_ sender: Any) {
-//        Utilities.shared.showLoader(loader: loader)
-//        guard let email = emailTF.text, !email.isEmpty,
-//              let password = passwordTF.text, !password.isEmpty else {
-//            self.errorView.isHidden = false
-//            self.lblError.text = "Please enter email and password"
-//            Utilities.shared.hideLoader(loader: loader)
-//            return
-//        }
-//        LoginTokenManager.shared.getAccessToken(username: email, password: password) { token, error in
-//            DispatchQueue.main.async {
-//                Utilities.shared.hideLoader(loader: self.loader)
-//                if let error = error {
-//                    print("Login failed \(error.localizedDescription)")
-//                    self.errorView.isHidden = false
-//                    self.lblError.text = "User doesn't exists, Please Signup to continue"
-//                } else if let token = token {
-//                    print("Login successful, token: \(token)")
-//                    let user = User(email: email, token: token)
-//                    UserDefaults.standard.saveUser(user)
-//                    self.goToHome()
-//                }
-//            }
-//        }
-        getUserDetail()
-//        goToHome()
-    }
-    func goToHome() {
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: HomeVC.self)) as? HomeVC {
-            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        Utilities.shared.showLoader(loader: loader)
+        guard let email = emailTF.text, !email.isEmpty,
+              let password = passwordTF.text, !password.isEmpty else {
+            self.errorView.isHidden = false
+            self.lblError.text = "Please enter email and password"
+            Utilities.shared.hideLoader(loader: loader)
+            return
+        }
+        LoginTokenManager.shared.getAccessToken(username: email, password: password) { token, error in
+            DispatchQueue.main.async {
+                Utilities.shared.hideLoader(loader: self.loader)
+                if let error = error {
+                    print("Login failed \(error.localizedDescription)")
+                    self.errorView.isHidden = false
+                    self.lblError.text = "User doesn't exists, Please Signup to continue"
+                } else if let token = token {
+                    print("Login successful, token: \(token)")
+                    let user = User(email: email, token: token)
+                    UserDefaults.standard.saveUser(user)
+                    self.getUserDetail()
+                }
+            }
         }
     }
     func goToConnectDevice() {
@@ -98,9 +90,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 DispatchQueue.main.async {
                     if (deviceDetail.devices?.count ?? 0) > 0 {
                         if deviceDetail.devices?.first?.role == "owner" || deviceDetail.devices?.first?.role == "watcher" {
-                            self.goToHome()
+                            Utilities.shared.goToHome(controller: self)
                         } else {
-                            self.goToHome()
+                            self.goToConnectDevice()
                         }
                     }
                 }

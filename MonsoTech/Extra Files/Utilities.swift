@@ -35,6 +35,12 @@ class Utilities {
         loader.isHidden = true
         loader.stopAnimating()
     }
+    func goToHome(controller: UIViewController) {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: HomeVC.self)) as? HomeVC {
+            Utilities.shared.pushViewController(currentViewController: controller, toViewController: secondViewController, animated: true)
+        }
+    }
 }
 class AlertManager {
     static let shared = AlertManager()

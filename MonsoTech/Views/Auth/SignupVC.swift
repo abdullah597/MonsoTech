@@ -40,16 +40,15 @@ class SignupVC: UIViewController {
     }
     
     @IBAction func signup(_ sender: Any) {
-//        Utilities.shared.showLoader(loader: loader)
-//        guard let email = emailTF.text, !email.isEmpty,
-//              let password = passwordTF.text, !password.isEmpty else {
-//            self.errorView.isHidden = false
-//            self.lblError.text = "Please enter email and password"
-//            Utilities.shared.hideLoader(loader: loader)
-//            return
-//        }
-//        signUp(email: email, password: password)
-        goToHome()
+        Utilities.shared.showLoader(loader: loader)
+        guard let email = emailTF.text, !email.isEmpty,
+              let password = passwordTF.text, !password.isEmpty else {
+            self.errorView.isHidden = false
+            self.lblError.text = "Please enter email and password"
+            Utilities.shared.hideLoader(loader: loader)
+            return
+        }
+        signUp(email: email, password: password)
     }
     
     @IBAction func hideShowPassword(_ sender: Any) {
@@ -73,19 +72,13 @@ class SignupVC: UIViewController {
                 Utilities.shared.hideLoader(loader: self.loader)
                 if success {
                     print("User created successfully")
-                    self.goToHome()
+                    Utilities.shared.goToHome(controller: self)
                 } else {
                     print("Sign-up failed: \(error?.localizedDescription ?? "Unknown error")")
                     self.errorView.isHidden = false
                     self.lblError.text = "User already exists, Please Login to continue"
                 }
             }
-        }
-    }
-    func goToHome() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: ConnectDeviceVC.self)) as? ConnectDeviceVC {
-            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }
 }

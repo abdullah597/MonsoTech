@@ -101,7 +101,6 @@ extension Step4ConnectVC: AVCaptureMetadataOutputObjectsDelegate {
         if code == "AAAAA123" || code == "AAAAB678" {
             
             self.connectDevice(code: code)
-//                self.goToHome()
         } else {
             AlertManager.shared.showAlert(on: self, message: "Wrong", actionText: "Dismiss") {}
         }
@@ -135,10 +134,10 @@ extension Step4ConnectVC: AVCaptureMetadataOutputObjectsDelegate {
                 switch result {
                 case .success(_):
                     if code == 200 || code == 201 {
-                        self.goToHome()
+                        Utilities.shared.goToHome(controller: self)
                     } else if code == 400 {
                         AlertManager.shared.showAlert(on: self, message: "Device Already Paired", actionText: "Go to Devices") {
-                            self.goToHome()
+                            Utilities.shared.goToHome(controller: self)
                         }
                     }
                     
@@ -155,12 +154,6 @@ extension Step4ConnectVC: AVCaptureMetadataOutputObjectsDelegate {
         
         if (captureSession.isRunning) {
             captureSession.stopRunning()
-        }
-    }
-    func goToHome() {
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: HomeVC.self)) as? HomeVC {
-            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
         }
     }
     

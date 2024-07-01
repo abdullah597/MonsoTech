@@ -21,13 +21,11 @@ class ConnectSlaveDeviceVC: UIViewController, UITextFieldDelegate {
         Utilities.shared.popViewController(currentViewController: self, animated: true)
     }
     @IBAction func connect(_ sender: Any) {
-        connectDevice()
-    }
-    func goToHome() {
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        if let secondViewController = storyboard.instantiateViewController(withIdentifier: String(describing: HomeVC.self)) as? HomeVC {
-            Utilities.shared.pushViewController(currentViewController: self, toViewController: secondViewController, animated: true)
+        if textField.text == "" {
+            AlertManager.shared.showAlert(on: self, message: "Enter connection code", actionText: "OK") {}
+            return
         }
+        connectDevice()
     }
     func goToConnectFailed() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -48,7 +46,7 @@ class ConnectSlaveDeviceVC: UIViewController, UITextFieldDelegate {
                         self.goToConnectFailed()
                     }
                     if code == 200 {
-                        self.goToHome()
+                        Utilities.shared.goToHome(controller: self)
                     }
                 }
             case .failure(_):
