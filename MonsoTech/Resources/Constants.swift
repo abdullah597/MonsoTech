@@ -28,4 +28,11 @@ class Constants {
         }
         return ""
     }
+    static func getToken() -> String {
+        if let user = UserDefaults.standard.getUser() {
+            let token = user.token
+            return token
+        }
+        return ""
+    }
 }

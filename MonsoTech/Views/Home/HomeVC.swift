@@ -13,6 +13,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var sideMenuBtn: UIButton!
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var notificationIcon: UIImageView!
     
     private var sideMenuViewController: SideMenuVC!
     private var sideMenuRevealWidth: CGFloat = 260
@@ -104,6 +105,14 @@ class HomeVC: UIViewController {
                 DispatchQueue.main.async {
                     Utilities.shared.hideLoader(loader: self.loader)
                     self.deviceDetail = deviceDetail
+                    let totalTrigercountunread = self.deviceDetail?.devices?.reduce(0) { (sum, device) -> Int in
+                        return sum + (device.trigercountunread ?? 0)
+                    }
+                    if (totalTrigercountunread ?? 0) > 0 {
+                        self.notificationIcon.tintColor = UIColor.red
+                    } else {
+                        self.notificationIcon.tintColor = UIColor.white
+                    }
                     self.tableView.reloadData()
                 }
             case .failure(let error):

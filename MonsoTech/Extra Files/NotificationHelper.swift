@@ -13,7 +13,7 @@ class NotificationHelper: NSObject {
     static let shared = NotificationHelper()
     var fcmToken = ""
     func enablePushNotifications(token: String) {
-        let body = PushNotificationBody(oid: Constants.oid, os: "ios", token: "", pushnotificationsenabled: true)
+        let body = PushNotificationBody(oid: Constants.oid, os: "ios", token: token, pushnotificationsenabled: true)
         APIManager.shared.patchData(endpoint: .pushNotification, requestBody: body, viewController: HomeVC()) { (code, result: APIResult<String>) in
             switch result {
             case .success(let t):

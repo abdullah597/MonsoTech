@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DeviceDetailCellDelegate: AnyObject {
-    func savesetting(alarm: Bool, notification: Bool)
+    func savesetting(alarm: Bool, notification: Bool, name: String)
 }
 
 class DeviceDetailCell: UITableViewCell {
@@ -45,7 +45,7 @@ class DeviceDetailCell: UITableViewCell {
     }
     
     @IBAction func saveSettings(_ sender: Any) {
-        self.delegate?.savesetting(alarm: generateAlarmSwitch.isOn, notification: sendNotiSwitch.isOn)
+        self.delegate?.savesetting(alarm: generateAlarmSwitch.isOn, notification: sendNotiSwitch.isOn, name: nameTF.text ?? "")
     }
 }
 struct RequestBodySaveSettings: Codable {

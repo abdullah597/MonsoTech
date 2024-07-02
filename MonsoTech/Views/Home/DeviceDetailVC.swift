@@ -78,11 +78,11 @@ extension DeviceDetailVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension DeviceDetailVC: DeviceDetailCellDelegate {
-    func savesetting(alarm: Bool, notification: Bool) {
+    func savesetting(alarm: Bool, notification: Bool, name: String) {
         Utilities.shared.showLoader(loader: loader)
         let body = RequestBodySaveSettings(
             charcode: self.deviceDetail?.charcode ?? "",
-            name: self.deviceDetail?.name ?? "",
+            name: name,
             devicetype: self.deviceDetail?.devicetype ?? "",
             alarm_when_removed: alarm,
             send_push_notifaction: notification

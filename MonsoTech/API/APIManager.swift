@@ -62,8 +62,11 @@ class APIManager {
             completion(nil, .failure(.noInternetConnection))
             return
         }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        var request = URLRequest(url: url)
+        if Constants.getToken() != "" {
+            request.setValue("Bearer \(Constants.getToken())", forHTTPHeaderField: "Authorization")
+        }
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(nil, .failure(.networkError(error)))
                 return
@@ -101,86 +104,88 @@ class APIManager {
     }
     
     func postData<T: Codable>(endpoint: APIEndpoint, requestBody: Codable, viewController: UIViewController, completion: @escaping (Int?, APIResult<T>) -> Void) {
-            guard let url = endpoint.url(baseURL: environment.baseURL) else {
-                completion(nil, .failure(.invalidURL))
+        guard let url = endpoint.url(baseURL: environment.baseURL) else {
+            completion(nil, .failure(.invalidURL))
+            return
+        }
+        
+        guard isInternetAvailable() else {
+            DispatchQueue.main.async {
+                self.showNoInternetAlert(viewController: viewController) {
+                    self.postData(endpoint: endpoint, requestBody: requestBody, viewController: viewController, completion: completion)
+                }
+            }
+            completion(nil, .failure(.noInternetConnection))
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        if Constants.getToken() != "" {
+            request.setValue("Bearer \(Constants.getToken())", forHTTPHeaderField: "Authorization")
+        }
+        do {
+            request.httpBody = try JSONEncoder().encode(requestBody)
+        } catch {
+            completion(nil, .failure(.invalidData))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(nil, .failure(.networkError(error)))
                 return
             }
             
-            guard isInternetAvailable() else {
-                DispatchQueue.main.async {
-                    self.showNoInternetAlert(viewController: viewController) {
-                        self.postData(endpoint: endpoint, requestBody: requestBody, viewController: viewController, completion: completion)
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(nil, .failure(.invalidResponse))
+                return
+            }
+            
+            // Check if status code is 200
+            if httpResponse.statusCode == 200 {
+                // Use a placeholder type for success response without decoding
+                if T.self == String.self {
+                    if let data = data, let stringResponse = String(data: data, encoding: .utf8) as? T {
+                        completion(httpResponse.statusCode, .success(stringResponse))
+                    } else {
+                        completion(httpResponse.statusCode, .failure(.invalidData))
+                    }
+                } else {
+                    do {
+                        let decodedData = try JSONDecoder().decode(T.self, from: data!)
+                        completion(httpResponse.statusCode, .success(decodedData))
+                    } catch {
+                        completion(httpResponse.statusCode, .failure(.invalidData))
                     }
                 }
-                completion(nil, .failure(.noInternetConnection))
                 return
             }
             
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            // For other status codes, handle as usual
+            guard let data = data else {
+                completion(httpResponse.statusCode, .failure(.invalidData))
+                return
+            }
+            
+            // Print the raw JSON data
+            if let jsonString = String(data: data, encoding: .utf8) {
+                print("JSON Response: \(jsonString)")
+            }
             
             do {
-                request.httpBody = try JSONEncoder().encode(requestBody)
+                let decodedData = try JSONDecoder().decode(T.self, from: data)
+                completion(httpResponse.statusCode, .success(decodedData))
             } catch {
-                completion(nil, .failure(.invalidData))
-                return
+                // Print the decoding error
+                print("Decoding error: \(error)")
+                completion(httpResponse.statusCode, .failure(.invalidData))
             }
-            
-            URLSession.shared.dataTask(with: request) { data, response, error in
-                if let error = error {
-                    completion(nil, .failure(.networkError(error)))
-                    return
-                }
-                
-                guard let httpResponse = response as? HTTPURLResponse else {
-                    completion(nil, .failure(.invalidResponse))
-                    return
-                }
-                
-                // Check if status code is 200
-                if httpResponse.statusCode == 200 {
-                    // Use a placeholder type for success response without decoding
-                    if T.self == String.self {
-                        if let data = data, let stringResponse = String(data: data, encoding: .utf8) as? T {
-                            completion(httpResponse.statusCode, .success(stringResponse))
-                        } else {
-                            completion(httpResponse.statusCode, .failure(.invalidData))
-                        }
-                    } else {
-                        do {
-                            let decodedData = try JSONDecoder().decode(T.self, from: data!)
-                            completion(httpResponse.statusCode, .success(decodedData))
-                        } catch {
-                            completion(httpResponse.statusCode, .failure(.invalidData))
-                        }
-                    }
-                    return
-                }
-                
-                // For other status codes, handle as usual
-                guard let data = data else {
-                    completion(httpResponse.statusCode, .failure(.invalidData))
-                    return
-                }
-                
-                // Print the raw JSON data
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    print("JSON Response: \(jsonString)")
-                }
-                
-                do {
-                    let decodedData = try JSONDecoder().decode(T.self, from: data)
-                    completion(httpResponse.statusCode, .success(decodedData))
-                } catch {
-                    // Print the decoding error
-                    print("Decoding error: \(error)")
-                    completion(httpResponse.statusCode, .failure(.invalidData))
-                }
-            }.resume()
-        }
-
-
+        }.resume()
+    }
+    
+    
     func patchData<T: Codable, U: Codable>(endpoint: APIEndpoint, requestBody: U, viewController: UIViewController, completion: @escaping (Int?, APIResult<T>) -> Void) {
         guard let url = endpoint.url(baseURL: environment.baseURL) else {
             completion(nil, .failure(.invalidURL))
@@ -200,7 +205,9 @@ class APIManager {
         var request = URLRequest(url: url)
         request.httpMethod = "PATCH"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
+        if Constants.getToken() != "" {
+            request.setValue("Bearer \(Constants.getToken())", forHTTPHeaderField: "Authorization")
+        }
         do {
             request.httpBody = try JSONEncoder().encode(requestBody)
         } catch {
@@ -251,9 +258,9 @@ class APIManager {
             }
         }.resume()
     }
-
-
-
+    
+    
+    
     
     private func isInternetAvailable() -> Bool {
         var zeroAddress = sockaddr_in()
