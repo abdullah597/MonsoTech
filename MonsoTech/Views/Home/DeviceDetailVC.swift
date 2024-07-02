@@ -95,9 +95,7 @@ extension DeviceDetailVC: DeviceDetailCellDelegate {
                     AlertManager.shared.showAlert(on: self, message: "Device detail updated successfully", actionText: "OK") {}
                 }
             case .failure(_):
-                DispatchQueue.main.async {
                     AlertManager.shared.showAlert(on: self, message: "Failed to update device detail", actionText: "OK") {}
-                }
             }
         }
     }
@@ -116,9 +114,7 @@ extension DeviceDetailVC: WatchersTableViewCellDelegate {
                     AlertManager.shared.showAlert(on: self, message: "Watcher Deleted successfully", actionText: "OK") {}
                 }
             case .failure(_):
-                DispatchQueue.main.async {
                     AlertManager.shared.showAlert(on: self, message: "Failed to Delete Watcher", actionText: "OK") {}
-                }
             }
         }
     }

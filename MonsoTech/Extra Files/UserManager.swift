@@ -13,7 +13,7 @@ class UserManager {
 
     func createUser(email: String, password: String, completion: @escaping (Bool, Error?) -> Void) {
         let tenantID = "a5d5834c-d7ee-47a0-86b7-9d2f773bd347"
-        TokenManager.shared.getAccessToken { token, error in
+        TokenManager.shared.getAccessToken { (token,oid, error) in
             guard let token = token, error == nil else {
                 completion(false, error)
                 return
@@ -63,7 +63,7 @@ class UserManager {
                 }
 
                 if httpResponse.statusCode == 201 {
-                    let user = User(email: email, token: token)
+                    let user = User(email: email, token: token, oid: oid ?? "")
                     UserDefaults.standard.saveUser(user)
                     completion(true, nil)
                 } else {

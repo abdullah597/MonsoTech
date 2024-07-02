@@ -36,14 +36,16 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     @IBAction func login(_ sender: Any) {
         Utilities.shared.showLoader(loader: loader)
-        guard let email = emailTF.text, !email.isEmpty,
-              let password = passwordTF.text, !password.isEmpty else {
-            self.errorView.isHidden = false
-            self.lblError.text = "Please enter email and password"
-            Utilities.shared.hideLoader(loader: loader)
-            return
-        }
-        LoginTokenManager.shared.getAccessToken(username: email, password: password) { token, error in
+//        guard let email = emailTF.text, !email.isEmpty,
+//              let password = passwordTF.text, !password.isEmpty else {
+//            self.errorView.isHidden = false
+//            self.lblError.text = "Please enter email and password"
+//            Utilities.shared.hideLoader(loader: loader)
+//            return
+//        }
+        let email = "ehtisham.badar@gmail.com"
+        let password = "Hashtag55@"
+        LoginTokenManager.shared.getAccessToken(username: email, password: password) { (token,oid, error) in
             DispatchQueue.main.async {
                 Utilities.shared.hideLoader(loader: self.loader)
                 if let error = error {
@@ -52,9 +54,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                     self.lblError.text = "User doesn't exists, Please Signup to continue"
                 } else if let token = token {
                     print("Login successful, token: \(token)")
-                    let user = User(email: email, token: token)
-                    UserDefaults.standard.saveUser(user)
                     self.getUserDetail()
+                    let user = User(email: email, token: token, oid: oid ?? "")
+                    UserDefaults.standard.saveUser(user)
+                    
                 }
             }
         }
@@ -94,12 +97,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                         } else {
                             self.goToConnectDevice()
                         }
+                    } else {
+                        self.goToConnectDevice()
                     }
                 }
             case .failure(let error):
-                AlertManager.shared.showAlert(on: self, message: error.localizedDescription, actionText: "Dismiss") {
-                    
-                }
+                Utilities.shared.hideLoader(loader: loader)
+                AlertManager.shared.showAlert(on: self, message: error.localizedDescription, actionText: "Dismiss") {}
             }
         }
     }

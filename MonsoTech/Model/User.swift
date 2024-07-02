@@ -10,4 +10,5 @@ import Foundation
 struct User: Codable {
     let email: String
     let token: String
+    let oid: String
 }

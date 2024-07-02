@@ -29,9 +29,7 @@ class ConnectFailedVC: UIViewController {
                 }
                 
             case .failure(_):
-                DispatchQueue.main.async {
                     AlertManager.shared.showAlert(on: self, message: "Failed", actionText: "Dismiss") {}
-                }
             }
         }
     }

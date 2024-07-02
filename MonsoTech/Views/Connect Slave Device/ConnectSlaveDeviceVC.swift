@@ -9,7 +9,7 @@ import UIKit
 import DPOTPView
 
 class ConnectSlaveDeviceVC: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var textField: DPOTPView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     
@@ -50,9 +50,7 @@ class ConnectSlaveDeviceVC: UIViewController, UITextFieldDelegate {
                     }
                 }
             case .failure(_):
-                DispatchQueue.main.async {
-                    AlertManager.shared.showAlert(on: self, message: "Failed", actionText: "OK") {}
-                }
+                AlertManager.shared.showAlert(on: self, message: "Failed", actionText: "OK") {}
             }
         }
     }

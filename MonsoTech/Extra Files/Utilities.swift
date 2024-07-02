@@ -47,14 +47,16 @@ class AlertManager {
     private init() {}
     
     func showAlert(on viewController: UIViewController, message: String, actionText: String, completion: @escaping () -> Void) {
-        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: actionText, style: .default) { _ in
-            completion()
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: actionText, style: .default) { _ in
+                completion()
+            }
+            
+            alertController.addAction(action)
+            
+            viewController.present(alertController, animated: true, completion: nil)
         }
-        
-        alertController.addAction(action)
-        
-        viewController.present(alertController, animated: true, completion: nil)
     }
 }
