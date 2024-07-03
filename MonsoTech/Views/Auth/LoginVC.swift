@@ -36,15 +36,15 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     @IBAction func login(_ sender: Any) {
         Utilities.shared.showLoader(loader: loader)
-//        guard let email = emailTF.text, !email.isEmpty,
-//              let password = passwordTF.text, !password.isEmpty else {
-//            self.errorView.isHidden = false
-//            self.lblError.text = "Please enter email and password"
-//            Utilities.shared.hideLoader(loader: loader)
-//            return
-//        }
-        let email = "ehtisham.badar@gmail.com"
-        let password = "Hashtag55@"
+        guard let email = emailTF.text, !email.isEmpty,
+              let password = passwordTF.text, !password.isEmpty else {
+            self.errorView.isHidden = false
+            self.lblError.text = "Please enter email and password"
+            Utilities.shared.hideLoader(loader: loader)
+            return
+        }
+//        let email = "ehtisham.badar@gmail.com"
+//        let password = "Hashtag55@"
         LoginTokenManager.shared.getAccessToken(username: email, password: password) { (token,oid, error) in
             DispatchQueue.main.async {
                 Utilities.shared.hideLoader(loader: self.loader)

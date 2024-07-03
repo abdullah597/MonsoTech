@@ -60,6 +60,7 @@ extension DeviceDetailVC: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: WatchersTableViewCell.self)) as? WatchersTableViewCell else { return UITableViewCell() }
             cell.selectionStyle = .none
             cell.delegate = self
+            cell.deleteButton.tag = indexPath.row
             guard let data = self.deviceDetail?.watchers?[indexPath.row] else { return UITableViewCell() }
             cell.setCell(data: data)
             return cell

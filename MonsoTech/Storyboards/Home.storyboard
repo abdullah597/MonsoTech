@@ -221,6 +221,14 @@
                                         <color key="textColor" name="TextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ppI-Pr-ig0">
+                                        <rect key="frame" x="0.0" y="77" width="393" height="622"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="xDc-uP-kK5" id="h4E-up-D4H"/>
+                                            <outlet property="delegate" destination="xDc-uP-kK5" id="Xbv-c4-EvF"/>
+                                        </connections>
+                                    </tableView>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="uaG-DP-yJe">
                                         <rect key="frame" x="178" y="369.66666666666663" width="37" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -229,9 +237,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ppI-Pr-ig0" firstAttribute="top" secondItem="6iO-cA-0f3" secondAttribute="bottom" constant="18" id="7AJ-Gk-Y0h"/>
+                                    <constraint firstItem="ppI-Pr-ig0" firstAttribute="leading" secondItem="FVq-Kb-Lgz" secondAttribute="leading" id="QZW-8D-Swi"/>
                                     <constraint firstItem="6iO-cA-0f3" firstAttribute="top" secondItem="FVq-Kb-Lgz" secondAttribute="top" constant="30" id="Y4z-xQ-yuU"/>
+                                    <constraint firstAttribute="bottom" secondItem="ppI-Pr-ig0" secondAttribute="bottom" id="abD-WQ-YFE"/>
                                     <constraint firstItem="6iO-cA-0f3" firstAttribute="leading" secondItem="FVq-Kb-Lgz" secondAttribute="leading" constant="24" id="fMB-f9-Nz0"/>
                                     <constraint firstAttribute="trailing" secondItem="6iO-cA-0f3" secondAttribute="trailing" constant="24" id="n6I-xU-SMI"/>
+                                    <constraint firstAttribute="trailing" secondItem="ppI-Pr-ig0" secondAttribute="trailing" id="tVI-SS-nxd"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="wOz-GU-YSk">
@@ -279,6 +291,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notificationiCON" translatesAutoresizingMaskIntoConstraints="NO" id="xWV-C3-gHS">
                                         <rect key="frame" x="10" y="10" width="24" height="24"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6m4-mV-FCr">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
@@ -329,6 +342,7 @@
                     <connections>
                         <outlet property="loader" destination="uaG-DP-yJe" id="Yb0-qp-wry"/>
                         <outlet property="mainView" destination="FVq-Kb-Lgz" id="Ss6-CL-TrQ"/>
+                        <outlet property="tableView" destination="ppI-Pr-ig0" id="F6F-gL-ux1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MeW-Zl-rX3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -398,6 +412,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notificationiCON" translatesAutoresizingMaskIntoConstraints="NO" id="8jI-eG-bsH">
                                         <rect key="frame" x="10" y="10" width="24" height="24"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqC-tr-NmR">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
@@ -842,6 +857,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notificationiCON" translatesAutoresizingMaskIntoConstraints="NO" id="a8A-CM-3WA">
                                         <rect key="frame" x="10" y="10" width="24" height="24"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-5i-A9O">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
@@ -1077,6 +1093,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notificationiCON" translatesAutoresizingMaskIntoConstraints="NO" id="Cf1-Fe-bt0">
                                         <rect key="frame" x="10" y="10" width="24" height="24"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ls-Uv-fj6">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
@@ -1182,7 +1199,7 @@
             <color red="0.067000001668930054" green="0.093999996781349182" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

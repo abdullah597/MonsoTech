@@ -253,13 +253,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="calendarEndIcon" destination="JKT-28-VbM" id="kT4-sA-7Xm"/>
+                <outlet property="endClockIcomn" destination="bEb-RV-GYq" id="DiQ-A6-Bfg"/>
                 <outlet property="endView" destination="MO0-eC-L4Z" id="lR6-2b-5iS"/>
                 <outlet property="lblEndDate" destination="lLt-Kv-oO2" id="6of-gA-ipM"/>
                 <outlet property="lblEndTime" destination="M9j-Zq-hge" id="zRc-fp-r03"/>
                 <outlet property="lblName" destination="ggE-gT-KGZ" id="LKQ-Ja-qUw"/>
                 <outlet property="lblStartDate" destination="C7i-cR-7TV" id="JIG-8c-jTl"/>
                 <outlet property="lblStartTime" destination="JBt-8a-pfI" id="upG-gU-KJn"/>
+                <outlet property="startCalendarIcon" destination="Avz-Fo-FCA" id="eCl-zq-rLU"/>
                 <outlet property="startView" destination="IOB-3x-LKJ" id="IlV-Mb-T2v"/>
+                <outlet property="startclockIcon" destination="hbq-xZ-WiP" id="DuO-Zn-KOn"/>
             </connections>
             <point key="canvasLocation" x="187.78625954198472" y="61.971830985915496"/>
         </tableViewCell>

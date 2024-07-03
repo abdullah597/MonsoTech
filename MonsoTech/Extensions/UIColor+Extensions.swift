@@ -16,6 +16,13 @@ extension UIColor{
         return hexStringToUIColor(hex: "9CA3AF")
     }
     
+    static var greenColor: UIColor? {
+        return hexStringToUIColor(hex: "D9F2D9")
+    }
+    
+    static var redColor: UIColor? {
+        return hexStringToUIColor(hex: "F2D9D9")
+    }
     
     static func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()

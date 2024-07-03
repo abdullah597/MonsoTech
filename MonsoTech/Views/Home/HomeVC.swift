@@ -116,9 +116,7 @@ class HomeVC: UIViewController {
                     self.tableView.reloadData()
                 }
             case .failure(let error):
-                AlertManager.shared.showAlert(on: self, message: error.localizedDescription, actionText: "Dismiss") {
-                    
-                }
+                AlertManager.shared.showAlert(on: self, message: error.localizedDescription, actionText: "Dismiss") {}
             }
         }
     }

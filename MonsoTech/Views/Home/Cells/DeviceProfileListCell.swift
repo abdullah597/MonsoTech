@@ -16,6 +16,10 @@ class DeviceProfileListCell: UITableViewCell {
     @IBOutlet weak var endView: UIView!
     @IBOutlet weak var startView: UIView!
     @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var startclockIcon: UIImageView!
+    @IBOutlet weak var startCalendarIcon: UIImageView!
+    @IBOutlet weak var endClockIcomn: UIImageView!
+    @IBOutlet weak var calendarEndIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,12 +39,22 @@ class DeviceProfileListCell: UITableViewCell {
         lblEndTime.text = data.endtime ?? ""
         if data.resolved ?? true {
             endView.isHidden = false
-            startView.backgroundColor = UIColor.hexStringToUIColor(hex: "F2D9D9")
-            endView.backgroundColor = UIColor.hexStringToUIColor(hex: "D9F2D9")
+            startView.backgroundColor = UIColor.greenColor
+            endView.backgroundColor = UIColor.greenColor
+            startclockIcon.tintColor = UIColor.greenColor
+            startCalendarIcon.tintColor = UIColor.greenColor
+            endClockIcomn.tintColor = UIColor.greenColor
+            calendarEndIcon.tintColor = UIColor.greenColor
         } else {
             endView.isHidden = true
-            startView.backgroundColor = UIColor.hexStringToUIColor(hex: "D9F2D9")
+            startView.backgroundColor = UIColor.redColor
+            startclockIcon.tintColor = UIColor.redColor
+            startCalendarIcon.tintColor = UIColor.redColor
+            endClockIcomn.tintColor = UIColor.redColor
+            calendarEndIcon.tintColor = UIColor.redColor
         }
     }
     
 }
+// D9F2D9 -> green
+// F2D9D9 -> red
