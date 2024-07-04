@@ -54,6 +54,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                     self.lblError.text = "User doesn't exists, Please Signup to continue"
                 } else if let token = token {
                     print("Login successful, token: \(token)")
+                    Constants.oid = oid ?? ""
                     self.getUserDetail()
                     let user = User(email: email, token: token, oid: oid ?? "")
                     UserDefaults.standard.saveUser(user)
@@ -102,8 +103,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                     }
                 }
             case .failure(let error):
-                Utilities.shared.hideLoader(loader: loader)
-                AlertManager.shared.showAlert(on: self, message: error.localizedDescription, actionText: "Dismiss") {}
+                AlertManager.shared.showAlert(on: self, message: error.localizedDescription, actionText: "Dismiss") {
+                    Utilities.shared.hideLoader(loader: self.loader)
+                }
             }
         }
     }

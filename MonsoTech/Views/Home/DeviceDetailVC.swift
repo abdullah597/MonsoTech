@@ -111,6 +111,8 @@ extension DeviceDetailVC: WatchersTableViewCellDelegate {
             switch result {
             case .success(_):
                 DispatchQueue.main.async {
+                    self.deviceDetail?.watchers?.remove(at: index)
+                    self.tableView.reloadData()
                     Utilities.shared.hideLoader(loader: self.loader)
                     AlertManager.shared.showAlert(on: self, message: "Watcher Deleted successfully", actionText: "OK") {}
                 }

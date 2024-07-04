@@ -19,7 +19,7 @@ struct Device: Codable {
     let name: String?
     let devicetype: String?
     let trigercount, trigercountunread: Int?
-    let watchers: [Watcher]?
+    var watchers: [Watcher]?
     let settings: [Setting]?
 }
 

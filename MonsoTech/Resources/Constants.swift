@@ -13,7 +13,7 @@ class Constants {
     static let authorityURL = "https://login.microsoftonline.com/84842931-5c83-48d8-a112-c19574b78849"
     static let TENANT_NAME = "ehtishambadargmail.onmicrosoft.com"
     
-    static let oid = getOid()
+    static var oid = getOid()
     
     static let kTenantName = "monsotech"
     static let kAuthorityHostName = "https://monsotech.b2clogin.com"

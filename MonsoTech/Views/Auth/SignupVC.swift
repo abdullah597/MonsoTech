@@ -25,6 +25,7 @@ class SignupVC: UIViewController {
     
     @IBOutlet weak var signupBtn: UIButton!
     var applicationContext: MSALPublicClientApplication?
+    var isAgreeToTerms = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class SignupVC: UIViewController {
         signupBtn.isEnabled = false
         setupTermsLabel()
         hideShowBtn.setImage(UIImage(named: "hidePassIcon"), for: .normal)
+        agreeIcon.image = UIImage(named: "uncheckIcon")
     }
     @IBAction func back(_ sender: Any) {
         Utilities.shared.popViewController(currentViewController: self, animated: true)
@@ -48,7 +50,13 @@ class SignupVC: UIViewController {
             Utilities.shared.hideLoader(loader: loader)
             return
         }
-        signUp(email: email, password: password)
+        if isAgreeToTerms {
+            signUp(email: email, password: password)
+        } else {
+            Utilities.shared.hideLoader(loader: loader)
+            self.errorView.isHidden = false
+            self.lblError.text = "Please agree to Terms and Privacy Policy"
+        }
     }
     
     @IBAction func hideShowPassword(_ sender: Any) {
@@ -64,7 +72,13 @@ class SignupVC: UIViewController {
         }
     }
     @IBAction func agree(_ sender: Any) {
-        
+        self.errorView.isHidden = true
+        isAgreeToTerms = !isAgreeToTerms
+        if isAgreeToTerms {
+            agreeIcon.image = UIImage(named: "checkIcon")
+        } else {
+            agreeIcon.image = UIImage(named: "uncheckIcon")
+        }
     }
     func signUp(email: String, password: String) {
         UserManager.shared.createUser(email: email, password: password) { success, error in

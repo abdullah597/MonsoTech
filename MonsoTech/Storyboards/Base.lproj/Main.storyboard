@@ -828,8 +828,9 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMZ-Ph-M9Z">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Oso-dQ-AEd">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uncheckIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Oso-dQ-AEd">
                                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                <color key="tintColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="24" id="GlO-s0-NaN"/>
                                                                     <constraint firstAttribute="width" constant="24" id="exU-X5-ED1"/>
@@ -2269,7 +2270,6 @@ You have the possibility to do this with the QR code or manually with the 5-char
     <resources>
         <image name="backIcon" width="24" height="24"/>
         <image name="backWhite" width="24" height="24"/>
-        <image name="checkIcon" width="24" height="24"/>
         <image name="cross" width="16" height="16"/>
         <image name="diagonal1" width="375" height="366.33334350585938"/>
         <image name="diagonal2" width="352.33334350585938" height="381"/>
@@ -2289,6 +2289,7 @@ You have the possibility to do this with the QR code or manually with the 5-char
         <image name="step6" width="327" height="32"/>
         <image name="successIcon" width="124" height="124"/>
         <image name="tickMark" width="124" height="124"/>
+        <image name="uncheckIcon" width="8" height="8"/>
         <namedColor name="AppColor">
             <color red="0.0040000001899898052" green="0.3529999852180481" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
