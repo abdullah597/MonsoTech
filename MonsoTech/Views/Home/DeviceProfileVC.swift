@@ -12,6 +12,7 @@ class DeviceProfileVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var lblTitle: UILabel!
     
     var deviceDetail: Device?
     var profileDetail: ProfileDevice?
@@ -22,6 +23,7 @@ class DeviceProfileVC: UIViewController {
         registerNibs()
         Utilities.shared.setTopCorners(view: mainView, radius: 30)
         resetAllTriggers()
+        lblTitle.text = self.deviceDetail?.name ?? "N/A"
     }
     
     func resetAllTriggers() {

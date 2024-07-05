@@ -17,10 +17,17 @@ extension UIColor{
     }
     
     static var greenColor: UIColor? {
-        return hexStringToUIColor(hex: "D9F2D9")
+        return hexStringToUIColor(hex: "0EAD69")
     }
     
     static var redColor: UIColor? {
+        return hexStringToUIColor(hex: "EB5757")
+    }
+    static var greenLightColor: UIColor? {
+        return hexStringToUIColor(hex: "D9F2D9")
+    }
+    
+    static var redLightColor: UIColor? {
         return hexStringToUIColor(hex: "F2D9D9")
     }
     
@@ -44,5 +51,19 @@ extension UIColor{
             blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
             alpha: CGFloat(1.0)
         )
+    }
+}
+extension UIImage {
+    static var clockgreen: UIImage? {
+        return UIImage(named: "clockgreen")
+    }
+    static var calendargreen: UIImage? {
+        return UIImage(named: "calendargreen")
+    }
+    static var clockred: UIImage? {
+        return UIImage(named: "clock")
+    }
+    static var calendarred: UIImage? {
+        return UIImage(named: "calendar")
     }
 }

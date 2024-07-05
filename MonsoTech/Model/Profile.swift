@@ -18,5 +18,6 @@ struct Trigger: Codable {
     let starttime, startdate: String?
     let resolved, viewed: Bool?
     let endtime, enddate: String?
+    let duration: String?
 }
 

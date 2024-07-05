@@ -98,12 +98,12 @@ extension Step4ConnectVC: AVCaptureMetadataOutputObjectsDelegate {
     
     func found(code: String) {
         print("QR Code: \(code)")
-        if code == "AAAAA123" || code == "AAAAB678" {
-            
+//        if code == "AAAAA123" || code == "AAAAB678" {
+//            
             self.connectDevice(code: code)
-        } else {
-            AlertManager.shared.showAlert(on: self, message: "Wrong", actionText: "Dismiss") {}
-        }
+//        } else {
+//            AlertManager.shared.showAlert(on: self, message: "Wrong", actionText: "Dismiss") {}
+//        }
     }
     func connectDevice(code: String) {
         let letters = String(code.prefix(5))
@@ -139,11 +139,12 @@ extension Step4ConnectVC: AVCaptureMetadataOutputObjectsDelegate {
                         AlertManager.shared.showAlert(on: self, message: "Device Already Paired", actionText: "Go to Devices") {
                             Utilities.shared.goToHome(controller: self)
                         }
+                    }else {
+                        AlertManager.shared.showAlert(on: self, message: "Wrong Connection Code", actionText: "Dismiss") {}
                     }
                     
                 case .failure(let error):
-                    // Handle failure
-                    print("API Error: \(error)")
+                    AlertManager.shared.showAlert(on: self, message: "Wrong Connection Code", actionText: "Dismiss") {}
                 }
             }
         }

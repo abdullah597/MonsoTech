@@ -28,12 +28,13 @@ class ConnectYourDeviceVC: UIViewController {
         } else if digitTF.text == "" {
             AlertManager.shared.showAlert(on: self, message: "Enter 3 digit number", actionText: "OK") {}
         } else {
-            let combinedText = "\(characterStringTF.text ?? "")\(digitTF.text ?? "")"
-            if combinedText == "AAAAA123" || combinedText == "AAAAB678" {
-                self.connectDevice()
-            } else {
-                AlertManager.shared.showAlert(on: self, message: "Wrong", actionText: "Dismiss") {}
-            }
+            self.connectDevice()
+//            let combinedText = "\(characterStringTF.text ?? "")\(digitTF.text ?? "")"
+//            if combinedText == "AAAAA123" || combinedText == "AAAAB678" {
+//                
+//            } else {
+//                AlertManager.shared.showAlert(on: self, message: "Wrong", actionText: "Dismiss") {}
+//            }
         }
     }
     func connectDevice() {
@@ -60,11 +61,12 @@ class ConnectYourDeviceVC: UIViewController {
                         AlertManager.shared.showAlert(on: self, message: "Device Already Paired", actionText: "Go to Devices") {
                             Utilities.shared.goToHome(controller: self)
                         }
+                    } else {
+                        AlertManager.shared.showAlert(on: self, message: "Wrong Connection Code", actionText: "Dismiss") {}
                     }
                     
                 case .failure(let error):
-                    // Handle failure
-                    print("API Error: \(error)")
+                    AlertManager.shared.showAlert(on: self, message: "Wrong Connection Code", actionText: "Dismiss") {}
                 }
             }
         }

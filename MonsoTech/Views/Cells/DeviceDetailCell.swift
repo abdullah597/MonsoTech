@@ -16,6 +16,8 @@ class DeviceDetailCell: UITableViewCell {
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var generateAlarmSwitch: UISwitch!
     @IBOutlet weak var sendNotiSwitch: UISwitch!
+    @IBOutlet weak var generateAlarmStackView: UIStackView!
+    @IBOutlet weak var pushStackView: UIStackView!
     
     weak var delegate: DeviceDetailCellDelegate?
     var data: Device?
@@ -33,6 +35,14 @@ class DeviceDetailCell: UITableViewCell {
         self.data = data
         lblProductName.text = data.devicetype ?? "N/A"
         nameTF.text = data.name
+        data.settings?.forEach({ setting in
+            if setting.variable == "alarm_when_removed" {
+                self.generateAlarmSwitch.isHidden = false
+            }
+            if setting.variable == "send_push_notification" {
+                self.pushStackView.isHidden = false
+            }
+        })
         if (data.settings?.count ?? 0) > 0 {
             if (data.settings?.count ?? 0) == 1 {
                 generateAlarmSwitch.isOn = data.settings?[0].value ?? true

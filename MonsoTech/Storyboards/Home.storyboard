@@ -906,6 +906,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblTitle" destination="I2y-Hq-hjD" id="U0f-gV-AHQ"/>
                         <outlet property="loader" destination="Lie-8s-n9O" id="ef4-mo-oN9"/>
                         <outlet property="mainView" destination="D5Q-cE-ldg" id="U6b-vI-6Wk"/>
                         <outlet property="tableView" destination="A4X-VY-bfS" id="qp6-jf-9rM"/>

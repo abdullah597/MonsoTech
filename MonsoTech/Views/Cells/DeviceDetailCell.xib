@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -67,7 +67,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watcher(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1T-dt-Exc">
-                        <rect key="frame" x="24" y="372.33333333333331" width="68.333333333333329" height="17"/>
+                        <rect key="frame" x="24" y="305" width="68.333333333333329" height="17"/>
                         <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="14"/>
                         <color key="textColor" name="TextBlueColor"/>
                         <nil key="highlightedColor"/>
@@ -108,7 +108,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfN-Gc-raa">
-                        <rect key="frame" x="24" y="302.33333333333331" width="398" height="56"/>
+                        <rect key="frame" x="24" y="235" width="398" height="56"/>
                         <color key="backgroundColor" red="0.066666666669999999" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="56" id="rvT-gl-aIx"/>
@@ -128,48 +128,83 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QnP-ZA-If9">
-                        <rect key="frame" x="24" y="201" width="398" height="77.333333333333314"/>
+                        <rect key="frame" x="24" y="201" width="398" height="10"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmM-Ix-euI">
-                                <rect key="frame" x="0.0" y="0.0" width="230.66666666666666" height="33.666666666666664"/>
-                                <string key="text">Generate alarm when removed from
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Shu-pa-00G">
+                                <rect key="frame" x="0.0" y="0.0" width="398" height="10"/>
+                                <subviews>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="118" translatesAutoresizingMaskIntoConstraints="NO" id="Zah-2L-47T">
+                                        <rect key="frame" x="0.0" y="10" width="398" height="0.0"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAP-ti-1Ea">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmM-Ix-euI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="230.66666666666666" height="0.0"/>
+                                                        <string key="text">Generate alarm when removed from
 socket.</string>
-                                <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="14"/>
-                                <color key="textColor" name="AppColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oss-qX-PqY">
-                                <rect key="frame" x="0.0" y="43.666666666666657" width="230.66666666666666" height="33.666666666666657"/>
-                                <string key="text">Send push notification when power 
+                                                        <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="14"/>
+                                                        <color key="textColor" name="AppColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHL-u4-Xdo">
+                                                        <rect key="frame" x="349" y="-15.333333333333343" width="51" height="31"/>
+                                                        <color key="onTintColor" red="0.066666666669999999" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="vmM-Ix-euI" firstAttribute="leading" secondItem="jAP-ti-1Ea" secondAttribute="leading" id="5dg-T2-m1K"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WHL-u4-Xdo" secondAttribute="trailing" id="BMs-GF-tV7"/>
+                                                    <constraint firstItem="vmM-Ix-euI" firstAttribute="top" secondItem="jAP-ti-1Ea" secondAttribute="top" id="ISK-9b-QDQ"/>
+                                                    <constraint firstItem="WHL-u4-Xdo" firstAttribute="centerY" secondItem="vmM-Ix-euI" secondAttribute="centerY" id="ZNB-Dx-Bus"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vmM-Ix-euI" secondAttribute="bottom" id="pDq-xi-YWx"/>
+                                                    <constraint firstItem="WHL-u4-Xdo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vmM-Ix-euI" secondAttribute="trailing" constant="16" id="r8p-nf-i9O"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="118" translatesAutoresizingMaskIntoConstraints="NO" id="9e3-Xb-4De">
+                                        <rect key="frame" x="0.0" y="10" width="398" height="0.0"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Pm-1H-7g9">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="0.0"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oss-qX-PqY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="223.33333333333334" height="0.0"/>
+                                                        <string key="text">Send push notification when power 
 outage is detected.</string>
-                                <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="14"/>
-                                <color key="textColor" name="AppColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHL-u4-Xdo">
-                                <rect key="frame" x="349" y="0.0" width="51" height="31"/>
-                                <color key="onTintColor" red="0.066666666669999999" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q30-oa-2rM">
-                                <rect key="frame" x="349" y="46.333333333333343" width="51" height="31"/>
-                                <color key="onTintColor" red="0.066666666669999999" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </switch>
+                                                        <fontDescription key="fontDescription" name="Urbanist-SemiBold" family="Urbanist" pointSize="14"/>
+                                                        <color key="textColor" name="AppColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q30-oa-2rM">
+                                                        <rect key="frame" x="349" y="-15.333333333333343" width="51" height="31"/>
+                                                        <color key="onTintColor" red="0.066666666669999999" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Oss-qX-PqY" secondAttribute="bottom" id="5PJ-6u-miY"/>
+                                                    <constraint firstItem="Oss-qX-PqY" firstAttribute="leading" secondItem="5Pm-1H-7g9" secondAttribute="leading" id="BOC-Fu-oDJ"/>
+                                                    <constraint firstItem="q30-oa-2rM" firstAttribute="centerY" secondItem="Oss-qX-PqY" secondAttribute="centerY" id="Yjn-WK-uJi"/>
+                                                    <constraint firstAttribute="trailing" secondItem="q30-oa-2rM" secondAttribute="trailing" id="faC-Fr-FrK"/>
+                                                    <constraint firstItem="q30-oa-2rM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Oss-qX-PqY" secondAttribute="trailing" constant="16" id="n50-la-aXg"/>
+                                                    <constraint firstItem="Oss-qX-PqY" firstAttribute="top" secondItem="5Pm-1H-7g9" secondAttribute="top" id="zev-8n-reV"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="q30-oa-2rM" secondAttribute="trailing" id="Ck3-Wy-gWE"/>
-                            <constraint firstItem="Oss-qX-PqY" firstAttribute="top" secondItem="vmM-Ix-euI" secondAttribute="bottom" constant="10" id="H61-5t-LVo"/>
-                            <constraint firstAttribute="trailing" secondItem="WHL-u4-Xdo" secondAttribute="trailing" id="Mf7-u8-Hzl"/>
-                            <constraint firstItem="WHL-u4-Xdo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vmM-Ix-euI" secondAttribute="trailing" constant="32" id="Psi-hn-FCq"/>
-                            <constraint firstItem="Oss-qX-PqY" firstAttribute="trailing" secondItem="vmM-Ix-euI" secondAttribute="trailing" id="XoH-g0-Krx"/>
-                            <constraint firstItem="Oss-qX-PqY" firstAttribute="leading" secondItem="vmM-Ix-euI" secondAttribute="leading" id="YFi-qc-jmG"/>
-                            <constraint firstItem="WHL-u4-Xdo" firstAttribute="top" secondItem="QnP-ZA-If9" secondAttribute="top" id="cfZ-j2-hkU"/>
-                            <constraint firstItem="q30-oa-2rM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Oss-qX-PqY" secondAttribute="trailing" constant="32" id="d4h-FV-WeG"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="ea7-sw-thO"/>
-                            <constraint firstAttribute="bottom" secondItem="q30-oa-2rM" secondAttribute="bottom" id="g9n-aW-4DG"/>
-                            <constraint firstAttribute="bottom" secondItem="Oss-qX-PqY" secondAttribute="bottom" id="iSh-Fj-4V5"/>
-                            <constraint firstItem="vmM-Ix-euI" firstAttribute="leading" secondItem="QnP-ZA-If9" secondAttribute="leading" id="nPH-QT-gvH"/>
-                            <constraint firstItem="vmM-Ix-euI" firstAttribute="top" secondItem="QnP-ZA-If9" secondAttribute="top" id="zKd-rE-Lum"/>
+                            <constraint firstAttribute="trailing" secondItem="Shu-pa-00G" secondAttribute="trailing" id="5ZW-g5-jjL"/>
+                            <constraint firstItem="Shu-pa-00G" firstAttribute="leading" secondItem="QnP-ZA-If9" secondAttribute="leading" id="dad-Hk-WN5"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="ea7-sw-thO"/>
+                            <constraint firstAttribute="bottom" secondItem="Shu-pa-00G" secondAttribute="bottom" id="kz7-JX-9Le"/>
+                            <constraint firstItem="Shu-pa-00G" firstAttribute="top" secondItem="QnP-ZA-If9" secondAttribute="top" id="oeY-vX-t6g"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -201,9 +236,11 @@ outage is detected.</string>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="generateAlarmStackView" destination="Zah-2L-47T" id="71u-Ku-CED"/>
                 <outlet property="generateAlarmSwitch" destination="WHL-u4-Xdo" id="ybt-4f-cJT"/>
                 <outlet property="lblProductName" destination="LPW-wn-K9t" id="t5W-ge-Iae"/>
                 <outlet property="nameTF" destination="0VA-hx-tCN" id="wIi-gD-kFN"/>
+                <outlet property="pushStackView" destination="9e3-Xb-4De" id="YnY-68-iWm"/>
                 <outlet property="sendNotiSwitch" destination="q30-oa-2rM" id="hQL-LT-Pk5"/>
             </connections>
             <point key="canvasLocation" x="146.56488549618319" y="820.4225352112677"/>

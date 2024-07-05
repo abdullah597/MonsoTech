@@ -38,23 +38,27 @@ class DeviceProfileListCell: UITableViewCell {
         lblEndDate.text = data.enddate ?? ""
         lblEndTime.text = data.endtime ?? ""
         if data.resolved ?? true {
+            lblName.textColor = UIColor.greenColor
             endView.isHidden = false
-            startView.backgroundColor = UIColor.greenColor
-            endView.backgroundColor = UIColor.greenColor
-            startclockIcon.tintColor = UIColor.greenColor
-            startCalendarIcon.tintColor = UIColor.greenColor
-            endClockIcomn.tintColor = UIColor.greenColor
-            calendarEndIcon.tintColor = UIColor.greenColor
+            startView.backgroundColor = UIColor.greenLightColor
+            endView.backgroundColor = UIColor.greenLightColor
+            startclockIcon.image = UIImage.clockgreen
+            startCalendarIcon.image = UIImage.calendargreen
+//            startCalendarIcon.tintColor = UIColor.greenColor
+//            endClockIcomn.tintColor = UIColor.greenColor
+//            calendarEndIcon.tintColor = UIColor.greenColor
+            lblEndDate.text = "Duration - \(data.duration ?? "")"
         } else {
+            lblName.textColor = UIColor.redColor
             endView.isHidden = true
-            startView.backgroundColor = UIColor.redColor
-            startclockIcon.tintColor = UIColor.redColor
-            startCalendarIcon.tintColor = UIColor.redColor
-            endClockIcomn.tintColor = UIColor.redColor
-            calendarEndIcon.tintColor = UIColor.redColor
+            startView.backgroundColor = UIColor.redLightColor
+            
+            startclockIcon.image = UIImage.clockred
+            startCalendarIcon.image = UIImage.calendarred
+            endClockIcomn.image = UIImage.clockred
+            calendarEndIcon.image = UIImage.calendarred
         }
     }
-    
 }
 // D9F2D9 -> green
 // F2D9D9 -> red
