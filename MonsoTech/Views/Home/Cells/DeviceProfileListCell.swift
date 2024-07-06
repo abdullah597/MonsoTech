@@ -37,28 +37,22 @@ class DeviceProfileListCell: UITableViewCell {
         lblStartTime.text = data.starttime ?? ""
         lblEndDate.text = data.enddate ?? ""
         lblEndTime.text = data.endtime ?? ""
-        if data.resolved ?? true {
+        if data.resolved ?? false {
             lblName.textColor = UIColor.greenColor
             endView.isHidden = false
             startView.backgroundColor = UIColor.greenLightColor
             endView.backgroundColor = UIColor.greenLightColor
             startclockIcon.image = UIImage.clockgreen
             startCalendarIcon.image = UIImage.calendargreen
-//            startCalendarIcon.tintColor = UIColor.greenColor
-//            endClockIcomn.tintColor = UIColor.greenColor
-//            calendarEndIcon.tintColor = UIColor.greenColor
+            endClockIcomn.image = UIImage.clockgreen
+            calendarEndIcon.image = UIImage.calendargreen
             lblEndDate.text = "Duration - \(data.duration ?? "")"
         } else {
             lblName.textColor = UIColor.redColor
             endView.isHidden = true
             startView.backgroundColor = UIColor.redLightColor
-            
             startclockIcon.image = UIImage.clockred
             startCalendarIcon.image = UIImage.calendarred
-            endClockIcomn.image = UIImage.clockred
-            calendarEndIcon.image = UIImage.calendarred
         }
     }
 }
-// D9F2D9 -> green
-// F2D9D9 -> red

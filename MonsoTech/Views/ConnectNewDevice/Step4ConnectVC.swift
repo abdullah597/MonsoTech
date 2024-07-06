@@ -98,27 +98,27 @@ extension Step4ConnectVC: AVCaptureMetadataOutputObjectsDelegate {
     
     func found(code: String) {
         print("QR Code: \(code)")
-//        if code == "AAAAA123" || code == "AAAAB678" {
-//            
-            self.connectDevice(code: code)
-//        } else {
-//            AlertManager.shared.showAlert(on: self, message: "Wrong", actionText: "Dismiss") {}
-//        }
+        //        if code == "AAAAA123" || code == "AAAAB678" {
+        //
+        self.connectDevice(code: code)
+        //        } else {
+        //            AlertManager.shared.showAlert(on: self, message: "Wrong", actionText: "Dismiss") {}
+        //        }
     }
     func connectDevice(code: String) {
         let letters = String(code.prefix(5))
-            let digits = String(code.suffix(3))
-            
-            // Check if the first 5 characters are letters and the last 3 are digits
-            let isLettersValid = letters.allSatisfy { $0.isLetter }
-            let isDigitsValid = digits.allSatisfy { $0.isNumber }
-            
-            if isLettersValid && isDigitsValid {
-                print("Letters: \(letters), Digits: \(digits)")
-                // Handle the valid QR code
-            } else {
-                print("Invalid QR Code format")
-            }
+        let digits = String(code.suffix(3))
+        
+        // Check if the first 5 characters are letters and the last 3 are digits
+        let isLettersValid = letters.allSatisfy { $0.isLetter }
+        let isDigitsValid = digits.allSatisfy { $0.isNumber }
+        
+        if isLettersValid && isDigitsValid {
+            print("Letters: \(letters), Digits: \(digits)")
+            // Handle the valid QR code
+        } else {
+            print("Invalid QR Code format")
+        }
         // Constructing the request body
         let connectionRequest = RequestBodyDevice(
             oid: Constants.oid,
@@ -134,20 +134,26 @@ extension Step4ConnectVC: AVCaptureMetadataOutputObjectsDelegate {
                 switch result {
                 case .success(_):
                     if code == 200 || code == 201 {
-                        Utilities.shared.goToHome(controller: self)
-                    } else if code == 400 {
-                        AlertManager.shared.showAlert(on: self, message: "Device Already Paired", actionText: "Go to Devices") {
-                            Utilities.shared.goToHome(controller: self)
-                        }
-                    }else {
-                        AlertManager.shared.showAlert(on: self, message: "Wrong Connection Code", actionText: "Dismiss") {}
+                        self.gotoStep5()
+                    } else {
+                        self.gotoFaileScreen()
                     }
                     
-                case .failure(let error):
-                    AlertManager.shared.showAlert(on: self, message: "Wrong Connection Code", actionText: "Dismiss") {}
+                case .failure(_):
+                    self.gotoFaileScreen()
                 }
             }
         }
+    }
+    func gotoStep5() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: String(describing: Step5ConnectVC.self)) as! Step5ConnectVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func gotoFaileScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: String(describing: ConnectFailedVC.self)) as! ConnectFailedVC
+                self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

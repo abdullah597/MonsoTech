@@ -27,7 +27,7 @@ class DeviceProfileVC: UIViewController {
     }
     
     func resetAllTriggers() {
-        APIManager.shared.postData(endpoint: .triggers(charcode: self.deviceDetail?.charcode ?? ""), requestBody: ResetTriggersBody(key: "reset_all_triggers"), viewController: self) { (code, result: APIResult<String>) in
+        APIManager.shared.postData(endpoint: .triggers(charcode: self.deviceDetail?.charcode ?? ""), requestBody: ResetTriggersBody(key: "reset-all-triggers"), viewController: self) { (code, result: APIResult<String>) in
             switch result {
             case .success(let t):
                 print(t)

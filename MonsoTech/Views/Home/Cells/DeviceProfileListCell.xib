@@ -34,13 +34,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Outage Detected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggE-gT-KGZ">
-                                <rect key="frame" x="66" y="12" width="336" height="17"/>
-                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="14"/>
+                                <rect key="frame" x="66" y="11.999999999999998" width="336" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="16"/>
                                 <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eZo-QQ-brT">
-                                <rect key="frame" x="66" y="37" width="336" height="80"/>
+                                <rect key="frame" x="66" y="39.333333333333343" width="336" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOB-3x-LKJ">
                                         <rect key="frame" x="0.0" y="0.0" width="336" height="36"/>
@@ -49,13 +49,13 @@
                                                 <rect key="frame" x="11" y="11" width="314" height="14"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Started" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpu-vU-mNR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="34.666666666666664" height="14"/>
-                                                        <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="10"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.666666666666664" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuy-Y6-ci3">
-                                                        <rect key="frame" x="62.666666666666664" y="0.0" width="82.666666666666686" height="14"/>
+                                                        <rect key="frame" x="69.666666666666657" y="0.0" width="75.666666666666657" height="14"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="hbq-xZ-WiP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="14" height="14"/>
@@ -66,8 +66,8 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBt-8a-pfI">
-                                                                <rect key="frame" x="17" y="1" width="65.666666666666671" height="12"/>
-                                                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="10"/>
+                                                                <rect key="frame" x="16.999999999999996" y="-0.3333333333333357" width="58.666666666666657" height="14.666666666666666"/>
+                                                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -94,8 +94,8 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10-02-2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7i-cR-7TV">
-                                                                <rect key="frame" x="17.000000000000004" y="1" width="52.333333333333343" height="12"/>
-                                                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="10"/>
+                                                                <rect key="frame" x="17" y="-0.3333333333333357" width="63" height="14.666666666666666"/>
+                                                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -128,19 +128,19 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MO0-eC-L4Z">
-                                        <rect key="frame" x="0.0" y="44" width="336" height="36"/>
+                                        <rect key="frame" x="0.0" y="43.999999999999993" width="336" height="36.000000000000007"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="tv1-z2-5Lj">
                                                 <rect key="frame" x="11" y="11" width="314" height="14"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkp-sf-hNo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="36.666666666666664" height="14"/>
-                                                        <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="10"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ne-Sh-891">
-                                                        <rect key="frame" x="64.666666666666657" y="0.0" width="81.333333333333343" height="14"/>
+                                                        <rect key="frame" x="72" y="0.0" width="74" height="14"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="bEb-RV-GYq">
                                                                 <rect key="frame" x="0.0" y="0.0" width="14" height="14"/>
@@ -151,8 +151,8 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9j-Zq-hge">
-                                                                <rect key="frame" x="17" y="1" width="64.333333333333329" height="12"/>
-                                                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="10"/>
+                                                                <rect key="frame" x="17" y="-0.3333333333333286" width="57" height="14.666666666666666"/>
+                                                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -179,8 +179,8 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration - 2:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLt-Kv-oO2">
-                                                                <rect key="frame" x="17" y="1" width="67" height="12"/>
-                                                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="10"/>
+                                                                <rect key="frame" x="17" y="-0.3333333333333286" width="80.666666666666671" height="14.666666666666666"/>
+                                                                <fontDescription key="fontDescription" name="Urbanist-Bold" family="Urbanist" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
