@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MSAL
 
 class PasswordResetManager {
     
@@ -14,68 +13,43 @@ class PasswordResetManager {
     
     private init() {}
     
-    func resetPassword(completion: @escaping (Bool, Error?) -> Void) {
-        // Define the authority URL for the password reset policy
-        let authorityURLString = "https://monsotech.b2clogin.com/tfp/monsotech.onmicrosoft.com/B2C_1_PasswordReset"
-        
-        // Ensure the authority URL is valid
-        guard let authorityURL = URL(string: authorityURLString) else {
-            let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid authority URL"])
+    func sendPasswordResetEmail(to email: String, completion: @escaping (Bool, Error?) -> Void) {
+        guard let url = URL(string: "https://your-backend-endpoint/reset-password") else {
+            let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid backend URL"])
             completion(false, error)
             return
         }
         
-        // Create the MSAL authority
-        guard let authority = try? MSALAuthority(url: authorityURL) else {
-            let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to create MSALAuthority"])
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonPayload: [String: Any] = ["email": email]
+        
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonPayload) else {
+            let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to create JSON payload"])
             completion(false, error)
             return
         }
         
-        // Create the MSAL configuration
-        let msalConfig = MSALPublicClientApplicationConfig(clientId: "668b03dc-0873-4043-97ea-7c20dd41fc9b", redirectUri: nil, authority: authority)
+        request.httpBody = jsonData
         
-        // Initialize the MSAL public client application
-        guard let application = try? MSALPublicClientApplication(configuration: msalConfig) else {
-            let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to create MSALPublicClientApplication"])
-            completion(false, error)
-            return
-        }
-        
-        // Set up the web view parameters for the interactive token request
-        guard let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
-            let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "No root view controller found"])
-            completion(false, error)
-            return
-        }
-        
-        let webParameters = MSALWebviewParameters(authPresentationViewController: rootViewController)
-        let interactiveParameters = MSALInteractiveTokenParameters(scopes: ["https://monsotech.onmicrosoft.com/api/read"], webviewParameters: webParameters)
-        
-        // Acquire the token to initiate the password reset flow
-        application.acquireToken(with: interactiveParameters) { (result, error) in
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
-                // Handle the error case
-                if let msalError = error as NSError?, msalError.domain == MSALErrorDomain, msalError.code == MSALError.interactionRequired.rawValue {
-                    print("User cancelled the password reset flow.")
-                    completion(false, nil)
-                    return
-                }
-                print("Error acquiring token: \(error.localizedDescription)")
+                print("Request error: \(error.localizedDescription)")
                 completion(false, error)
                 return
             }
             
-            guard let result = result else {
-                // Handle the case where no result was received
-                let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "No result received from token acquisition"])
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid response from server"])
                 completion(false, error)
                 return
             }
             
-            // Password reset successful
-            print("Password reset successful. Token: \(result.accessToken)")
             completion(true, nil)
         }
+        
+        task.resume()
     }
 }
