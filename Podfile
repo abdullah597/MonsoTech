@@ -11,6 +11,5 @@ target 'MonsoTech' do
   pod 'MSAL'
   pod 'Firebase'
   pod 'FirebaseMessaging'
-  pod 'Firebase/Crashlytics'
   
 end
