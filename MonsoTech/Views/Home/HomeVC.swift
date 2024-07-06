@@ -39,11 +39,23 @@ class HomeVC: UIViewController {
         tableView.allowsSelection = true
         sideMenuViewController.delegate = self
         loader.isHidden = true
+        enablePushNotifications(token: Constants.fcmToken)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getDeviceDetails()
     }
+    func enablePushNotifications(token: String) {
+            let body = PushNotificationBody(oid: Constants.oid, os: "ios", token: token, pushnotificationsenabled: true)
+            APIManager.shared.patchData(endpoint: .pushNotification, requestBody: body, viewController: HomeVC()) { (code, result: APIResult<String>) in
+                switch result {
+                case .success(let t):
+                    print(t)
+                case .failure(let aPIError):
+                    print(aPIError)
+                }
+            }
+        }
     func setSideMenu() {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
         panGestureRecognizer.delegate = self

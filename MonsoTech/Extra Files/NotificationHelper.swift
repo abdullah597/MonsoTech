@@ -12,17 +12,7 @@ import FirebaseMessaging
 class NotificationHelper: NSObject {
     static let shared = NotificationHelper()
     var fcmToken = ""
-    func enablePushNotifications(token: String) {
-        let body = PushNotificationBody(oid: Constants.oid, os: "ios", token: token, pushnotificationsenabled: true)
-        APIManager.shared.patchData(endpoint: .pushNotification, requestBody: body, viewController: HomeVC()) { (code, result: APIResult<String>) in
-            switch result {
-            case .success(let t):
-                print(t)
-            case .failure(let aPIError):
-                print(aPIError)
-            }
-        }
-    }
+    
     
     func configure(_ application: UIApplication) {
         Messaging.messaging().delegate = self
@@ -58,7 +48,7 @@ extension NotificationHelper: UNUserNotificationCenterDelegate, MessagingDelegat
     }
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         print("fcm = \(fcmToken ?? "")")
-        enablePushNotifications(token: fcmToken ?? "")
+        Constants.fcmToken = fcmToken ?? ""
     }
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print(deviceToken)

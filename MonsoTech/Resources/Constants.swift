@@ -14,6 +14,7 @@ class Constants {
     static let TENANT_NAME = "ehtishambadargmail.onmicrosoft.com"
     
     static var oid = getOid()
+    static var fcmToken = ""
     
     static let kTenantName = "monsotech"
     static let kAuthorityHostName = "https://monsotech.b2clogin.com"
