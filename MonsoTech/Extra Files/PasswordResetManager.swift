@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MSAL
 
 class PasswordResetManager {
     
@@ -13,43 +14,49 @@ class PasswordResetManager {
     
     private init() {}
     
-    func sendPasswordResetEmail(to email: String, completion: @escaping (Bool, Error?) -> Void) {
-        guard let url = URL(string: "https://your-backend-endpoint/reset-password") else {
-            let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid backend URL"])
+    func resetPassword(completion: @escaping (Bool, Error?) -> Void) {
+        let authorityURL = "https://monsotech.b2clogin.com/tfp/monsotech.onmicrosoft.com/B2C_1_PasswordReset"
+        
+        guard let authority = try? MSALAuthority(url: URL(string: authorityURL)!) else {
+            let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid authority URL"])
             completion(false, error)
             return
         }
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let msalConfig = MSALPublicClientApplicationConfig(clientId: "668b03dc-0873-4043-97ea-7c20dd41fc9b", redirectUri: nil, authority: authority)
+        msalConfig.knownAuthorities = [authority] // Disable authority validation for this custom policy
         
-        let jsonPayload: [String: Any] = ["email": email]
-        
-        guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonPayload) else {
-            let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to create JSON payload"])
+        guard let application = try? MSALPublicClientApplication(configuration: msalConfig) else {
+            let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to create MSALPublicClientApplication"])
             completion(false, error)
             return
         }
         
-        request.httpBody = jsonData
+        let webParameters = MSALWebviewParameters(authPresentationViewController: UIApplication.shared.windows.first!.rootViewController!)
+        let interactiveParameters = MSALInteractiveTokenParameters(scopes: ["https://monsotech.onmicrosoft.com/api/read"], webviewParameters: webParameters)
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        application.acquireToken(with: interactiveParameters) { (result, error) in
             if let error = error {
-                print("Request error: \(error.localizedDescription)")
+                if let msalError = error as NSError?, msalError.domain == MSALErrorDomain {
+                    if msalError.code == MSALError.interactionRequired.rawValue {
+                        print("User cancelled the password reset flow.")
+                        completion(false, nil)
+                        return
+                    }
+                }
+                print("Error acquiring token: \(error.localizedDescription)")
                 completion(false, error)
                 return
             }
             
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid response from server"])
+            guard let result = result else {
+                let error = NSError(domain: "PasswordResetManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "No result received from token acquisition"])
                 completion(false, error)
                 return
             }
             
+            print("Password reset successful. Token: \(result.accessToken)")
             completion(true, nil)
         }
-        
-        task.resume()
     }
 }
