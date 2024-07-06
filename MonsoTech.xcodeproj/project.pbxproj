@@ -24,6 +24,7 @@
 		FF409A332C1CA3000019CBD7 /* DeviceDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF409A312C1CA3000019CBD7 /* DeviceDetailCell.xib */; };
 		FF42442A2C22DC22001CD413 /* msalconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = FF4244292C22DC22001CD413 /* msalconfig.json */; };
 		FF42442E2C22DDB4001CD413 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42442D2C22DDB4001CD413 /* Constants.swift */; };
+		FF4FDA732C39C2BB00F911B1 /* PasswordResetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4FDA722C39C2BB00F911B1 /* PasswordResetManager.swift */; };
 		FF67B6FC2C269BA5008B7C77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B6FB2C269BA5008B7C77 /* User.swift */; };
 		FF67B6FE2C269BBC008B7C77 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B6FD2C269BBC008B7C77 /* UserDefaultManager.swift */; };
 		FF67B7002C26A0AD008B7C77 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67B6FF2C26A0AD008B7C77 /* LaunchScreenViewController.swift */; };
@@ -105,6 +106,7 @@
 		FF4244282C22DB56001CD413 /* MonsoTech.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MonsoTech.entitlements; sourceTree = "<group>"; };
 		FF4244292C22DC22001CD413 /* msalconfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = msalconfig.json; sourceTree = "<group>"; };
 		FF42442D2C22DDB4001CD413 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FF4FDA722C39C2BB00F911B1 /* PasswordResetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetManager.swift; sourceTree = "<group>"; };
 		FF67B6FB2C269BA5008B7C77 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FF67B6FD2C269BBC008B7C77 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		FF67B6FF2C26A0AD008B7C77 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				7F2484872C25ADDE00B84575 /* UserManager.swift */,
 				FF67B6FD2C269BBC008B7C77 /* UserDefaultManager.swift */,
 				7F45B6EB2C32A54200293A9A /* NotificationHelper.swift */,
+				FF4FDA722C39C2BB00F911B1 /* PasswordResetManager.swift */,
 			);
 			path = "Extra Files";
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				FFD53DC32C18C072003CB232 /* InitialVC.swift in Sources */,
 				FFF0A4F52C1A1B1C00057925 /* SignupVC.swift in Sources */,
 				FF2A2E9F2C1B814900433096 /* ConnectSlaveDeviceVC.swift in Sources */,
+				FF4FDA732C39C2BB00F911B1 /* PasswordResetManager.swift in Sources */,
 				FF67B6FC2C269BA5008B7C77 /* User.swift in Sources */,
 				FF409A322C1CA3000019CBD7 /* DeviceDetailCell.swift in Sources */,
 				FFF3F60B2C1B8F03000FC7B4 /* ConnectYourDeviceVC.swift in Sources */,
