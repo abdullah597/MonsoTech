@@ -55,9 +55,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 } else if let token = token {
                     print("Login successful, token: \(token)")
                     Constants.oid = oid ?? ""
-                    self.getUserDetail()
+//                    self.getUserDetail()
                     let user = User(email: email, token: token, oid: oid ?? "")
                     UserDefaults.standard.saveUser(user)
+                    Utilities.shared.goToHome(controller: self)
                     
                 }
             }

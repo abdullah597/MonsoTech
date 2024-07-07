@@ -363,7 +363,10 @@ extension HomeVC: SideMenuDelegate {
         let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { _ in
             // Clear user data from UserDefaults
             UserDefaults.standard.clearUser()
-            
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+            print(Array(UserDefaults.standard.dictionaryRepresentation().keys).count)
             let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: LoginNavViewController.self))
             UIApplication.shared.keyWindow?.rootViewController = loginViewController
         }
